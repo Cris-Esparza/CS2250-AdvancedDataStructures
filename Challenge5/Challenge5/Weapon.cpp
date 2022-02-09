@@ -1,8 +1,10 @@
 #include "Weapon.h"
 
-Weapon::Weapon(string defaultWeapon, int startingAmmo)
+Weapon::Weapon(string startingWeapon, int startingAmmo)
 {
-	cout << "Created Weapon " << defaultWeapon << " with ammo " << startingAmmo << endl;
+	weaponName = startingWeapon;
+	ammo = startingAmmo;
+	cout << "Created Weapon " << weaponName << " with ammo " << ammo << endl;
 }
 
 

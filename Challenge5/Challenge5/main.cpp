@@ -3,7 +3,8 @@ using namespace std;
 
 int main()
 {
-	Weapon w1();
+	Weapon weapon1();
+
 	
 	return 0;
 }

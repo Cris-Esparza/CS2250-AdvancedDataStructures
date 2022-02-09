@@ -8,7 +8,7 @@ using namespace std;
 class Weapon
 {
 public:
-	Weapon(string defaultWeapon = "PISTOL", int startingAmmo = 0);
+	Weapon(string startingWeapon = "PISTOL", int startingAmmo = 0);
 	bool Fire();
 
 private:
