@@ -14,7 +14,6 @@ public:
 private:
 	string weaponName;
 	int ammo;
-
 };
 
 #endif
