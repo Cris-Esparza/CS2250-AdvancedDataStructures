@@ -1,0 +1,3 @@
+﻿  main.cpp
+C:\CS2250 Repository\CS2250\Challenge5\Challenge5\main.cpp(6,9): warning C4930: 'Weapon w1(void)': prototyped function not called (was a variable definition intended?)
+  Challenge5.vcxproj -> C:\CS2250 Repository\CS2250\Challenge5\Debug\Challenge5.exe
