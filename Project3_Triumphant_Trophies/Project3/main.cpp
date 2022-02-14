@@ -23,7 +23,7 @@ int printMenu();
 void /* TODO: Return a Trophy instead of void */ promptForTrophy();
 string promptForString(const string& message);
 int promptForInt(const string& message, int minimum, int maximum);
-void /* TODO: Return a color instead of void */ promptForColor(const string& message);
+Color /* TODO: Return a color instead of void */ promptForColor(const string& message);
 
 // Useful helper methods
 string stringToUpper(string value);
@@ -205,30 +205,53 @@ int promptForInt(const string& message, int minimum, int maximum)
 string stringToUpper(string value)
 {
 	// TODO: Convert the string parameter into all uppercase
+	int i = 0;
+	char c;
+	while (value[i]) {
+		c = value[i];
+		putchar(toupper(c));
+		i++;
+	}
 	return value;
 }
 
 // Ask the user for a color, validate the response
 // Return the color
-void /* TODO: Return a color instead of void */ promptForColor(const string& message)
+Color /* TODO: Return a color instead of void */ promptForColor(const string& message)
 {
 	/* TODO: Create a Color variable */
 	string value;
+	Color trophyColor;
 	cout << message << endl;
-
+	
 	// TODO: while the color is not acceptable
+	do
 	{
 		// TODO: read in the color
-		
+		cin >> value;
+		stringToUpper(value);
 		// TODO: If the color is  GOLD, SILVER, or BRONZE (hint: case insensitive!)
 		// TODO:    convert the string color into the enumerated type Color
+		if (value == "GOLD")
+		{
+			trophyColor = GOLD;
+		}
+		else if (value == "SILVER")
+		{
+			trophyColor = SILVER;
+		}
+		else
+		{
+			trophyColor = BRONZE;
+		}
 		// TODO: otherwise, print an error
 		{
 			cout << "That is not an acceptable color.  Try again." << endl;
 		}
-	}
+	} while (trophyColor != BRONZE && trophyColor != SILVER && trophyColor != GOLD);
 	cin.ignore();
 	/* TODO: Return the Color that the user selected */
+	return trophyColor;
 }
 
 // Search for a trophy in the collection by name
