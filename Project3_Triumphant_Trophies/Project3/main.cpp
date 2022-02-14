@@ -20,7 +20,7 @@ void printTrophies(/* TODO: vector of trophies */);
 
 // Input handlers
 int printMenu();
-void /* TODO: Return a Trophy instead of void */ promptForTrophy();
+Trophy /* TODO: Return a Trophy instead of void */ promptForTrophy();
 string promptForString(const string& message);
 int promptForInt(const string& message, int minimum, int maximum);
 Color /* TODO: Return a color instead of void */ promptForColor(const string& message);
@@ -40,7 +40,7 @@ int main()
 		<< "***********************************************" << endl;
 
 	// TODO: Create a vector of Trophy objects
-
+	vector<Trophy> trophy;
 	// Loop the menu, allowing the user to select an action each time
 	int input;
 	do
@@ -107,6 +107,7 @@ void addTrophy(/* TODO: vector of trophies */)
 {
 	cout << "You have chosen to add a trophy." << endl;
 	// TODO: Ask the user for the Trophy info (hint: there's a function for this...) and add it to the vector
+
 }
 
 // Delete an existing Trophy from the collection
@@ -158,15 +159,17 @@ void printTrophies(/* TODO: vector of trophies */)
 
 // Ask the user for a Trophy, validate their responses
 // Return the Trophy
-void /* TODO: Return a Trophy instead of void */ promptForTrophy()
+Trophy /* TODO: Return a Trophy instead of void */ promptForTrophy()
 {
+	Trophy trophy;
 	string name = promptForString(PROMPT_FOR_NAME);
 	int level = promptForInt(PROMPT_FOR_LEVEL, 1, 10);
-	/* TODO: Store the color the user selected = */ promptForColor(PROMPT_FOR_COLOR);
+	Color trophyColor =/* TODO: Store the color the user selected = */ promptForColor(PROMPT_FOR_COLOR);
 
 	// TODO: Create a new trophy with the above info
 
 	// TODO: Return a Trophy
+	return trophy;
 }
 
 // Ask the user for a string, validate their response
@@ -177,10 +180,24 @@ string promptForString(const string& message)
 	cout << message << endl;
 	// TODO: read in the trophy name
 	// TODO: while the user has not entered any characters
+	do
 	{
+		cin >> value;
+		if (value == "GOLD")
+		{
+			value = "GOLD";
+		}
+		else if (value == "SILVER")
+		{
+			value = "SILVER";
+		}
+		else
+		{
+			value = "BRONZE";
+		}
 		cout << "That is not a valid name.  Try again.";
 		// TODO: read in the trophy name
-	}
+	} while (value != "GOLD" || value != "SILVER" || value != "BRONZE");
 	return value;
 }
 
@@ -193,10 +210,30 @@ int promptForInt(const string& message, int minimum, int maximum)
 	cout << message << endl;
 	// TODO: read in a level number
 	// TODO: while the level number is not between the minimum and maximum (inclusive)
+	do
 	{
+		cin >> value;
+		switch (value)
+		{
+		case 1:
+			value = 1;
+			break;
+		case 2:
+			value = 2;
+			break;
+		case 3:
+			value = 3;
+			break;
+		case 4:
+			value = 4;
+			break;
+		case 5:
+			value = 5;
+			break;
+		}
 		cout << "That value is outside the acceptable range.  Try again." << endl;
 		// TODO: read in a level number
-	}
+	} while (value < 0 || value > 10);
 	return value;
 }
 

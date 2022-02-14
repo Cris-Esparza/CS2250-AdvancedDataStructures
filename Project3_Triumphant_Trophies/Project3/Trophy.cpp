@@ -49,8 +49,7 @@ void Trophy :: SetColor(Color newColor)
 	*trophyColor = newColor;
 }
 
-string  Trophy::Print() 
+void Trophy::Print() 
 {
-	return "[ " + GetName() + " : " + GetLevel() + " : " + GetColor()
-		+ " ]";
+	
 }

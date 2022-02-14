@@ -31,7 +31,7 @@ public:
 	void SetColor(Color newColor);
 
 	// print 
-	string Print();
+	void Print();
 
 private:
 	string name;
