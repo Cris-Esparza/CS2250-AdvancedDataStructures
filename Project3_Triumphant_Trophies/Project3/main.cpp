@@ -41,6 +41,7 @@ int main()
 
 	// TODO: Create a vector of Trophy objects
 	vector<Trophy> trophy;
+	
 	// Loop the menu, allowing the user to select an action each time
 	int input;
 	do
