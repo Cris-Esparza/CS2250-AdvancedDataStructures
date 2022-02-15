@@ -10,7 +10,7 @@ const string PROMPT_FOR_LEVEL = "Please enter the level of your Trophy (between 
 const string PROMPT_FOR_COLOR = "Please enter the color of your Trophy (GOLD, SILVER, or BRONZE)";
 
 // Menu choice handlers
-void addTrophy(/* TODO: vector of trophies */);
+void addTrophy(/* TODO: vector of trophies */vector<Trophy> trophies);
 void copyTrophy(/* TODO: vector of trophies */);
 void deleteTrophy(/* TODO: vector of trophies */);
 void renameTrophy(/* TODO: vector of trophies */);
@@ -50,7 +50,7 @@ int main()
 		switch (input)
 		{
 		case 1:		// Add a new Trophy
-			addTrophy(/* collection of trophies  */);
+			addTrophy(/* collection of trophies  */trophy);
 			break;
 		case 2:		// Copy an existing Trophy
 			copyTrophy(/* collection of trophies  */);
@@ -104,11 +104,12 @@ int printMenu()
 }
 
 // Add a new Trophy to the collection
-void addTrophy(/* TODO: vector of trophies */)
+void addTrophy(/* TODO: vector of trophies */vector<Trophy> trophies)
 {
 	cout << "You have chosen to add a trophy." << endl;
 	// TODO: Ask the user for the Trophy info (hint: there's a function for this...) and add it to the vector
-
+	Trophy trophy = promptForTrophy();
+	trophies.push_back(trophy);
 }
 
 // Delete an existing Trophy from the collection
