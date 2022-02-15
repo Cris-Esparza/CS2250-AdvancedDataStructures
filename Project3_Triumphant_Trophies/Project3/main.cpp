@@ -161,13 +161,12 @@ void printTrophies(/* TODO: vector of trophies */)
 // Return the Trophy
 Trophy /* TODO: Return a Trophy instead of void */ promptForTrophy()
 {
-	Trophy trophy;
 	string name = promptForString(PROMPT_FOR_NAME);
 	int level = promptForInt(PROMPT_FOR_LEVEL, 1, 10);
 	Color trophyColor =/* TODO: Store the color the user selected = */ promptForColor(PROMPT_FOR_COLOR);
 
 	// TODO: Create a new trophy with the above info
-
+	Trophy trophy(name, level, trophyColor);
 	// TODO: Return a Trophy
 	return trophy;
 }
@@ -206,34 +205,19 @@ string promptForString(const string& message)
 // Return the int
 int promptForInt(const string& message, int minimum, int maximum)
 {
-	int value = 0;
+	int value;
 	cout << message << endl;
 	// TODO: read in a level number
 	// TODO: while the level number is not between the minimum and maximum (inclusive)
 	do
 	{
 		cin >> value;
-		switch (value)
+		if (value < minimum || value > maximum)
 		{
-		case 1:
-			value = 1;
-			break;
-		case 2:
-			value = 2;
-			break;
-		case 3:
-			value = 3;
-			break;
-		case 4:
-			value = 4;
-			break;
-		case 5:
-			value = 5;
-			break;
+			cout << "That value is outside the acceptable range.  Try again." << endl;
 		}
-		cout << "That value is outside the acceptable range.  Try again." << endl;
-		// TODO: read in a level number
-	} while (value < 0 || value > 10);
+	} while (value < minimum || value > maximum);
+	// TODO: read in a level number
 	return value;
 }
 
