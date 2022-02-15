@@ -10,13 +10,13 @@ const string PROMPT_FOR_LEVEL = "Please enter the level of your Trophy (between 
 const string PROMPT_FOR_COLOR = "Please enter the color of your Trophy (GOLD, SILVER, or BRONZE)";
 
 // Menu choice handlers
-void addTrophy(/* TODO: vector of trophies */);
+void addTrophy(/* TODO: vector of trophies */vector<Trophy> trophies);
 void copyTrophy(/* TODO: vector of trophies */);
 void deleteTrophy(/* TODO: vector of trophies */);
 void renameTrophy(/* TODO: vector of trophies */);
 void relevelTrophy(/* TODO: vector of trophies */);
 void recolorTrophy(/* TODO: vector of trophies */);
-void printTrophies(/* TODO: vector of trophies */);
+void printTrophies(/* TODO: vector of trophies */vector<Trophy> trophies);
 
 // Input handlers
 int printMenu();
@@ -40,7 +40,7 @@ int main()
 		<< "***********************************************" << endl;
 
 	// TODO: Create a vector of Trophy objects
-	vector<Trophy> trophy;
+	vector<Trophy> trophies;
 	
 	// Loop the menu, allowing the user to select an action each time
 	int input;
@@ -50,7 +50,8 @@ int main()
 		switch (input)
 		{
 		case 1:		// Add a new Trophy
-			addTrophy(/* collection of trophies  */);
+			addTrophy(/* collection of trophies  */trophies);
+			
 			break;
 		case 2:		// Copy an existing Trophy
 			copyTrophy(/* collection of trophies  */);
@@ -104,11 +105,11 @@ int printMenu()
 }
 
 // Add a new Trophy to the collection
-void addTrophy(/* TODO: vector of trophies */)
+void addTrophy(vector<Trophy> trophies)
 {
 	cout << "You have chosen to add a trophy." << endl;
 	// TODO: Ask the user for the Trophy info (hint: there's a function for this...) and add it to the vector
-
+	trophies.push_back(promptForTrophy());
 }
 
 // Delete an existing Trophy from the collection
@@ -152,10 +153,11 @@ void recolorTrophy(/* TODO: vector of trophies */)
 }
 
 // Print all of the Trophies in the collection
-void printTrophies(/* TODO: vector of trophies */)
+void printTrophies(/* TODO: vector of trophies */vector<Trophy> trophies)
 {
 	cout << "You have chosen to print all of the trophies." << endl;
 	// TODO: Print all the trophies in the order they are stored in the vector
+	Print();
 }
 
 // Ask the user for a Trophy, validate their responses
