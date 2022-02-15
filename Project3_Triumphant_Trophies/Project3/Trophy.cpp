@@ -51,5 +51,5 @@ void Trophy :: SetColor(Color newColor)
 
 void Trophy::Print() 
 {
-	
+	cout << "[ " + GetName() + " : " + GetLevel() + " : " + GetColor() + " ]" << endl;
 }

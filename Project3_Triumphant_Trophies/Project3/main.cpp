@@ -163,7 +163,7 @@ Trophy /* TODO: Return a Trophy instead of void */ promptForTrophy()
 {
 	string name = promptForString(PROMPT_FOR_NAME);
 	int level = promptForInt(PROMPT_FOR_LEVEL, 1, 10);
-	Color trophyColor =/* TODO: Store the color the user selected = */ promptForColor(PROMPT_FOR_COLOR);
+	Color trophyColor = /* TODO: Store the color the user selected  */ promptForColor(PROMPT_FOR_COLOR);
 
 	// TODO: Create a new trophy with the above info
 	Trophy trophy(name, level, trophyColor);
