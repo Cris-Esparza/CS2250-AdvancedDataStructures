@@ -10,7 +10,7 @@ Trophy::Trophy(string name, int newLevel, Color newColor)
 {
 	this->name = name;
 	level = new int(newLevel);
-	trophyColor = new Color(BRONZE);
+	trophyColor = new Color(Color :: BRONZE);
 }
 
 Trophy :: ~Trophy()
@@ -51,5 +51,5 @@ void Trophy :: SetColor(Color newColor)
 
 void Trophy::Print() 
 {
-	cout << "[ " << GetName() << " : " << GetLevel() << " : " << GetColor() << " ]" << endl;
+	cout << "[ " << GetName() << " : " << GetLevel() << " : " << Color :: GetColor() << " ]" << endl;
 }
