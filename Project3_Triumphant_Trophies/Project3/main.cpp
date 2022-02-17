@@ -165,7 +165,7 @@ Trophy /* TODO: Return a Trophy instead of void */ promptForTrophy()
 {
 	string name = promptForString(PROMPT_FOR_NAME);
 	int level = promptForInt(PROMPT_FOR_LEVEL, 1, 10);
-	Color trophyColor = /* TODO: Store the color the user selected  */ promptForColor(PROMPT_FOR_COLOR);
+	Color trophyColor  = /* TODO: Store the color the user selected  */promptForColor(PROMPT_FOR_COLOR);
 
 	// TODO: Create a new trophy with the above info
 	Trophy trophy(name, level, trophyColor);
@@ -181,24 +181,14 @@ string promptForString(const string& message)
 	cout << message << endl;
 	// TODO: read in the trophy name
 	// TODO: while the user has not entered any characters
-	do
+	if (getline(cin, value))
 	{
-		cin >> value;
-		if (value == "GOLD")
+		if (value.empty())
 		{
-			value = "GOLD";
+			cout << "That is not a valid name.  Try again.";
 		}
-		else if (value == "SILVER")
-		{
-			value = "SILVER";
-		}
-		else
-		{
-			value = "BRONZE";
-		}
-		cout << "That is not a valid name.  Try again.";
-		// TODO: read in the trophy name
-	} while (value != "GOLD" || value != "SILVER" || value != "BRONZE");
+	}
+	// TODO: read in the trophy name
 	return value;
 }
 
@@ -263,10 +253,11 @@ Color /* TODO: Return a color instead of void */ promptForColor(const string& me
 		{
 			trophyColor = SILVER;
 		}
-		else
+		else if (value == "BRONZE")
 		{
 			trophyColor = BRONZE;
 		}
+		else
 		// TODO: otherwise, print an error
 		{
 			cout << "That is not an acceptable color.  Try again." << endl;
