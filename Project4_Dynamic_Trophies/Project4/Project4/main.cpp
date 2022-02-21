@@ -14,7 +14,7 @@ char printMenu();
 // Menu choice handlers
 void addTrophy(vector<Trophy*>& trophies);
 void copyTrophy(vector<Trophy*>& trophies);
-void deleteTrophy(vector<Trophy>& trophies);
+void deleteTrophy(vector<Trophy*>& trophies);
 void renameTrophy(vector<Trophy>& trophies);
 void relevelTrophy(vector<Trophy>& trophies);
 void recolorTrophy(vector<Trophy>& trophies);
@@ -55,9 +55,9 @@ int main()
 		case 2:		// Copy an existing Trophy
 			copyTrophy(trophies);
 			break;
-		//case 3:		// Delete an existing Trophy
-		//	deleteTrophy(trophies);
-		//	break;
+		case 3:		// Delete an existing Trophy
+			deleteTrophy(trophies);
+			break;
 		//case 4:		// Rename a Trophy
 		//	renameTrophy(trophies);
 		//	break;
@@ -108,7 +108,7 @@ void addTrophy(vector<Trophy*>& trophies)
 	cout << "You have chosen to add a trophy." << endl;
 	trophies.push_back(new Trophy(promptForTrophy()));
 }
-/*
+
 // Delete an existing Trophy from the collection
 void deleteTrophy(vector<Trophy*>& trophies)
 {
@@ -120,7 +120,7 @@ void deleteTrophy(vector<Trophy*>& trophies)
 		trophies.erase(trophies.begin() + index);
 	}
 }
-*/
+
 // Copy an existing Trophy in the collection
 void copyTrophy(vector<Trophy*>& trophies)
 {
