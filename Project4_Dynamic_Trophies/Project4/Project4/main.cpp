@@ -61,9 +61,9 @@ int main()
 		case 4:		// Rename a Trophy
 			renameTrophy(trophies);
 			break;
-		//case 5:		// Change the level of a Trophy
-		//	relevelTrophy(trophies);
-		//	break;
+		case 5:		// Change the level of a Trophy
+			relevelTrophy(trophies);
+			break;
 		//case 6:		// Change the color of a Trophy
 		//	recolorTrophy(trophies);
 		//	break;
@@ -146,18 +146,18 @@ void renameTrophy(vector<Trophy*>& trophies)
 	}
 }
 
-//// Relevel an existing Trophy (change the level)
-//void relevelTrophy(vector<Trophy*>& trophies)
-//{
-//	cout << "You have chosen to change the level of an existing trophy." << endl;
-//	string name = promptForString(PROMPT_FOR_NAME);
-//	int index = searchForTrophy(trophies, name);
-//	if (index >= 0)
-//	{
-//		trophies[index].setLevel(promptForInt(PROMPT_FOR_LEVEL, 1, 10));
-//	}
-//}
-//
+// Relevel an existing Trophy (change the level)
+void relevelTrophy(vector<Trophy*>& trophies)
+{
+	cout << "You have chosen to change the level of an existing trophy." << endl;
+	string name = promptForString(PROMPT_FOR_NAME);
+	int index = searchForTrophy(trophies, name);
+	if (index >= 0)
+	{
+		trophies[index]->setLevel(promptForInt(PROMPT_FOR_LEVEL, 1, 10));
+	}
+}
+
 //// Recolor an existing Trophy (change the color)
 //void recolorTrophy(vector<Trophy*>& trophies)
 //{

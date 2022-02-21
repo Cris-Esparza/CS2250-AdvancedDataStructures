@@ -59,7 +59,8 @@ void Trophy::setName(string name)
 
 void Trophy::setLevel(int level)
 {
-	this->level = &level;
+	delete this->level;
+	this->level = new int(level);
 }
 
 void Trophy::setColor(Color color)
