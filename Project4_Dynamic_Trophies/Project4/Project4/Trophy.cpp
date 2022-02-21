@@ -65,7 +65,8 @@ void Trophy::setLevel(int level)
 
 void Trophy::setColor(Color color)
 {
-	this->color = &color;
+	delete this->color;
+	this->color = new Color(color);
 }
 
 void Trophy::print() const
