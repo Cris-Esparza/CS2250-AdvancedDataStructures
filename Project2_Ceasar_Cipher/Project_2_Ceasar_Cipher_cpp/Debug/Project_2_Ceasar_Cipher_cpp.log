@@ -1,0 +1,4 @@
+﻿  main.cpp
+C:\CS2250 Repository\CS2250\Project_2_Ceasar_Cipher\Project_2_Ceasar_Cipher_cpp\main.cpp(92,20): warning C4018: '<': signed/unsigned mismatch
+C:\CS2250 Repository\CS2250\Project_2_Ceasar_Cipher\Project_2_Ceasar_Cipher_cpp\main.cpp(120,20): warning C4018: '<': signed/unsigned mismatch
+  Project_2_Ceasar_Cipher_cpp.vcxproj -> C:\CS2250 Repository\CS2250\Project_2_Ceasar_Cipher\Debug\Project_2_Ceasar_Cipher_cpp.exe
