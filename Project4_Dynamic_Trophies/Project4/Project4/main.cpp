@@ -87,18 +87,27 @@ int main()
 char printMenu()
 {
 	string input;
-	cout << "-----------------------------------------" << endl
-		<< "Please select an option :" << endl
-		<< "1 - Add a new Trophy" << endl
-		<< "2 - Copy a Trophy" << endl
-		<< "3 - Delete a Trophy" << endl
-		<< "4 - Rename a Trophy" << endl
-		<< "5 - Change the level of a Trophy" << endl
-		<< "6 - Change the color of a Trophy" << endl
-		<< "7 - Print All the Trophies" << endl
-		<< "8 - Exit the program" << endl
-		<< "-----------------------------------------" << endl;
-	getline(cin, input);
+	try 
+	{
+		cout << "-----------------------------------------" << endl
+			<< "Please select an option :" << endl
+			<< "1 - Add a new Trophy" << endl
+			<< "2 - Copy a Trophy" << endl
+			<< "3 - Delete a Trophy" << endl
+			<< "4 - Rename a Trophy" << endl
+			<< "5 - Change the level of a Trophy" << endl
+			<< "6 - Change the color of a Trophy" << endl
+			<< "7 - Print All the Trophies" << endl
+			<< "8 - Exit the program" << endl
+			<< "-----------------------------------------" << endl;
+		getline(cin, input);
+		stoi(input);
+	}
+	catch (exception& d)
+	{
+		cout << "That is not a recognized menu selection, choose again." << endl;
+	}
+	
 	return stoi(input);
 }
 
@@ -200,11 +209,18 @@ string promptForString(const string& message)
 	string value = "";
 	cout << message << endl;
 	getline(cin, value);
-	while (value == "")
-	{
-		cout << "That is not a valid name.  Try again.";
-		getline(cin, value);
+	try {
+		while (value == "")
+		{
+			cout << "That is not a valid name.  Try again.";
+			getline(cin, value);
+		}
 	}
+	catch (exception& a)
+	{
+		cout << PROMPT_FOR_NAME << endl;
+	}
+	
 	return value;
 }
 
@@ -215,13 +231,20 @@ int promptForInt(const string& message, int minimum, int maximum)
 {
 	string value;
 	cout << message << endl;
-	getline(cin, value);
-	stoi(value);
-	while (stoi(value) < minimum || stoi(value) > maximum)
+	try 
 	{
-		cout << "That value is outside the acceptable range.  Try again." << endl;
 		getline(cin, value);
 		stoi(value);
+		while (stoi(value) < minimum || stoi(value) > maximum)
+		{
+			cout << "That value is outside the acceptable range.  Try again." << endl;
+			getline(cin, value);
+			stoi(value);
+		}
+	}
+	catch (exception& b)
+	{
+		cout << PROMPT_FOR_LEVEL;
 	}
 	
 	return stoi(value);
@@ -246,31 +269,37 @@ Color promptForColor(const string& message)
 	string value;
 	bool goodColor = false;
 	cout << message << endl;
-
-	while (goodColor == false)
+	try
 	{
-		getline(cin, value);
-		string upperValue = stringToUpper(value);
+		while (goodColor == false)
+		{
+			getline(cin, value);
+			string upperValue = stringToUpper(value);
 
-		if (upperValue == "GOLD")
-		{
-			color = GOLD;
-			goodColor = true;
+			if (upperValue == "GOLD")
+			{
+				color = GOLD;
+				goodColor = true;
+			}
+			else if (upperValue == "SILVER")
+			{
+				color = SILVER;
+				goodColor = true;
+			}
+			else if (upperValue == "BRONZE")
+			{
+				color = BRONZE;
+				goodColor = true;
+			}
+			else
+			{
+				cout << "That is not an acceptable color.  Try again." << endl;
+			}
 		}
-		else if (upperValue == "SILVER")
-		{
-			color = SILVER;
-			goodColor = true;
-		}
-		else if (upperValue == "BRONZE")
-		{
-			color = BRONZE;
-			goodColor = true;
-		}
-		else
-		{
-			cout << "That is not an acceptable color.  Try again." << endl;
-		}
+	}
+	catch (exception& c)
+	{
+		cout << PROMPT_FOR_COLOR;
 	}
 	
 	return color;
