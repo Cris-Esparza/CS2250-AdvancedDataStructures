@@ -13,7 +13,7 @@ char printMenu();
 
 // Menu choice handlers
 void addTrophy(vector<Trophy*>& trophies);
-void copyTrophy(vector<Trophy>& trophies);
+void copyTrophy(vector<Trophy*>& trophies);
 void deleteTrophy(vector<Trophy>& trophies);
 void renameTrophy(vector<Trophy>& trophies);
 void relevelTrophy(vector<Trophy>& trophies);
@@ -28,7 +28,7 @@ Color promptForColor(const string& message);
 
 // Useful helper methods
 string stringToUpper(string value);
-int searchForTrophy(vector<Trophy>& trophies, const string& name);
+int searchForTrophy(vector<Trophy*>& trophies, const string& name);
 
 // This application allows for the management of a trophy collection
 int main()
@@ -52,9 +52,9 @@ int main()
 		case 1:		// Add a new Trophy
 			addTrophy(trophies);
 			break;
-		//case 2:		// Copy an existing Trophy
-		//	copyTrophy(trophies);
-		//	break;
+		case 2:		// Copy an existing Trophy
+			copyTrophy(trophies);
+			break;
 		//case 3:		// Delete an existing Trophy
 		//	deleteTrophy(trophies);
 		//	break;
@@ -120,7 +120,7 @@ void deleteTrophy(vector<Trophy*>& trophies)
 		trophies.erase(trophies.begin() + index);
 	}
 }
-
+*/
 // Copy an existing Trophy in the collection
 void copyTrophy(vector<Trophy*>& trophies)
 {
@@ -130,10 +130,10 @@ void copyTrophy(vector<Trophy*>& trophies)
 	int index = searchForTrophy(trophies, name);
 	if (index >= 0)
 	{
-		trophies.push_back(trophies[index]);
+		trophies.push_back(new Trophy(*trophies[index]));
 	}
 }
-
+/*
 // Rename an existing Trophy (change the name)
 void renameTrophy(vector<Trophy*>& trophies)
 {
@@ -276,16 +276,16 @@ Color promptForColor(const string& message)
 	return color;
 }
 
-//// Search for a trophy in the collection by name
-//int searchForTrophy(vector<Trophy>& trophies, const string& name)
-//{
-//	for (int i = 0; i < trophies.size(); ++i)
-//	{
-//		if (name == trophies[i].getName())
-//		{
-//			return i;
-//		}
-//	}
-//	cout << "ERROR: The Trophy was not found" << endl;
-//	return -1;
-//}
+// Search for a trophy in the collection by name
+int searchForTrophy(vector<Trophy*>& trophies, const string& name)
+{
+	for (int i = 0; i < trophies.size(); ++i)
+	{
+		if (name == trophies[i]->getName())
+		{
+			return i;
+		}
+	}
+	cout << "ERROR: The Trophy was not found" << endl;
+	return -1;
+}
