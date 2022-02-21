@@ -15,9 +15,9 @@ char printMenu();
 void addTrophy(vector<Trophy*>& trophies);
 void copyTrophy(vector<Trophy*>& trophies);
 void deleteTrophy(vector<Trophy*>& trophies);
-void renameTrophy(vector<Trophy>& trophies);
-void relevelTrophy(vector<Trophy>& trophies);
-void recolorTrophy(vector<Trophy>& trophies);
+void renameTrophy(vector<Trophy*>& trophies);
+void relevelTrophy(vector<Trophy*>& trophies);
+void recolorTrophy(vector<Trophy*>& trophies);
 void printTrophies(vector<Trophy*>& trophies);
 
 // Input handlers
@@ -58,9 +58,9 @@ int main()
 		case 3:		// Delete an existing Trophy
 			deleteTrophy(trophies);
 			break;
-		//case 4:		// Rename a Trophy
-		//	renameTrophy(trophies);
-		//	break;
+		case 4:		// Rename a Trophy
+			renameTrophy(trophies);
+			break;
 		//case 5:		// Change the level of a Trophy
 		//	relevelTrophy(trophies);
 		//	break;
@@ -133,7 +133,7 @@ void copyTrophy(vector<Trophy*>& trophies)
 		trophies.push_back(new Trophy(*trophies[index]));
 	}
 }
-/*
+
 // Rename an existing Trophy (change the name)
 void renameTrophy(vector<Trophy*>& trophies)
 {
@@ -142,34 +142,34 @@ void renameTrophy(vector<Trophy*>& trophies)
 	int index = searchForTrophy(trophies, name);
 	if (index >= 0)
 	{
-		trophies[index].setName(promptForString("Please enter the new name of the Trophy"));
+		trophies[index]->setName(promptForString("Please enter the new name of the Trophy"));
 	}
 }
 
-// Relevel an existing Trophy (change the level)
-void relevelTrophy(vector<Trophy*>& trophies)
-{
-	cout << "You have chosen to change the level of an existing trophy." << endl;
-	string name = promptForString(PROMPT_FOR_NAME);
-	int index = searchForTrophy(trophies, name);
-	if (index >= 0)
-	{
-		trophies[index].setLevel(promptForInt(PROMPT_FOR_LEVEL, 1, 10));
-	}
-}
+//// Relevel an existing Trophy (change the level)
+//void relevelTrophy(vector<Trophy*>& trophies)
+//{
+//	cout << "You have chosen to change the level of an existing trophy." << endl;
+//	string name = promptForString(PROMPT_FOR_NAME);
+//	int index = searchForTrophy(trophies, name);
+//	if (index >= 0)
+//	{
+//		trophies[index].setLevel(promptForInt(PROMPT_FOR_LEVEL, 1, 10));
+//	}
+//}
+//
+//// Recolor an existing Trophy (change the color)
+//void recolorTrophy(vector<Trophy*>& trophies)
+//{
+//	cout << "You have chosen to change the color of an existing trophy." << endl;
+//	string name = promptForString(PROMPT_FOR_NAME);
+//	int index = searchForTrophy(trophies, name);
+//	if (index >= 0)
+//	{
+//		trophies[index].setColor(promptForColor(PROMPT_FOR_COLOR));
+//	}
+//}
 
-// Recolor an existing Trophy (change the color)
-void recolorTrophy(vector<Trophy*>& trophies)
-{
-	cout << "You have chosen to change the color of an existing trophy." << endl;
-	string name = promptForString(PROMPT_FOR_NAME);
-	int index = searchForTrophy(trophies, name);
-	if (index >= 0)
-	{
-		trophies[index].setColor(promptForColor(PROMPT_FOR_COLOR));
-	}
-}
-*/
 // print all of the Trophies in the collection
 void printTrophies(vector<Trophy*>& trophies)
 {

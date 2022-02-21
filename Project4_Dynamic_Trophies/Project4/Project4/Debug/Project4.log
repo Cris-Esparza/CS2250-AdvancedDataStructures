@@ -1,5 +1,7 @@
-﻿  main.cpp
+﻿  Trophy.cpp
+  main.cpp
 C:\CS2250 Repository\CS2250\Project4_Dynamic_Trophies\Project4\Project4\main.cpp(177,20): warning C4018: '<': signed/unsigned mismatch
 C:\CS2250 Repository\CS2250\Project4_Dynamic_Trophies\Project4\Project4\main.cpp(234,20): warning C4018: '<': signed/unsigned mismatch
 C:\CS2250 Repository\CS2250\Project4_Dynamic_Trophies\Project4\Project4\main.cpp(282,20): warning C4018: '<': signed/unsigned mismatch
+  Generating Code...
   Project4.vcxproj -> C:\CS2250 Repository\CS2250\Project4_Dynamic_Trophies\Project4\Debug\Project4.exe
