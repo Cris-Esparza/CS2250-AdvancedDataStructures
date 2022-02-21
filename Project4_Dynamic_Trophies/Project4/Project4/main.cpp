@@ -80,6 +80,15 @@ int main()
 
 	} while (input != 8);
 
+	/*Trophy trophy("dragon", 3, GOLD);
+	Trophy trophy1("Lion", 2, SILVER);
+
+	trophy1 = trophy;
+	
+	trophy.print();
+	trophy1.print();*/
+
+	
 	return 0;
 }
 

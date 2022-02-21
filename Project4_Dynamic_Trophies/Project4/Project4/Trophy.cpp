@@ -16,9 +16,17 @@ Trophy::Trophy(string name, int level, Color color)
 
 Trophy::Trophy(const Trophy& trophy)
 {
-	this->name = name;
+	name = new string(*trophy.name);
 	level = new int(*trophy.level);
 	color = new Color(*trophy.color);
+}
+
+Trophy& Trophy :: operator = (const Trophy& trophy)
+{
+	*name = *trophy.name;
+	*level = *trophy.level;
+	*color = *trophy.color;
+	return *this;
 }
 
 Trophy::~Trophy()
@@ -74,5 +82,5 @@ void Trophy::print() const
 		break;
 	}
 
-	cout << "[ " << name << " : " << level << " : " << colorString << " ]" << endl;
+	cout << "[ " << *name << " : " << *level << " : " << colorString << " ]" << endl;
 }
