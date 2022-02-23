@@ -20,7 +20,9 @@ void printBoard(char** board, int size)
 		for (size_t j = 0; j < size; j++)
 		{
 			// TODO: replace the 'X' with the board's (i, j) cell
-			cout << "| " << board[i][j]  << " ";
+			char space = ' ';
+			board[i][j] = space;
+			cout << "| " << board[i][j] << " ";
 		}
 		cout << "|" << endl;
 	}
@@ -42,6 +44,7 @@ int main()
 	{
 		board[i] = new char[size];
 	}
+
 	// TODO: Print the empty board
 	printBoard(board, size);
 
@@ -56,11 +59,19 @@ int main()
 
 			// TODO: Update this while loop to also check that the
 			// board's x, y cell is empty
-		} while (x < 0 || x >= size || y < 0 || y >= size);
+		} while (x < 0 || x >= size || y < 0 || y >= size && board == NULL);
 
 		// TODO: Place 'S' in the appropriate board cell
-
+		for (int i = 0; i <= x; ++i)
+		{
+			for (int j = 0; j <= y; ++j)
+			{
+				char ship = 'S';
+				board[i][j] = ship;
+			}
+		}
 		// TODO: Print the current board
+		printBoard(board, size);
 	}
 
 	return 0;
