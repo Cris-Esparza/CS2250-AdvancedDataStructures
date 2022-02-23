@@ -1,7 +1,9 @@
-﻿  Trophy.cpp
-  main.cpp
-A:\Git\CS2250\Project4_Dynamic_Trophies\Project4\Project4\main.cpp(187,20): warning C4018: '<': signed/unsigned mismatch
-A:\Git\CS2250\Project4_Dynamic_Trophies\Project4\Project4\main.cpp(241,20): warning C4018: '<': signed/unsigned mismatch
-A:\Git\CS2250\Project4_Dynamic_Trophies\Project4\Project4\main.cpp(290,20): warning C4018: '<': signed/unsigned mismatch
-  Generating Code...
-  Project4.vcxproj -> A:\Git\CS2250\Project4_Dynamic_Trophies\Project4\Debug\Project4.exe
+﻿  main.cpp
+C:\CS2250 Repository\CS2250\Project4_Dynamic_Trophies\Project4\Project4\main.cpp(106,20): warning C4101: 'd': unreferenced local variable
+C:\CS2250 Repository\CS2250\Project4_Dynamic_Trophies\Project4\Project4\main.cpp(186,20): warning C4018: '<': signed/unsigned mismatch
+C:\CS2250 Repository\CS2250\Project4_Dynamic_Trophies\Project4\Project4\main.cpp(219,20): warning C4101: 'a': unreferenced local variable
+C:\CS2250 Repository\CS2250\Project4_Dynamic_Trophies\Project4\Project4\main.cpp(245,20): warning C4101: 'b': unreferenced local variable
+C:\CS2250 Repository\CS2250\Project4_Dynamic_Trophies\Project4\Project4\main.cpp(257,20): warning C4018: '<': signed/unsigned mismatch
+C:\CS2250 Repository\CS2250\Project4_Dynamic_Trophies\Project4\Project4\main.cpp(300,20): warning C4101: 'c': unreferenced local variable
+C:\CS2250 Repository\CS2250\Project4_Dynamic_Trophies\Project4\Project4\main.cpp(311,20): warning C4018: '<': signed/unsigned mismatch
+  Project4.vcxproj -> C:\CS2250 Repository\CS2250\Project4_Dynamic_Trophies\Project4\Debug\Project4.exe

@@ -53,17 +53,20 @@ Color Trophy::getColor() const
 
 void Trophy::setName(string name)
 {
-	this->name = &name;
+	delete this->name;
+	this->name = new string(name);
 }
 
 void Trophy::setLevel(int level)
 {
-	this->level = &level;
+	delete this->level;
+	this->level = new int(level);
 }
 
 void Trophy::setColor(Color color)
 {
-	this->color = &color;
+	delete this->color;
+	this->color = new Color(color);
 }
 
 void Trophy::print() const

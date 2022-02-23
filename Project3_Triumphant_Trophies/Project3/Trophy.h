@@ -7,7 +7,7 @@
 #include <vector>
 using namespace std;
 
-enum class Color {GOLD, SILVER, BRONZE};		// TODO: create the color values
+enum class Color {GOLD, SILVER, BRONZE, COPPER};		// TODO: create the color values
 
 // TODO: complete the Trophy class
 class Trophy 
