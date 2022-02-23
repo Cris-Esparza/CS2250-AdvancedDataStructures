@@ -86,26 +86,27 @@ int main()
 // print the menu to the user and accept their menu choice
 char printMenu()
 {
+	cout << "-----------------------------------------" << endl
+		<< "Please select an option :" << endl
+		<< "1 - Add a new Trophy" << endl
+		<< "2 - Copy a Trophy" << endl
+		<< "3 - Delete a Trophy" << endl
+		<< "4 - Rename a Trophy" << endl
+		<< "5 - Change the level of a Trophy" << endl
+		<< "6 - Change the color of a Trophy" << endl
+		<< "7 - Print All the Trophies" << endl
+		<< "8 - Exit the program" << endl
+		<< "-----------------------------------------" << endl;
 	string input;
+	int value;
+	getline(cin, input);
 	try 
 	{
-		cout << "-----------------------------------------" << endl
-			<< "Please select an option :" << endl
-			<< "1 - Add a new Trophy" << endl
-			<< "2 - Copy a Trophy" << endl
-			<< "3 - Delete a Trophy" << endl
-			<< "4 - Rename a Trophy" << endl
-			<< "5 - Change the level of a Trophy" << endl
-			<< "6 - Change the color of a Trophy" << endl
-			<< "7 - Print All the Trophies" << endl
-			<< "8 - Exit the program" << endl
-			<< "-----------------------------------------" << endl;
-		getline(cin, input);
-		stoi(input);
+		value = stoi(input);
 	}
 	catch (exception& d)
 	{
-		cout << "That is not a recognized menu selection, choose again." << endl;
+		return 0;
 	}
 	
 	return stoi(input);
@@ -230,24 +231,32 @@ string promptForString(const string& message)
 int promptForInt(const string& message, int minimum, int maximum)
 {
 	string value;
+	int num;
 	cout << message << endl;
-	try 
+	getline(cin, value);
+	try
 	{
+		num = stoi(value);
+	}
+	catch (exception& g)
+	{
+		num = 0;
+	}
+	while (num < minimum || num > maximum)
+	{
+		cout << "That value is outside the acceptable range.  Try again." << endl;
 		getline(cin, value);
-		stoi(value);
-		while (stoi(value) < minimum || stoi(value) > maximum)
+		try 
+		{			
+			num = stoi(value);
+		}
+		catch (exception& f)
 		{
-			cout << "That value is outside the acceptable range.  Try again." << endl;
-			getline(cin, value);
-			stoi(value);
+			num = 0;
 		}
 	}
-	catch (exception& b)
-	{
-		cout << PROMPT_FOR_LEVEL;
-	}
 	
-	return stoi(value);
+	return num;
 }
 
 // Convert a string to all uppercase (so that we can compare the
