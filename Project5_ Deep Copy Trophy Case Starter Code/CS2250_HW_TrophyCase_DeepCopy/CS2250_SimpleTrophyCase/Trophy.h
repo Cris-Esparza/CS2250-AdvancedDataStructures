@@ -14,6 +14,13 @@ public:
 	Trophy(string name, int level, Color color);
 	Trophy(const Trophy& trophy);
 	Trophy& operator = (const Trophy& trophy);
+	Trophy& operator << (const Trophy& trophy);
+	Trophy& operator < (const Trophy& trophy);
+	Trophy& operator > (const Trophy& trophy);
+	Trophy& operator == (const Trophy& trophy);
+	Trophy& operator != (const Trophy& trophy);
+	Trophy& operator <= (const Trophy& trophy);
+	Trophy& operator >= (const Trophy& trophy);
 	~Trophy();
 	string getName() const;
 	int getLevel() const;

@@ -9,29 +9,33 @@ TrophyCase::TrophyCase()
 
 TrophyCase::TrophyCase(const TrophyCase& trophyCase)
 {
-	trophies = new TrophyCase*(*trophyCase.trophies);
+	trophies = new TrophyCase(*trophyCase.trophies);
 	nbrOfTrophies = new int(*trophyCase.nbrOfTrophies);
 	capacity = new int(*trophyCase.capacity);
 }
 
 TrophyCase :: ~TrophyCase()
 {
-
+	delete trophies;
+	delete nbrOfTrophies;
+	delete capacity;
 }
 
 TrophyCase& TrophyCase :: operator = (const TrophyCase& trophyCase)
 {
-
+	*trophies = *trophyCase.trophies;
+	*nbrOfTrophies = *trophyCase.nbrOfTrophies;
+	*capacity = *trophyCase.capacity;
 }
 
 int TrophyCase :: getNbrOfTrophies()
 {
-
+	return *nbrOfTrophies;
 }
 
 int TrophyCase::getAllocatedSize()
 {
-
+	return *capacity;
 }
 
 void TrophyCase::addTrophy(string name, int level, Color color)

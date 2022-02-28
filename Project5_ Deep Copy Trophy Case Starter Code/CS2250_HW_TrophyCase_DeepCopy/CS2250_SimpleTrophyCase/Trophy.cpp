@@ -29,6 +29,41 @@ Trophy& Trophy :: operator = (const Trophy& trophy)
 	return *this;
 }
 
+Trophy& Trophy :: operator << (const Trophy& trophy)
+{
+	cout << &trophy << endl;
+}
+
+Trophy& Trophy :: operator < (const Trophy& trophy)
+{
+
+}
+
+Trophy& Trophy :: operator > (const Trophy& trophy)
+{
+
+}
+
+Trophy& Trophy :: operator == (const Trophy& trophy)
+{
+
+}
+
+Trophy& Trophy :: operator != (const Trophy& trophy)
+{
+
+}
+
+Trophy& Trophy :: operator <= (const Trophy& trophy)
+{
+
+}
+
+Trophy& Trophy :: operator >= (const Trophy& trophy)
+{
+
+}
+
 Trophy::~Trophy()
 {
 	delete name;
