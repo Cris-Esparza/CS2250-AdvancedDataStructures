@@ -1,1 +1,109 @@
-﻿
+﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(514,5): warning MSB8028: The intermediate directory (Debug\) contains files shared from another project (CS2250_SimpleTrophyCase.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+cl : command line warning D9025: overriding '/W3' with '/W4'
+  main.cpp
+B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\TrophyCase.h(26,24): error C3078: array size must be specified in new expressions without an initializer
+B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\main.cpp(260,6): error C2171: '!': illegal on operands of type 'void'
+B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\main.cpp(260,44): error C2451: a conditional expression of type 'void' is not valid
+B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\main.cpp(260,6): message : Expressions of type void cannot be converted to other types
+B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\main.cpp(282,6): error C2171: '!': illegal on operands of type 'void'
+B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\main.cpp(282,42): error C2451: a conditional expression of type 'void' is not valid
+B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\main.cpp(282,6): message : Expressions of type void cannot be converted to other types
+B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\main.cpp(305,6): error C2171: '!': illegal on operands of type 'void'
+B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\main.cpp(305,53): error C2451: a conditional expression of type 'void' is not valid
+B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\main.cpp(305,6): message : Expressions of type void cannot be converted to other types
+B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\main.cpp(328,6): error C2171: '!': illegal on operands of type 'void'
+B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\main.cpp(328,52): error C2451: a conditional expression of type 'void' is not valid
+B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\main.cpp(328,6): message : Expressions of type void cannot be converted to other types
+B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\main.cpp(351,6): error C2171: '!': illegal on operands of type 'void'
+B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\main.cpp(351,52): error C2451: a conditional expression of type 'void' is not valid
+B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\main.cpp(351,6): message : Expressions of type void cannot be converted to other types
+B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\main.cpp(365,25): error C2679: binary '<<': no operator found which takes a right-hand operand of type '_Ty' (or there is no acceptable conversion)
+          with
+          [
+              _Ty=TrophyCase
+          ]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103\include\ostream(471,39): message : could be 'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(std::basic_streambuf<char,std::char_traits<char>> *)'
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103\include\ostream(439,39): message : or       'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(const void *)'
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103\include\ostream(421,39): message : or       'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(long double)'
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103\include\ostream(403,39): message : or       'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(double)'
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103\include\ostream(385,39): message : or       'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(float)'
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103\include\ostream(367,39): message : or       'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(unsigned __int64)'
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103\include\ostream(349,39): message : or       'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(__int64)'
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103\include\ostream(331,39): message : or       'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(unsigned long)'
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103\include\ostream(313,39): message : or       'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(long)'
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103\include\ostream(294,39): message : or       'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(unsigned int)'
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103\include\ostream(268,39): message : or       'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(int)'
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103\include\ostream(249,39): message : or       'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(unsigned short)'
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103\include\ostream(215,39): message : or       'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(short)'
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103\include\ostream(197,39): message : or       'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(bool)'
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103\include\ostream(192,39): message : or       'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(std::ios_base &(__cdecl *)(std::ios_base &))'
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103\include\ostream(187,39): message : or       'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(std::basic_ios<char,std::char_traits<char>> &(__cdecl *)(std::basic_ios<char,std::char_traits<char>> &))'
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103\include\ostream(182,39): message : or       'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(std::basic_ostream<char,std::char_traits<char>> &(__cdecl *)(std::basic_ostream<char,std::char_traits<char>> &))'
+B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\main.cpp(365,25): message : while trying to match the argument list '(std::ostream, _Ty)'
+          with
+          [
+              _Ty=TrophyCase
+          ]
+  TrophyCase.cpp
+B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\TrophyCase.h(26,24): error C3078: array size must be specified in new expressions without an initializer
+  Trophy.cpp
+B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\Trophy.cpp(54,29): warning C4458: declaration of 'name' hides class member
+B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\Trophy.h(26,10): message : see declaration of 'Trophy::name'
+B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\Trophy.cpp(60,27): warning C4458: declaration of 'level' hides class member
+B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\Trophy.h(27,7): message : see declaration of 'Trophy::level'
+B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\Trophy.cpp(66,29): warning C4458: declaration of 'color' hides class member
+B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\Trophy.h(28,9): message : see declaration of 'Trophy::color'
+  main.cpp
+B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\TrophyCase.h(26,24): error C3078: array size must be specified in new expressions without an initializer
+B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\main.cpp(260,6): error C2171: '!': illegal on operands of type 'void'
+B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\main.cpp(260,44): error C2451: a conditional expression of type 'void' is not valid
+B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\main.cpp(260,6): message : Expressions of type void cannot be converted to other types
+B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\main.cpp(282,6): error C2171: '!': illegal on operands of type 'void'
+B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\main.cpp(282,42): error C2451: a conditional expression of type 'void' is not valid
+B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\main.cpp(282,6): message : Expressions of type void cannot be converted to other types
+B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\main.cpp(305,6): error C2171: '!': illegal on operands of type 'void'
+B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\main.cpp(305,53): error C2451: a conditional expression of type 'void' is not valid
+B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\main.cpp(305,6): message : Expressions of type void cannot be converted to other types
+B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\main.cpp(328,6): error C2171: '!': illegal on operands of type 'void'
+B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\main.cpp(328,52): error C2451: a conditional expression of type 'void' is not valid
+B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\main.cpp(328,6): message : Expressions of type void cannot be converted to other types
+B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\main.cpp(351,6): error C2171: '!': illegal on operands of type 'void'
+B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\main.cpp(351,52): error C2451: a conditional expression of type 'void' is not valid
+B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\main.cpp(351,6): message : Expressions of type void cannot be converted to other types
+B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\main.cpp(365,25): error C2679: binary '<<': no operator found which takes a right-hand operand of type '_Ty' (or there is no acceptable conversion)
+          with
+          [
+              _Ty=TrophyCase
+          ]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103\include\ostream(471,39): message : could be 'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(std::basic_streambuf<char,std::char_traits<char>> *)'
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103\include\ostream(439,39): message : or       'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(const void *)'
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103\include\ostream(421,39): message : or       'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(long double)'
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103\include\ostream(403,39): message : or       'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(double)'
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103\include\ostream(385,39): message : or       'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(float)'
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103\include\ostream(367,39): message : or       'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(unsigned __int64)'
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103\include\ostream(349,39): message : or       'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(__int64)'
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103\include\ostream(331,39): message : or       'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(unsigned long)'
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103\include\ostream(313,39): message : or       'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(long)'
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103\include\ostream(294,39): message : or       'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(unsigned int)'
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103\include\ostream(268,39): message : or       'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(int)'
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103\include\ostream(249,39): message : or       'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(unsigned short)'
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103\include\ostream(215,39): message : or       'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(short)'
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103\include\ostream(197,39): message : or       'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(bool)'
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103\include\ostream(192,39): message : or       'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(std::ios_base &(__cdecl *)(std::ios_base &))'
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103\include\ostream(187,39): message : or       'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(std::basic_ios<char,std::char_traits<char>> &(__cdecl *)(std::basic_ios<char,std::char_traits<char>> &))'
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103\include\ostream(182,39): message : or       'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(std::basic_ostream<char,std::char_traits<char>> &(__cdecl *)(std::basic_ostream<char,std::char_traits<char>> &))'
+B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\main.cpp(365,25): message : while trying to match the argument list '(std::ostream, _Ty)'
+          with
+          [
+              _Ty=TrophyCase
+          ]
+  Trophy.cpp
+B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\Trophy.cpp(54,29): warning C4458: declaration of 'name' hides class member
+B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\Trophy.h(26,10): message : see declaration of 'Trophy::name'
+B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\Trophy.cpp(60,27): warning C4458: declaration of 'level' hides class member
+B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\Trophy.h(27,7): message : see declaration of 'Trophy::level'
+B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\Trophy.cpp(66,29): warning C4458: declaration of 'color' hides class member
+B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\Trophy.h(28,9): message : see declaration of 'Trophy::color'
+  TrophyCase.cpp
+B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\TrophyCase.h(26,24): error C3078: array size must be specified in new expressions without an initializer
+  Generating Code...

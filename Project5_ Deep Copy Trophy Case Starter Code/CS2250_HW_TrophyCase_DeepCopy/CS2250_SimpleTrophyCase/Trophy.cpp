@@ -3,8 +3,8 @@
 Trophy::Trophy()
 {
 	name = new string("");
-	level =  new int(1);
-	color = new Color(BRONZE);
+	level =  new int(0);
+	color = new Color(Color :: BRONZE);
 }
 
 Trophy::Trophy(string name, int level, Color color)
@@ -74,13 +74,13 @@ void Trophy::print() const
 	string colorString = "";
 	switch (*color)
 	{
-	case GOLD:
+	case Color :: GOLD:
 		colorString = "GOLD";
 		break;
-	case SILVER:
+	case Color :: SILVER:
 		colorString = "SILVER";
 		break;
-	case BRONZE:
+	case Color :: BRONZE:
 		colorString = "BRONZE";
 		break;
 	}

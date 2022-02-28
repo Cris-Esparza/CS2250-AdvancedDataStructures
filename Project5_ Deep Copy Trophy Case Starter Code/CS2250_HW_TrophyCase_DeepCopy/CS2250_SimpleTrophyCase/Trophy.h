@@ -5,7 +5,7 @@
 #include <string>
 using namespace std;
 
-enum Color { BRONZE, SILVER, GOLD };
+enum class Color { BRONZE, SILVER, GOLD };
 
 class Trophy
 {
