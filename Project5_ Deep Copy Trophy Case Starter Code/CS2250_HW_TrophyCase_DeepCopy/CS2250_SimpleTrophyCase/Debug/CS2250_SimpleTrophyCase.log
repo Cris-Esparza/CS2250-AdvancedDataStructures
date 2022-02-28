@@ -1,7 +1,6 @@
 ﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(514,5): warning MSB8028: The intermediate directory (Debug\) contains files shared from another project (CS2250_SimpleTrophyCase.vcxproj).  This can lead to incorrect clean and rebuild behavior.
 cl : command line warning D9025: overriding '/W3' with '/W4'
   main.cpp
-B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\TrophyCase.h(26,24): error C3078: array size must be specified in new expressions without an initializer
 B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\main.cpp(260,6): error C2171: '!': illegal on operands of type 'void'
 B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\main.cpp(260,44): error C2451: a conditional expression of type 'void' is not valid
 B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\main.cpp(260,6): message : Expressions of type void cannot be converted to other types
@@ -39,22 +38,42 @@ C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.3110
 C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103\include\ostream(192,39): message : or       'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(std::ios_base &(__cdecl *)(std::ios_base &))'
 C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103\include\ostream(187,39): message : or       'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(std::basic_ios<char,std::char_traits<char>> &(__cdecl *)(std::basic_ios<char,std::char_traits<char>> &))'
 C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103\include\ostream(182,39): message : or       'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(std::basic_ostream<char,std::char_traits<char>> &(__cdecl *)(std::basic_ostream<char,std::char_traits<char>> &))'
+B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\Trophy.h(17,18): message : or       'std::ostream &operator <<(std::ostream &,const Trophy &)'
 B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\main.cpp(365,25): message : while trying to match the argument list '(std::ostream, _Ty)'
           with
           [
               _Ty=TrophyCase
           ]
   TrophyCase.cpp
-B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\TrophyCase.h(26,24): error C3078: array size must be specified in new expressions without an initializer
+B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\TrophyCase.cpp(5,25): warning C4458: declaration of 'trophies' hides class member
+B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\TrophyCase.h(26,14): message : see declaration of 'TrophyCase::trophies'
+B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\TrophyCase.cpp(5,41): error C3078: array size must be specified in new expressions without an initializer
   Trophy.cpp
-B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\Trophy.cpp(54,29): warning C4458: declaration of 'name' hides class member
-B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\Trophy.h(26,10): message : see declaration of 'Trophy::name'
-B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\Trophy.cpp(60,27): warning C4458: declaration of 'level' hides class member
-B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\Trophy.h(27,7): message : see declaration of 'Trophy::level'
-B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\Trophy.cpp(66,29): warning C4458: declaration of 'color' hides class member
-B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\Trophy.h(28,9): message : see declaration of 'Trophy::color'
+B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\Trophy.cpp(53,17): warning C4239: nonstandard extension used: 'return': conversion from 'Trophy' to 'Trophy &'
+B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\Trophy.cpp(53,17): message : A non-const reference may only be bound to an lvalue
+B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\Trophy.cpp(51,45): warning C4100: 'trophy': unreferenced formal parameter
+B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\Trophy.cpp(58,17): warning C4239: nonstandard extension used: 'return': conversion from 'Trophy' to 'Trophy &'
+B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\Trophy.cpp(58,17): message : A non-const reference may only be bound to an lvalue
+B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\Trophy.cpp(56,45): warning C4100: 'trophy': unreferenced formal parameter
+B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\Trophy.cpp(63,17): warning C4239: nonstandard extension used: 'return': conversion from 'Trophy' to 'Trophy &'
+B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\Trophy.cpp(63,17): message : A non-const reference may only be bound to an lvalue
+B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\Trophy.cpp(61,46): warning C4100: 'trophy': unreferenced formal parameter
+B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\Trophy.cpp(68,17): warning C4239: nonstandard extension used: 'return': conversion from 'Trophy' to 'Trophy &'
+B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\Trophy.cpp(68,17): message : A non-const reference may only be bound to an lvalue
+B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\Trophy.cpp(66,46): warning C4100: 'trophy': unreferenced formal parameter
+B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\Trophy.cpp(73,17): warning C4239: nonstandard extension used: 'return': conversion from 'Trophy' to 'Trophy &'
+B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\Trophy.cpp(73,17): message : A non-const reference may only be bound to an lvalue
+B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\Trophy.cpp(71,46): warning C4100: 'trophy': unreferenced formal parameter
+B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\Trophy.cpp(78,17): warning C4239: nonstandard extension used: 'return': conversion from 'Trophy' to 'Trophy &'
+B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\Trophy.cpp(78,17): message : A non-const reference may only be bound to an lvalue
+B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\Trophy.cpp(76,46): warning C4100: 'trophy': unreferenced formal parameter
+B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\Trophy.cpp(103,29): warning C4458: declaration of 'name' hides class member
+B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\Trophy.h(33,10): message : see declaration of 'Trophy::name'
+B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\Trophy.cpp(109,27): warning C4458: declaration of 'level' hides class member
+B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\Trophy.h(34,7): message : see declaration of 'Trophy::level'
+B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\Trophy.cpp(115,29): warning C4458: declaration of 'color' hides class member
+B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\Trophy.h(35,9): message : see declaration of 'Trophy::color'
   main.cpp
-B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\TrophyCase.h(26,24): error C3078: array size must be specified in new expressions without an initializer
 B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\main.cpp(260,6): error C2171: '!': illegal on operands of type 'void'
 B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\main.cpp(260,44): error C2451: a conditional expression of type 'void' is not valid
 B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\main.cpp(260,6): message : Expressions of type void cannot be converted to other types
@@ -92,18 +111,51 @@ C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.3110
 C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103\include\ostream(192,39): message : or       'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(std::ios_base &(__cdecl *)(std::ios_base &))'
 C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103\include\ostream(187,39): message : or       'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(std::basic_ios<char,std::char_traits<char>> &(__cdecl *)(std::basic_ios<char,std::char_traits<char>> &))'
 C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103\include\ostream(182,39): message : or       'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(std::basic_ostream<char,std::char_traits<char>> &(__cdecl *)(std::basic_ostream<char,std::char_traits<char>> &))'
+B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\Trophy.h(17,18): message : or       'std::ostream &operator <<(std::ostream &,const Trophy &)'
 B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\main.cpp(365,25): message : while trying to match the argument list '(std::ostream, _Ty)'
           with
           [
               _Ty=TrophyCase
           ]
   Trophy.cpp
-B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\Trophy.cpp(54,29): warning C4458: declaration of 'name' hides class member
-B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\Trophy.h(26,10): message : see declaration of 'Trophy::name'
-B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\Trophy.cpp(60,27): warning C4458: declaration of 'level' hides class member
-B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\Trophy.h(27,7): message : see declaration of 'Trophy::level'
-B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\Trophy.cpp(66,29): warning C4458: declaration of 'color' hides class member
-B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\Trophy.h(28,9): message : see declaration of 'Trophy::color'
+B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\Trophy.cpp(53,17): warning C4239: nonstandard extension used: 'return': conversion from 'Trophy' to 'Trophy &'
+B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\Trophy.cpp(53,17): message : A non-const reference may only be bound to an lvalue
+B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\Trophy.cpp(51,45): warning C4100: 'trophy': unreferenced formal parameter
+B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\Trophy.cpp(58,17): warning C4239: nonstandard extension used: 'return': conversion from 'Trophy' to 'Trophy &'
+B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\Trophy.cpp(58,17): message : A non-const reference may only be bound to an lvalue
+B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\Trophy.cpp(56,45): warning C4100: 'trophy': unreferenced formal parameter
+B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\Trophy.cpp(63,17): warning C4239: nonstandard extension used: 'return': conversion from 'Trophy' to 'Trophy &'
+B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\Trophy.cpp(63,17): message : A non-const reference may only be bound to an lvalue
+B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\Trophy.cpp(61,46): warning C4100: 'trophy': unreferenced formal parameter
+B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\Trophy.cpp(68,17): warning C4239: nonstandard extension used: 'return': conversion from 'Trophy' to 'Trophy &'
+B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\Trophy.cpp(68,17): message : A non-const reference may only be bound to an lvalue
+B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\Trophy.cpp(66,46): warning C4100: 'trophy': unreferenced formal parameter
+B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\Trophy.cpp(73,17): warning C4239: nonstandard extension used: 'return': conversion from 'Trophy' to 'Trophy &'
+B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\Trophy.cpp(73,17): message : A non-const reference may only be bound to an lvalue
+B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\Trophy.cpp(71,46): warning C4100: 'trophy': unreferenced formal parameter
+B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\Trophy.cpp(78,17): warning C4239: nonstandard extension used: 'return': conversion from 'Trophy' to 'Trophy &'
+B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\Trophy.cpp(78,17): message : A non-const reference may only be bound to an lvalue
+B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\Trophy.cpp(76,46): warning C4100: 'trophy': unreferenced formal parameter
+B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\Trophy.cpp(103,29): warning C4458: declaration of 'name' hides class member
+B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\Trophy.h(33,10): message : see declaration of 'Trophy::name'
+B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\Trophy.cpp(109,27): warning C4458: declaration of 'level' hides class member
+B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\Trophy.h(34,7): message : see declaration of 'Trophy::level'
+B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\Trophy.cpp(115,29): warning C4458: declaration of 'color' hides class member
+B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\Trophy.h(35,9): message : see declaration of 'Trophy::color'
   TrophyCase.cpp
-B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\TrophyCase.h(26,24): error C3078: array size must be specified in new expressions without an initializer
+B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\TrophyCase.cpp(5,25): warning C4458: declaration of 'trophies' hides class member
+B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\TrophyCase.h(26,14): message : see declaration of 'TrophyCase::trophies'
+B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\TrophyCase.cpp(5,41): error C3078: array size must be specified in new expressions without an initializer
   Generating Code...
+B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\Trophy.cpp(53): warning C4172: returning address of local variable or temporary
+B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\Trophy.cpp(58): warning C4172: returning address of local variable or temporary
+B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\Trophy.cpp(63): warning C4172: returning address of local variable or temporary
+B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\Trophy.cpp(68): warning C4172: returning address of local variable or temporary
+B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\Trophy.cpp(73): warning C4172: returning address of local variable or temporary
+B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\Trophy.cpp(78): warning C4172: returning address of local variable or temporary
+B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\Trophy.cpp(53): warning C4172: returning address of local variable or temporary
+B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\Trophy.cpp(63): warning C4172: returning address of local variable or temporary
+B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\Trophy.cpp(58): warning C4172: returning address of local variable or temporary
+B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\Trophy.cpp(68): warning C4172: returning address of local variable or temporary
+B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\Trophy.cpp(73): warning C4172: returning address of local variable or temporary
+B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\Trophy.cpp(78): warning C4172: returning address of local variable or temporary

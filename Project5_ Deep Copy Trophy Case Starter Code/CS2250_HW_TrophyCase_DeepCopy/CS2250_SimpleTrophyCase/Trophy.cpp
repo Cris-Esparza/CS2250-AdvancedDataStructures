@@ -29,39 +29,53 @@ Trophy& Trophy :: operator = (const Trophy& trophy)
 	return *this;
 }
 
-Trophy& Trophy :: operator << (const Trophy& trophy)
+ostream& operator << (ostream& sout, const Trophy& trophy)
 {
-	cout << &trophy << endl;
+	string colorString = "";
+	switch (*trophy.color)
+	{
+	case Color::GOLD:
+		colorString = "GOLD";
+		break;
+	case Color::SILVER:
+		colorString = "SILVER";
+		break;
+	case Color::BRONZE:
+		colorString = "BRONZE";
+		break;
+	}
+	sout << "[ " << trophy.name << " " << trophy.level << " " << colorString << " ]" << endl;
+	return sout;
 }
 
 Trophy& Trophy :: operator < (const Trophy& trophy)
 {
-
+	return Trophy();
 }
 
 Trophy& Trophy :: operator > (const Trophy& trophy)
 {
-
+	return Trophy();
 }
 
 Trophy& Trophy :: operator == (const Trophy& trophy)
 {
-
+	return Trophy();
 }
 
 Trophy& Trophy :: operator != (const Trophy& trophy)
 {
-
+	return Trophy();
 }
 
 Trophy& Trophy :: operator <= (const Trophy& trophy)
 {
-
+	return Trophy();
 }
 
 Trophy& Trophy :: operator >= (const Trophy& trophy)
 {
-
+	return Trophy();
 }
 
 Trophy::~Trophy()
