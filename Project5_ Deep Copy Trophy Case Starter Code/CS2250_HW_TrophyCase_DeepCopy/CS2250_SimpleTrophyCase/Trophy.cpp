@@ -48,34 +48,34 @@ ostream& operator << (ostream& sout, const Trophy& trophy)
 	return sout;
 }
 
-Trophy& Trophy :: operator < (const Trophy& trophy)
+bool Trophy :: operator < (const Trophy& trophy) const
 {
-	return Trophy();
+	return true;
 }
 
-Trophy& Trophy :: operator > (const Trophy& trophy)
+bool Trophy :: operator > (const Trophy& trophy) const
 {
-	return Trophy();
+	return true;
 }
 
-Trophy& Trophy :: operator == (const Trophy& trophy)
+bool Trophy :: operator == (const Trophy& trophy) const
 {
-	return Trophy();
+	return true;
 }
 
-Trophy& Trophy :: operator != (const Trophy& trophy)
+bool Trophy :: operator != (const Trophy& trophy) const
 {
-	return Trophy();
+	return true;
 }
 
-Trophy& Trophy :: operator <= (const Trophy& trophy)
+bool Trophy :: operator <= (const Trophy& trophy) const
 {
-	return Trophy();
+	return true;
 }
 
-Trophy& Trophy :: operator >= (const Trophy& trophy)
+bool Trophy :: operator >= (const Trophy& trophy) const 
 {
-	return Trophy();
+	return true;
 }
 
 Trophy::~Trophy()

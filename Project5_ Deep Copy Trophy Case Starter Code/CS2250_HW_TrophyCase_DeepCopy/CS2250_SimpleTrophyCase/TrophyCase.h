@@ -12,6 +12,7 @@ public:
 	TrophyCase(const TrophyCase& trophyCase);
 	~TrophyCase();
 	TrophyCase& operator = (const TrophyCase& trophyCase);
+	friend ostream& operator << (ostream& sout, const TrophyCase& trophies);
 	int getNbrOfTrophies();
 	int getAllocatedSize();
 	void addTrophy(string name, int level, Color color);

@@ -2,7 +2,7 @@
 
 TrophyCase::TrophyCase()
 {
-	TrophyCase* trophies = new TrophyCase[];
+	TrophyCase* trophies = new TrophyCase[10];
 	nbrOfTrophies = new int(1);
 	capacity = new int(10);
 }
@@ -28,6 +28,14 @@ TrophyCase& TrophyCase :: operator = (const TrophyCase& trophyCase)
 	*capacity = *trophyCase.capacity;
 }
 
+ostream& operator << (ostream& sout, const TrophyCase& trophies)
+{
+	for (int i = 0; i < *trophies.capacity; ++i)
+	{
+		sout << trophies.trophies[i] << endl;
+	}
+}
+
 int TrophyCase :: getNbrOfTrophies()
 {
 	return *nbrOfTrophies;
@@ -40,7 +48,11 @@ int TrophyCase::getAllocatedSize()
 
 void TrophyCase::addTrophy(string name, int level, Color color)
 {
-
+	TrophyCase** trophies = new TrophyCase * [10];
+	for (int i = 0; i < 10; ++i)
+	{
+		trophies[i] = new TrophyCase();
+	}
 }
 
 void TrophyCase::copyTrophy(string name)

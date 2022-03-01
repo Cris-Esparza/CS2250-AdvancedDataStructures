@@ -16,57 +16,23 @@ B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_Tro
 B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\main.cpp(351,6): error C2171: '!': illegal on operands of type 'void'
 B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\main.cpp(351,52): error C2451: a conditional expression of type 'void' is not valid
 B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\main.cpp(351,6): message : Expressions of type void cannot be converted to other types
-B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\main.cpp(365,25): error C2679: binary '<<': no operator found which takes a right-hand operand of type '_Ty' (or there is no acceptable conversion)
-          with
-          [
-              _Ty=TrophyCase
-          ]
-C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103\include\ostream(471,39): message : could be 'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(std::basic_streambuf<char,std::char_traits<char>> *)'
-C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103\include\ostream(439,39): message : or       'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(const void *)'
-C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103\include\ostream(421,39): message : or       'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(long double)'
-C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103\include\ostream(403,39): message : or       'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(double)'
-C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103\include\ostream(385,39): message : or       'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(float)'
-C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103\include\ostream(367,39): message : or       'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(unsigned __int64)'
-C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103\include\ostream(349,39): message : or       'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(__int64)'
-C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103\include\ostream(331,39): message : or       'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(unsigned long)'
-C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103\include\ostream(313,39): message : or       'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(long)'
-C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103\include\ostream(294,39): message : or       'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(unsigned int)'
-C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103\include\ostream(268,39): message : or       'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(int)'
-C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103\include\ostream(249,39): message : or       'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(unsigned short)'
-C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103\include\ostream(215,39): message : or       'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(short)'
-C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103\include\ostream(197,39): message : or       'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(bool)'
-C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103\include\ostream(192,39): message : or       'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(std::ios_base &(__cdecl *)(std::ios_base &))'
-C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103\include\ostream(187,39): message : or       'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(std::basic_ios<char,std::char_traits<char>> &(__cdecl *)(std::basic_ios<char,std::char_traits<char>> &))'
-C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103\include\ostream(182,39): message : or       'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(std::basic_ostream<char,std::char_traits<char>> &(__cdecl *)(std::basic_ostream<char,std::char_traits<char>> &))'
-B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\Trophy.h(17,18): message : or       'std::ostream &operator <<(std::ostream &,const Trophy &)'
-B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\main.cpp(365,25): message : while trying to match the argument list '(std::ostream, _Ty)'
-          with
-          [
-              _Ty=TrophyCase
-          ]
   TrophyCase.cpp
 B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\TrophyCase.cpp(5,25): warning C4458: declaration of 'trophies' hides class member
-B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\TrophyCase.h(26,14): message : see declaration of 'TrophyCase::trophies'
-B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\TrophyCase.cpp(5,41): error C3078: array size must be specified in new expressions without an initializer
+B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\TrophyCase.h(27,14): message : see declaration of 'TrophyCase::trophies'
+B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\TrophyCase.cpp(5,14): warning C4189: 'trophies': local variable is initialized but not referenced
+B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\TrophyCase.cpp(51,26): warning C4458: declaration of 'trophies' hides class member
+B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\TrophyCase.h(27,14): message : see declaration of 'TrophyCase::trophies'
+B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\TrophyCase.cpp(49,58): warning C4100: 'color': unreferenced formal parameter
+B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\TrophyCase.cpp(49,45): warning C4100: 'level': unreferenced formal parameter
+B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\TrophyCase.cpp(73,49): warning C4100: 'newLevel': unreferenced formal parameter
+B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\TrophyCase.cpp(78,51): warning C4100: 'newColor': unreferenced formal parameter
   Trophy.cpp
-B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\Trophy.cpp(53,17): warning C4239: nonstandard extension used: 'return': conversion from 'Trophy' to 'Trophy &'
-B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\Trophy.cpp(53,17): message : A non-const reference may only be bound to an lvalue
-B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\Trophy.cpp(51,45): warning C4100: 'trophy': unreferenced formal parameter
-B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\Trophy.cpp(58,17): warning C4239: nonstandard extension used: 'return': conversion from 'Trophy' to 'Trophy &'
-B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\Trophy.cpp(58,17): message : A non-const reference may only be bound to an lvalue
-B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\Trophy.cpp(56,45): warning C4100: 'trophy': unreferenced formal parameter
-B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\Trophy.cpp(63,17): warning C4239: nonstandard extension used: 'return': conversion from 'Trophy' to 'Trophy &'
-B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\Trophy.cpp(63,17): message : A non-const reference may only be bound to an lvalue
-B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\Trophy.cpp(61,46): warning C4100: 'trophy': unreferenced formal parameter
-B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\Trophy.cpp(68,17): warning C4239: nonstandard extension used: 'return': conversion from 'Trophy' to 'Trophy &'
-B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\Trophy.cpp(68,17): message : A non-const reference may only be bound to an lvalue
-B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\Trophy.cpp(66,46): warning C4100: 'trophy': unreferenced formal parameter
-B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\Trophy.cpp(73,17): warning C4239: nonstandard extension used: 'return': conversion from 'Trophy' to 'Trophy &'
-B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\Trophy.cpp(73,17): message : A non-const reference may only be bound to an lvalue
-B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\Trophy.cpp(71,46): warning C4100: 'trophy': unreferenced formal parameter
-B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\Trophy.cpp(78,17): warning C4239: nonstandard extension used: 'return': conversion from 'Trophy' to 'Trophy &'
-B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\Trophy.cpp(78,17): message : A non-const reference may only be bound to an lvalue
-B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\Trophy.cpp(76,46): warning C4100: 'trophy': unreferenced formal parameter
+B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\Trophy.cpp(51,42): warning C4100: 'trophy': unreferenced formal parameter
+B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\Trophy.cpp(56,42): warning C4100: 'trophy': unreferenced formal parameter
+B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\Trophy.cpp(61,43): warning C4100: 'trophy': unreferenced formal parameter
+B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\Trophy.cpp(66,43): warning C4100: 'trophy': unreferenced formal parameter
+B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\Trophy.cpp(71,43): warning C4100: 'trophy': unreferenced formal parameter
+B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\Trophy.cpp(76,43): warning C4100: 'trophy': unreferenced formal parameter
 B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\Trophy.cpp(103,29): warning C4458: declaration of 'name' hides class member
 B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\Trophy.h(33,10): message : see declaration of 'Trophy::name'
 B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\Trophy.cpp(109,27): warning C4458: declaration of 'level' hides class member
@@ -89,53 +55,13 @@ B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_Tro
 B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\main.cpp(351,6): error C2171: '!': illegal on operands of type 'void'
 B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\main.cpp(351,52): error C2451: a conditional expression of type 'void' is not valid
 B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\main.cpp(351,6): message : Expressions of type void cannot be converted to other types
-B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\main.cpp(365,25): error C2679: binary '<<': no operator found which takes a right-hand operand of type '_Ty' (or there is no acceptable conversion)
-          with
-          [
-              _Ty=TrophyCase
-          ]
-C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103\include\ostream(471,39): message : could be 'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(std::basic_streambuf<char,std::char_traits<char>> *)'
-C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103\include\ostream(439,39): message : or       'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(const void *)'
-C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103\include\ostream(421,39): message : or       'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(long double)'
-C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103\include\ostream(403,39): message : or       'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(double)'
-C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103\include\ostream(385,39): message : or       'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(float)'
-C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103\include\ostream(367,39): message : or       'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(unsigned __int64)'
-C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103\include\ostream(349,39): message : or       'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(__int64)'
-C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103\include\ostream(331,39): message : or       'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(unsigned long)'
-C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103\include\ostream(313,39): message : or       'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(long)'
-C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103\include\ostream(294,39): message : or       'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(unsigned int)'
-C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103\include\ostream(268,39): message : or       'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(int)'
-C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103\include\ostream(249,39): message : or       'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(unsigned short)'
-C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103\include\ostream(215,39): message : or       'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(short)'
-C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103\include\ostream(197,39): message : or       'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(bool)'
-C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103\include\ostream(192,39): message : or       'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(std::ios_base &(__cdecl *)(std::ios_base &))'
-C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103\include\ostream(187,39): message : or       'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(std::basic_ios<char,std::char_traits<char>> &(__cdecl *)(std::basic_ios<char,std::char_traits<char>> &))'
-C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103\include\ostream(182,39): message : or       'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(std::basic_ostream<char,std::char_traits<char>> &(__cdecl *)(std::basic_ostream<char,std::char_traits<char>> &))'
-B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\Trophy.h(17,18): message : or       'std::ostream &operator <<(std::ostream &,const Trophy &)'
-B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\main.cpp(365,25): message : while trying to match the argument list '(std::ostream, _Ty)'
-          with
-          [
-              _Ty=TrophyCase
-          ]
   Trophy.cpp
-B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\Trophy.cpp(53,17): warning C4239: nonstandard extension used: 'return': conversion from 'Trophy' to 'Trophy &'
-B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\Trophy.cpp(53,17): message : A non-const reference may only be bound to an lvalue
-B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\Trophy.cpp(51,45): warning C4100: 'trophy': unreferenced formal parameter
-B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\Trophy.cpp(58,17): warning C4239: nonstandard extension used: 'return': conversion from 'Trophy' to 'Trophy &'
-B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\Trophy.cpp(58,17): message : A non-const reference may only be bound to an lvalue
-B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\Trophy.cpp(56,45): warning C4100: 'trophy': unreferenced formal parameter
-B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\Trophy.cpp(63,17): warning C4239: nonstandard extension used: 'return': conversion from 'Trophy' to 'Trophy &'
-B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\Trophy.cpp(63,17): message : A non-const reference may only be bound to an lvalue
-B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\Trophy.cpp(61,46): warning C4100: 'trophy': unreferenced formal parameter
-B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\Trophy.cpp(68,17): warning C4239: nonstandard extension used: 'return': conversion from 'Trophy' to 'Trophy &'
-B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\Trophy.cpp(68,17): message : A non-const reference may only be bound to an lvalue
-B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\Trophy.cpp(66,46): warning C4100: 'trophy': unreferenced formal parameter
-B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\Trophy.cpp(73,17): warning C4239: nonstandard extension used: 'return': conversion from 'Trophy' to 'Trophy &'
-B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\Trophy.cpp(73,17): message : A non-const reference may only be bound to an lvalue
-B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\Trophy.cpp(71,46): warning C4100: 'trophy': unreferenced formal parameter
-B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\Trophy.cpp(78,17): warning C4239: nonstandard extension used: 'return': conversion from 'Trophy' to 'Trophy &'
-B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\Trophy.cpp(78,17): message : A non-const reference may only be bound to an lvalue
-B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\Trophy.cpp(76,46): warning C4100: 'trophy': unreferenced formal parameter
+B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\Trophy.cpp(51,42): warning C4100: 'trophy': unreferenced formal parameter
+B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\Trophy.cpp(56,42): warning C4100: 'trophy': unreferenced formal parameter
+B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\Trophy.cpp(61,43): warning C4100: 'trophy': unreferenced formal parameter
+B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\Trophy.cpp(66,43): warning C4100: 'trophy': unreferenced formal parameter
+B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\Trophy.cpp(71,43): warning C4100: 'trophy': unreferenced formal parameter
+B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\Trophy.cpp(76,43): warning C4100: 'trophy': unreferenced formal parameter
 B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\Trophy.cpp(103,29): warning C4458: declaration of 'name' hides class member
 B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\Trophy.h(33,10): message : see declaration of 'Trophy::name'
 B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\Trophy.cpp(109,27): warning C4458: declaration of 'level' hides class member
@@ -144,18 +70,18 @@ B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_Tro
 B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\Trophy.h(35,9): message : see declaration of 'Trophy::color'
   TrophyCase.cpp
 B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\TrophyCase.cpp(5,25): warning C4458: declaration of 'trophies' hides class member
-B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\TrophyCase.h(26,14): message : see declaration of 'TrophyCase::trophies'
-B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\TrophyCase.cpp(5,41): error C3078: array size must be specified in new expressions without an initializer
+B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\TrophyCase.h(27,14): message : see declaration of 'TrophyCase::trophies'
+B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\TrophyCase.cpp(5,14): warning C4189: 'trophies': local variable is initialized but not referenced
+B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\TrophyCase.cpp(51,26): warning C4458: declaration of 'trophies' hides class member
+B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\TrophyCase.h(27,14): message : see declaration of 'TrophyCase::trophies'
+B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\TrophyCase.cpp(49,58): warning C4100: 'color': unreferenced formal parameter
+B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\TrophyCase.cpp(49,45): warning C4100: 'level': unreferenced formal parameter
+B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\TrophyCase.cpp(73,49): warning C4100: 'newLevel': unreferenced formal parameter
+B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\TrophyCase.cpp(78,51): warning C4100: 'newColor': unreferenced formal parameter
   Generating Code...
-B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\Trophy.cpp(53): warning C4172: returning address of local variable or temporary
-B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\Trophy.cpp(58): warning C4172: returning address of local variable or temporary
-B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\Trophy.cpp(63): warning C4172: returning address of local variable or temporary
-B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\Trophy.cpp(68): warning C4172: returning address of local variable or temporary
-B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\Trophy.cpp(73): warning C4172: returning address of local variable or temporary
-B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\Trophy.cpp(78): warning C4172: returning address of local variable or temporary
-B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\Trophy.cpp(53): warning C4172: returning address of local variable or temporary
-B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\Trophy.cpp(63): warning C4172: returning address of local variable or temporary
-B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\Trophy.cpp(58): warning C4172: returning address of local variable or temporary
-B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\Trophy.cpp(68): warning C4172: returning address of local variable or temporary
-B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\Trophy.cpp(73): warning C4172: returning address of local variable or temporary
-B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\Trophy.cpp(78): warning C4172: returning address of local variable or temporary
+B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\TrophyCase.cpp(37): error C4716: 'operator<<': must return a value
+B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\TrophyCase.cpp(29): warning C4717: 'TrophyCase::operator=': recursive on all control paths, function will cause runtime stack overflow
+B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\TrophyCase.cpp(29): error C4716: 'TrophyCase::operator=': must return a value
+B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\TrophyCase.cpp(37): error C4716: 'operator<<': must return a value
+B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\TrophyCase.cpp(29): warning C4717: 'TrophyCase::operator=': recursive on all control paths, function will cause runtime stack overflow
+B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\TrophyCase.cpp(29): error C4716: 'TrophyCase::operator=': must return a value

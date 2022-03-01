@@ -15,12 +15,12 @@ public:
 	Trophy(const Trophy& trophy);
 	Trophy& operator = (const Trophy& trophy);
 	friend ostream& operator << (ostream& sout, const Trophy& trophy);
-	Trophy& operator < (const Trophy& trophy);
-	Trophy& operator > (const Trophy& trophy);
-	Trophy& operator == (const Trophy& trophy);
-	Trophy& operator != (const Trophy& trophy);
-	Trophy& operator <= (const Trophy& trophy);
-	Trophy& operator >= (const Trophy& trophy);
+	bool operator < (const Trophy& trophy) const;
+	bool operator > (const Trophy& trophy) const;
+	bool operator == (const Trophy& trophy) const;
+	bool operator != (const Trophy& trophy) const;
+	bool operator <= (const Trophy& trophy) const;
+	bool operator >= (const Trophy& trophy) const;
 	~Trophy();
 	string getName() const;
 	int getLevel() const;
