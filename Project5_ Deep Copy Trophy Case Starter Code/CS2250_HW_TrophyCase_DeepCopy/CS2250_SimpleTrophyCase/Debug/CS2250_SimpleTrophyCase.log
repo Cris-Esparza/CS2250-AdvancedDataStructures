@@ -2,29 +2,12 @@
 cl : command line warning D9025: overriding '/W3' with '/W4'
   main.cpp
   TrophyCase.cpp
-B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\TrophyCase.cpp(5,25): warning C4458: declaration of 'trophies' hides class member
-B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\TrophyCase.h(27,14): message : see declaration of 'TrophyCase::trophies'
-B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\TrophyCase.cpp(5,14): warning C4189: 'trophies': local variable is initialized but not referenced
 B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\TrophyCase.cpp(53,26): warning C4458: declaration of 'trophies' hides class member
-B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\TrophyCase.h(27,14): message : see declaration of 'TrophyCase::trophies'
+B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\TrophyCase.h(27,15): message : see declaration of 'TrophyCase::trophies'
 B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\TrophyCase.cpp(51,58): warning C4100: 'color': unreferenced formal parameter
 B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\TrophyCase.cpp(51,45): warning C4100: 'level': unreferenced formal parameter
 B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\TrophyCase.cpp(76,49): warning C4100: 'newLevel': unreferenced formal parameter
 B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\TrophyCase.cpp(81,51): warning C4100: 'newColor': unreferenced formal parameter
-  Trophy.cpp
-B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\Trophy.cpp(51,42): warning C4100: 'trophy': unreferenced formal parameter
-B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\Trophy.cpp(56,42): warning C4100: 'trophy': unreferenced formal parameter
-B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\Trophy.cpp(61,43): warning C4100: 'trophy': unreferenced formal parameter
-B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\Trophy.cpp(66,43): warning C4100: 'trophy': unreferenced formal parameter
-B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\Trophy.cpp(71,43): warning C4100: 'trophy': unreferenced formal parameter
-B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\Trophy.cpp(76,43): warning C4100: 'trophy': unreferenced formal parameter
-B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\Trophy.cpp(103,29): warning C4458: declaration of 'name' hides class member
-B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\Trophy.h(33,10): message : see declaration of 'Trophy::name'
-B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\Trophy.cpp(109,27): warning C4458: declaration of 'level' hides class member
-B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\Trophy.h(34,7): message : see declaration of 'Trophy::level'
-B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\Trophy.cpp(115,29): warning C4458: declaration of 'color' hides class member
-B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\Trophy.h(35,9): message : see declaration of 'Trophy::color'
-  main.cpp
   Trophy.cpp
 B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\Trophy.cpp(51,42): warning C4100: 'trophy': unreferenced formal parameter
 B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\Trophy.cpp(56,42): warning C4100: 'trophy': unreferenced formal parameter
@@ -39,16 +22,12 @@ B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_Tro
 B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\Trophy.cpp(115,29): warning C4458: declaration of 'color' hides class member
 B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\Trophy.h(35,9): message : see declaration of 'Trophy::color'
   TrophyCase.cpp
-B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\TrophyCase.cpp(5,25): warning C4458: declaration of 'trophies' hides class member
-B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\TrophyCase.h(27,14): message : see declaration of 'TrophyCase::trophies'
-B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\TrophyCase.cpp(5,14): warning C4189: 'trophies': local variable is initialized but not referenced
 B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\TrophyCase.cpp(53,26): warning C4458: declaration of 'trophies' hides class member
-B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\TrophyCase.h(27,14): message : see declaration of 'TrophyCase::trophies'
+B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\TrophyCase.h(27,15): message : see declaration of 'TrophyCase::trophies'
 B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\TrophyCase.cpp(51,58): warning C4100: 'color': unreferenced formal parameter
 B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\TrophyCase.cpp(51,45): warning C4100: 'level': unreferenced formal parameter
 B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\TrophyCase.cpp(76,49): warning C4100: 'newLevel': unreferenced formal parameter
 B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\TrophyCase.cpp(81,51): warning C4100: 'newColor': unreferenced formal parameter
+  main.cpp
   Generating Code...
-B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\TrophyCase.cpp(30): warning C4717: 'TrophyCase::operator=': recursive on all control paths, function will cause runtime stack overflow
-B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\TrophyCase.cpp(30): warning C4717: 'TrophyCase::operator=': recursive on all control paths, function will cause runtime stack overflow
   CS2250_SimpleTrophyCase.vcxproj -> B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\Debug\CS2250_TrophyCase_DeepCopy.exe

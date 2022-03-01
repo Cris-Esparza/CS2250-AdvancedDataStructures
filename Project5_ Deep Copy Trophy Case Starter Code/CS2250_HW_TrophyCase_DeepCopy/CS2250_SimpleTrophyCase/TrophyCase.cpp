@@ -2,14 +2,14 @@
 
 TrophyCase::TrophyCase()
 {
-	TrophyCase* trophies = new TrophyCase[10];
-	nbrOfTrophies = new int(1);
 	capacity = new int(10);
+	nbrOfTrophies = new int(0);
+	trophies = new TrophyCase*[*capacity];
 }
 
 TrophyCase::TrophyCase(const TrophyCase& trophyCase)
 {
-	trophies = new TrophyCase(*trophyCase.trophies);
+	trophies = new TrophyCase*(*trophyCase.trophies);
 	nbrOfTrophies = new int(*trophyCase.nbrOfTrophies);
 	capacity = new int(*trophyCase.capacity);
 }
@@ -50,7 +50,7 @@ int TrophyCase::getAllocatedSize()
 
 bool TrophyCase::addTrophy(string name, int level, Color color)
 {
-	TrophyCase** trophies = new TrophyCase * [10];
+	TrophyCase** trophies = new TrophyCase * [*capacity];
 	for (int i = 0; i < 10; ++i)
 	{
 		trophies[i] = new TrophyCase();

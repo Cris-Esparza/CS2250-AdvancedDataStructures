@@ -1,3 +1,3 @@
 ﻿  unittest1.cpp
-B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\CS2250_SimpleTrophyCase\TrophyCase.cpp(30): warning C4717: 'TrophyCase::operator=': recursive on all control paths, function will cause runtime stack overflow
+     Creating library B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\Debug\TrophyTest.lib and object B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\Debug\TrophyTest.exp
   TrophyTest.vcxproj -> B:\A drive\Git\CS2250\Project5_ Deep Copy Trophy Case Starter Code\CS2250_HW_TrophyCase_DeepCopy\Debug\TrophyTest.dll
