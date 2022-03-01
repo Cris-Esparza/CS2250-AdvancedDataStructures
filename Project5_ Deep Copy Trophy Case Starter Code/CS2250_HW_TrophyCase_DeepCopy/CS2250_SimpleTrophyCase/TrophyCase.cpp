@@ -26,6 +26,7 @@ TrophyCase& TrophyCase :: operator = (const TrophyCase& trophyCase)
 	*trophies = *trophyCase.trophies;
 	*nbrOfTrophies = *trophyCase.nbrOfTrophies;
 	*capacity = *trophyCase.capacity;
+	return *this;
 }
 
 ostream& operator << (ostream& sout, const TrophyCase& trophies)
@@ -34,6 +35,7 @@ ostream& operator << (ostream& sout, const TrophyCase& trophies)
 	{
 		sout << trophies.trophies[i] << endl;
 	}
+	return sout;
 }
 
 int TrophyCase :: getNbrOfTrophies()
@@ -46,38 +48,39 @@ int TrophyCase::getAllocatedSize()
 	return *capacity;
 }
 
-void TrophyCase::addTrophy(string name, int level, Color color)
+bool TrophyCase::addTrophy(string name, int level, Color color)
 {
 	TrophyCase** trophies = new TrophyCase * [10];
 	for (int i = 0; i < 10; ++i)
 	{
 		trophies[i] = new TrophyCase();
 	}
+	return true;
 }
 
-void TrophyCase::copyTrophy(string name)
+bool TrophyCase::copyTrophy(string name)
 {
-
+	return true;
 }
 
-void TrophyCase::deleteTrophy(string name)
+bool TrophyCase::deleteTrophy(string name)
 {
-
+	return true;
 }
 
-void TrophyCase::renameTrophy(string name, string newName)
+bool TrophyCase::renameTrophy(string name, string newName)
 {
-
+	return true;
 }
 
-void TrophyCase::relevelTrophy(string name, int newLevel)
+bool TrophyCase::relevelTrophy(string name, int newLevel)
 {
-
+	return true;
 }
 
-void TrophyCase::recolorTrophy(string name, Color newColor)
+bool TrophyCase::recolorTrophy(string name, Color newColor)
 {
-
+	return true;
 }
 
 void TrophyCase::searchTrophies(string name)

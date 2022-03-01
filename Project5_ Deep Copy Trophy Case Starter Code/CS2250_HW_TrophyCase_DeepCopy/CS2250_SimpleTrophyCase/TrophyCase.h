@@ -15,12 +15,12 @@ public:
 	friend ostream& operator << (ostream& sout, const TrophyCase& trophies);
 	int getNbrOfTrophies();
 	int getAllocatedSize();
-	void addTrophy(string name, int level, Color color);
-	void copyTrophy(string name);
-	void deleteTrophy(string name);
-	void renameTrophy(string name, string newName);
-	void relevelTrophy(string name, int newLevel);
-	void recolorTrophy(string name, Color newColor);
+	bool addTrophy(string name, int level, Color color);
+	bool copyTrophy(string name);
+	bool deleteTrophy(string name);
+	bool renameTrophy(string name, string newName);
+	bool relevelTrophy(string name, int newLevel);
+	bool recolorTrophy(string name, Color newColor);
 	void searchTrophies(string name);
 	void sortTrophies();
 private:
