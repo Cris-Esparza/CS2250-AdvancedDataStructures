@@ -50,7 +50,7 @@ int TrophyCase::getAllocatedSize()
 
 bool TrophyCase::addTrophy(string name, int level, Color color)
 {
-	
+	Trophy* trophy = new Trophy(name, level, color);
 	return true;
 }
 
