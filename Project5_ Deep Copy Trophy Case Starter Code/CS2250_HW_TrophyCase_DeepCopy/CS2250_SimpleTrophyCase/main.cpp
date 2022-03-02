@@ -157,7 +157,7 @@ int main()
 	// Code required to run the memory leak detection
 	// TODO: Comment out the following line before submitting
 	//////////////////////////////////////////////////////////////////////////////////////////
-	_CrtDumpMemoryLeaks();
+	/*_CrtDumpMemoryLeaks();*/
 
 	return 0;
 }

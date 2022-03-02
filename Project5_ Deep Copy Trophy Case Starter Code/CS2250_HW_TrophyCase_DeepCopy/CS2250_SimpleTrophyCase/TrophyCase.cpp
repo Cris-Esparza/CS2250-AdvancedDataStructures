@@ -31,9 +31,9 @@ TrophyCase& TrophyCase :: operator = (const TrophyCase& trophyCase)
 
 ostream& operator << (ostream& sout, const TrophyCase& trophies)
 {
-	for (int i = 0; i < *trophies.capacity; ++i)
+	for (int i = 0; i < *trophies.nbrOfTrophies; ++i)
 	{
-		sout << trophies.trophies[i] << endl;
+		sout << *trophies.trophies[i] << endl;
 	}
 	return sout;
 }
@@ -50,11 +50,7 @@ int TrophyCase::getAllocatedSize()
 
 bool TrophyCase::addTrophy(string name, int level, Color color)
 {
-	TrophyCase** trophies = new TrophyCase * [*capacity];
-	for (int i = 0; i < 10; ++i)
-	{
-		trophies[i] = new TrophyCase();
-	}
+	
 	return true;
 }
 
