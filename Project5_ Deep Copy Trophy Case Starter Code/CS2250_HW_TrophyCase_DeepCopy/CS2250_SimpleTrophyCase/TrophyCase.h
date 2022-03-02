@@ -24,7 +24,7 @@ public:
 	void searchTrophies(string name);
 	void sortTrophies();
 private:
-	TrophyCase** trophies;
+	Trophy** trophies;
 	int *nbrOfTrophies;
 	int *capacity;
 };
