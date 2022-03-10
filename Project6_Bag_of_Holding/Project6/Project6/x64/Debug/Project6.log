@@ -1,2 +1,2 @@
 ﻿  BagOfHolding.cpp
-  Project6.vcxproj -> B:\A drive\Git\CS2250\Project6_Bag_of_Holding\Project6\x64\Debug\Project6.exe
+B:\A drive\Git\CS2250\Project6_Bag_of_Holding\Project 6_ Bag of Holding Starter Code\BagOfHolding.cpp(113): error C4703: potentially uninitialized local pointer variable 'prev' used

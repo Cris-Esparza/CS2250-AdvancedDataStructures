@@ -36,7 +36,22 @@ BagOfHolding::BagOfHolding(const BagOfHolding& list)
 
 BagOfHolding::~BagOfHolding()
 {
-	delete m_head;
+	while (size() > 1)
+	{
+		BagOfHoldingItem* temp = m_head;
+		BagOfHoldingItem* prev = m_head;
+		for (int i = 1; i < size(); ++i)
+		{
+			prev = temp;
+			temp = temp->getNext();
+		}
+		prev->setNext(nullptr);
+		delete temp;
+	}
+	if (size() > 0)
+	{
+		delete m_head;
+	}
 }
 
 // Mutators
@@ -49,7 +64,22 @@ void BagOfHolding::addTop(string item)
 
 void BagOfHolding::addBottom(string item)
 {
-
+	BagOfHoldingItem* newItem = new BagOfHoldingItem(item);
+	newItem->setItem(item);
+	newItem->setNext(nullptr);
+	if (m_head == nullptr)
+	{
+		m_head = newItem;
+	}
+	else
+	{
+		BagOfHoldingItem* temp = m_head;
+		while (temp->getNext() != nullptr)
+		{
+			temp = temp->getNext();
+		}
+		temp->setNext(newItem);
+	}
 }
 
 string BagOfHolding::removeTop()
@@ -63,12 +93,61 @@ string BagOfHolding::removeTop()
 
 string BagOfHolding::removeBottom()
 {
-	return " ";
+	BagOfHoldingItem* newItem;
+	BagOfHoldingItem* prev;
+	string item = m_head->getItem();
+	if (m_head->getNext() == nullptr)
+	{
+		newItem = m_head;
+		m_head = nullptr;
+		delete newItem;
+	}
+	else
+	{
+		newItem = m_head;
+		while (newItem->getNext() != nullptr)
+		{
+			prev = newItem;
+			newItem = newItem->getNext();
+		}
+		prev->setNext(nullptr);
+	}
+	return item;
 }
 
 bool BagOfHolding::removeItem(string item)
 {
-	
+	BagOfHoldingItem* curr = m_head;
+	BagOfHoldingItem* prev = nullptr;
+	if (m_head != nullptr)
+	{
+		while (curr != nullptr)
+		{
+			if (curr->getItem() == item)
+			{
+				delete curr;
+				return true;
+			}
+			else
+			{
+				prev = curr;
+				curr = curr->getNext();
+			}
+		}
+		if (curr != nullptr)
+		{
+			if (m_head == curr)
+			{
+				m_head = m_head->getNext();
+			}
+			else
+			{
+				prev->setNext(curr->getNext());
+				delete curr;
+			}
+			delete curr;
+		}
+	}
 	return false;
 }
 
@@ -89,7 +168,7 @@ bool BagOfHolding::search(string item) const
 
 int BagOfHolding::size() const
 {
-	return 0;
+	return m_head->getNbrNodes();
 }
 
 // Operators
