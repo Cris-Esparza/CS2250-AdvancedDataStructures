@@ -36,13 +36,15 @@ BagOfHolding::BagOfHolding(const BagOfHolding& list)
 
 BagOfHolding::~BagOfHolding()
 {
-	
+	delete m_head;
 }
 
 // Mutators
 void BagOfHolding::addTop(string item)
 {
-	m_head = new BagOfHoldingItem(item, m_head);
+	BagOfHoldingItem* newItem = new BagOfHoldingItem(item);
+	newItem->setNext(m_head);
+	m_head = newItem;
 }
 
 void BagOfHolding::addBottom(string item)
@@ -52,10 +54,11 @@ void BagOfHolding::addBottom(string item)
 
 string BagOfHolding::removeTop()
 {
-	BagOfHoldingItem* curr = m_head;
-	m_head = m_head->getNext();
-	delete curr;
-	return " ";
+	string item = m_head->getItem();
+	BagOfHoldingItem* temp = m_head;
+	m_head = temp->getNext();
+	delete temp;
+	return item;
 }
 
 string BagOfHolding::removeBottom()
@@ -65,12 +68,22 @@ string BagOfHolding::removeBottom()
 
 bool BagOfHolding::removeItem(string item)
 {
+	
 	return false;
 }
 
 // Accessors
 bool BagOfHolding::search(string item) const
 {
+	BagOfHoldingItem* curr = m_head;
+	while (curr != nullptr)
+	{
+		if (curr->getItem() == item)
+		{
+			return true;
+			curr = curr->getNext();
+		}
+	}
 	return false;
 }
 
