@@ -93,24 +93,25 @@ string BagOfHolding::removeTop()
 
 string BagOfHolding::removeBottom()
 {
-	BagOfHoldingItem* newItem;
-	BagOfHoldingItem* prev;
-	string item = m_head->getItem();
+	BagOfHoldingItem* curr;
+	BagOfHoldingItem* prev = nullptr;
+	string item;
 	if (m_head->getNext() == nullptr)
 	{
-		newItem = m_head;
+		curr = m_head;
 		m_head = nullptr;
-		delete newItem;
+		delete curr;
 	}
 	else
 	{
-		newItem = m_head;
-		while (newItem->getNext() != nullptr)
+		curr = m_head;
+		while (curr->getNext() != nullptr)
 		{
-			prev = newItem;
-			newItem = newItem->getNext();
+			prev = curr;
+			curr = curr->getNext();
 		}
 		prev->setNext(nullptr);
+		item = prev->getItem();
 	}
 	return item;
 }
