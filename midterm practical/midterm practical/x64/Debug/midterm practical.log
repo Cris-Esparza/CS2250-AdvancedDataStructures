@@ -1,0 +1,3 @@
+﻿  Source.cpp
+B:\A drive\Git\CS2250\midterm practical\midterm practical\Source.cpp(5,5): error C2143: syntax error: missing ';' before '<<'
+B:\A drive\Git\CS2250\midterm practical\midterm practical\Source.cpp(5,5): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int

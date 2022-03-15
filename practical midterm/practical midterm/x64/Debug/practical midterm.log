@@ -1,0 +1,3 @@
+﻿  Source.cpp
+B:\A drive\Git\CS2250\practical midterm\practical midterm\Source.cpp(114): warning C4715: 'findStudent': not all control paths return a value
+  practical midterm.vcxproj -> B:\A drive\Git\CS2250\practical midterm\x64\Debug\practical midterm.exe
