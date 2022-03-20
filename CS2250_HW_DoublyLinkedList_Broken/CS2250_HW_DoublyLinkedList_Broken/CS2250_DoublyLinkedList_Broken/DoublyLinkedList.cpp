@@ -15,6 +15,25 @@ DoublyLinkedList::DoublyLinkedList()
 // the "this" list, in order
 DoublyLinkedList::DoublyLinkedList(const DoublyLinkedList& list)
 {
+    // Copy each item into new list
+    DoublyLinkedListNode* listCurr = list.m_head;
+
+    // Check to see if list has any items
+    if (list.m_head != NULL)
+    {
+        // Copy data over
+        m_head = new DoublyLinkedListNode(list.m_head->GetData());
+        DoublyLinkedListNode* curr = m_head;
+        listCurr = listCurr->GetNext();
+        while (listCurr != NULL)
+        {
+            // Create new node and copy listCurr's data
+            DoublyLinkedListNode* temp = new DoublyLinkedListNode(listCurr->GetData());
+            curr->SetNext(temp);
+            curr = temp;
+            listCurr = listCurr->GetNext();
+        }
+    }
     m_count = 0;
 }
 
@@ -62,6 +81,25 @@ void DoublyLinkedList::AddFront( int item )
 // AddBack - adds the item to the back of the list
 void DoublyLinkedList::AddBack( int item )
 {
+    // Check if list is empty
+    if (m_tail == NULL)
+    {
+        // Set head and tail to point to only node
+        m_tail = new DoublyLinkedListNode(item);
+        m_head = m_tail;
+    }
+    else
+    {
+        // Create a new node
+        DoublyLinkedListNode* newNode = new DoublyLinkedListNode(item);
+
+        // Connect the new node to the back of the list
+        m_tail->SetNext(newNode);
+        newNode->SetPrev(m_tail);
+
+        // Set tail to point to new node
+        m_tail = newNode;
+    }
 }
 
 // RemoveFront - removes the first item in the list
@@ -117,11 +155,24 @@ int DoublyLinkedList::RemoveFront()
 int DoublyLinkedList::RemoveBack()
 {
     // If there are no items in the list
-    if (m_head = m_tail)
+    if (m_tail == NULL)
     {
 		cerr << "ERROR:  Cannot remove from an empty list" << endl;
         return 0;
 	}
+    // If theres one item in the list
+    else if (m_tail == m_head)
+    {
+        //Store data to be removed
+        int data = m_tail->GetData();
+
+        //Delete only node
+        delete m_tail;
+        m_head = NULL;
+        m_tail = NULL;
+        --m_count;
+        return data;
+    }
     // If there at least one item
     else
     {
@@ -132,14 +183,15 @@ int DoublyLinkedList::RemoveBack()
         DoublyLinkedListNode* temp = m_tail;
 
         // Set tail to point to new node
-        m_tail = m_tail->GetNext();
+        m_tail = m_tail->GetPrev();
 
         // Fix new "tail" node's pointer
-        m_tail->SetPrev(m_head);
+        m_tail->SetNext(NULL);
 
         // Delete old head node
         delete temp;
 
+        --m_count;
         return data;
     }
 }
@@ -151,21 +203,30 @@ bool DoublyLinkedList::RemoveItem(int item)
     DoublyLinkedListNode* curr = SearchNodes(item);
 
     // If item was not found or list is empty
-    if (curr = NULL)
+    if (curr == NULL)
     {
         return false;
+    }
+    else if (curr == m_head)
+    {
+        RemoveFront();
+    }
+    else if (curr == m_tail)
+    {
+        RemoveBack();
     }
     // If there at least one item
     else
     {
         // Set left item to point to right item
-        curr->GetNext()->SetPrev(curr->GetNext());
+        curr->GetNext()->SetPrev(curr->GetPrev());
 
         // Set right item to point to left item
-        curr->GetPrev()->SetNext(curr->GetPrev());
+        curr->GetPrev()->SetNext(curr->GetNext());
 
         // Remove item
         delete curr;
+        --m_count;
     }    
     return true;
 }
@@ -273,7 +334,7 @@ ostream& operator<<(ostream& sout, const DoublyLinkedList& list)
 	while (curr != NULL)
 	{
 		// Display an arrow (pointer!) and the next node
-		sout << "->" << curr->GetData();
+        sout << "->" << curr->GetData();
 		curr = curr->GetNext();
 	}
 
