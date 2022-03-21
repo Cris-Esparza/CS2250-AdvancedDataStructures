@@ -50,6 +50,6 @@ private:
 	int m_count;                    // number of nodes in list
 };
 
-
+#include "DoublyLinkedList.cpp"
 
 #endif
