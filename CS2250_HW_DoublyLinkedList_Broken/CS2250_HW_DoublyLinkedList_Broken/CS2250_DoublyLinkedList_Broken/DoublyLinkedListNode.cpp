@@ -77,7 +77,7 @@ DoublyLinkedListNode<T>::~DoublyLinkedListNode(void)
 // Accessors
 // GetData - returns the data stored in the node
 template <class T>
-int DoublyLinkedListNode<T>::GetData() const
+T DoublyLinkedListNode<T>::GetData() const
 {
 	return m_data;
 }

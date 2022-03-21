@@ -114,7 +114,7 @@ void DoublyLinkedList<T>::AddBack( T item )
 // Returns the value stored in the first item in the list
 // Displays an error and returns 0 if the list is empty
 template <class T>
-int DoublyLinkedList<T>::RemoveFront()
+T DoublyLinkedList<T>::RemoveFront()
 {
     // If there are no items in the list
     if (m_head == NULL)
@@ -126,7 +126,7 @@ int DoublyLinkedList<T>::RemoveFront()
     else if (m_head == m_tail)
     {
         //Store data to be removed
-        int data = m_head->GetData();
+        T data = m_head->GetData();
 
         //Delete only node
         delete m_head;
@@ -139,7 +139,7 @@ int DoublyLinkedList<T>::RemoveFront()
     else
     {
         // Store data to be removed
-        int data = m_head->GetData();
+        T data = m_head->GetData();
 
         // Create a temp pointer to node to remove
         DoublyLinkedListNode<T>* temp = m_head;
@@ -162,7 +162,7 @@ int DoublyLinkedList<T>::RemoveFront()
 // Returns the value stored in the last item in the list
 // Displays an error and returns 0 if the list is empty
 template <class T>
-int DoublyLinkedList<T>::RemoveBack()
+T DoublyLinkedList<T>::RemoveBack()
 {
     // If there are no items in the list
     if (m_tail == NULL)
@@ -174,7 +174,7 @@ int DoublyLinkedList<T>::RemoveBack()
     else if (m_tail == m_head)
     {
         //Store data to be removed
-        int data = m_tail->GetData();
+        T data = m_tail->GetData();
 
         //Delete only node
         delete m_tail;
@@ -187,7 +187,7 @@ int DoublyLinkedList<T>::RemoveBack()
     else
     {
         // Store data to be removed
-        int data = m_tail->GetData();
+        T data = m_tail->GetData();
 
         // Create a temp pointer to node to remove
         DoublyLinkedListNode<T>* temp = m_tail;

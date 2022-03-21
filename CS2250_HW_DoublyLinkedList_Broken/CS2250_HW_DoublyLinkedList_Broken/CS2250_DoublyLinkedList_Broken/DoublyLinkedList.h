@@ -24,8 +24,8 @@ public:
 	void AddBack(T item);
 
 	// Remove methods
-	int  RemoveFront();
-	int  RemoveBack();
+	T  RemoveFront();
+	T  RemoveBack();
 	bool RemoveItem(T item);
 
 	// Facilitator methods

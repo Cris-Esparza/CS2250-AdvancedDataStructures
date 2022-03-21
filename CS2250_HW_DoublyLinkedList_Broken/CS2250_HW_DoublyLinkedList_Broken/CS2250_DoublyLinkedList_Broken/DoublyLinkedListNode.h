@@ -20,7 +20,7 @@ public:
 	~DoublyLinkedListNode(void);
 
 	// Accessors/Inspectors
-	int GetData() const;
+	T GetData() const;
 	DoublyLinkedListNode<T>* GetNext() const;
 	DoublyLinkedListNode<T>* GetPrev() const;
 
