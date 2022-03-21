@@ -3,43 +3,53 @@
 
 #include "DoublyLinkedListNode.h"
 
+// Forward declare class
+template <class T>
+class DoublyLinkedList;
+
+template <class T>
+ostream& operator << <> (ostream& sout, const DoublyLinkedList<T>& list);
+
+template <class T>
 class DoublyLinkedList
 {
 public:
 	// Constructors & Destructor
 	DoublyLinkedList();
-	DoublyLinkedList(const DoublyLinkedList& list);
+	DoublyLinkedList(const DoublyLinkedList<T>& list);
 	~DoublyLinkedList();
 
 	// Add methods
-	void AddFront(int item);
-	void AddBack(int item);
+	void AddFront(T item);
+	void AddBack(T item);
 
 	// Remove methods
 	int  RemoveFront();
 	int  RemoveBack();
-	bool RemoveItem(int item);
+	bool RemoveItem(T item);
 
 	// Facilitator methods
-	bool Search(int item) const;
+	bool Search(T item) const;
 	int  Size() const;
 	void PrintFullNodes() const;
 
 	// Operators
-	DoublyLinkedList& operator=(const DoublyLinkedList& rhsList);
-	friend ostream& operator<<(ostream& sout, const DoublyLinkedList& list);
+	DoublyLinkedList& operator=(const DoublyLinkedList<T>& rhsList);
+	friend ostream& operator<< <> (ostream& sout, const DoublyLinkedList<T>& list);
 
 	// Accessors for TESTING ONLY
-	const DoublyLinkedListNode* const GetHead() const;
-	const DoublyLinkedListNode* const GetTail() const;
+	const DoublyLinkedListNode<T>* const GetHead() const;
+	const DoublyLinkedListNode<T>* const GetTail() const;
 	int GetCount() const;
 
 private:
-	DoublyLinkedListNode* SearchNodes(int item) const;
+	DoublyLinkedListNode<T>* SearchNodes(T item) const;
 
-	DoublyLinkedListNode* m_head;   // first node in list
-	DoublyLinkedListNode* m_tail;   // last node in list
+	DoublyLinkedListNode<T>* m_head;   // first node in list
+	DoublyLinkedListNode<T>* m_tail;   // last node in list
 	int m_count;                    // number of nodes in list
 };
+
+
 
 #endif

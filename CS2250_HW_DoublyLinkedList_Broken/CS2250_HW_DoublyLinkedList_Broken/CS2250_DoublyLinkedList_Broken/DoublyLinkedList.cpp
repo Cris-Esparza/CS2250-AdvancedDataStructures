@@ -3,6 +3,7 @@
 // Default Constructor
 // Initializes first and last pointers to NULL (empty list)
 // Sets number of nodes to zero
+template <class T>
 DoublyLinkedList::DoublyLinkedList()
 {
     m_count = 0;
@@ -13,6 +14,7 @@ DoublyLinkedList::DoublyLinkedList()
 // Copy Constructor
 // Iterates through the parameter list, adding each node to
 // the "this" list, in order
+template <class T>
 DoublyLinkedList::DoublyLinkedList(const DoublyLinkedList& list)
 {
     // Copy each item into new list
@@ -39,6 +41,7 @@ DoublyLinkedList::DoublyLinkedList(const DoublyLinkedList& list)
 
 // Destructor
 // Destroys any remaining nodes in the list
+template <class T>
 DoublyLinkedList::~DoublyLinkedList()
 {
     DoublyLinkedListNode* curr = m_head->GetNext();
@@ -54,6 +57,7 @@ DoublyLinkedList::~DoublyLinkedList()
 }
 
 // AddFront - adds the item to the front of the list
+template <class T>
 void DoublyLinkedList::AddFront( int item )
 {
     //check for empty list
@@ -79,6 +83,7 @@ void DoublyLinkedList::AddFront( int item )
 }
 
 // AddBack - adds the item to the back of the list
+template <class T>
 void DoublyLinkedList::AddBack( int item )
 {
     // Check if list is empty
@@ -105,6 +110,7 @@ void DoublyLinkedList::AddBack( int item )
 // RemoveFront - removes the first item in the list
 // Returns the value stored in the first item in the list
 // Displays an error and returns 0 if the list is empty
+template <class T>
 int DoublyLinkedList::RemoveFront()
 {
     // If there are no items in the list
@@ -152,6 +158,7 @@ int DoublyLinkedList::RemoveFront()
 // RemoveBack - removes the last item in the list
 // Returns the value stored in the last item in the list
 // Displays an error and returns 0 if the list is empty
+template <class T>
 int DoublyLinkedList::RemoveBack()
 {
     // If there are no items in the list
@@ -198,6 +205,7 @@ int DoublyLinkedList::RemoveBack()
 
 // RemoveItem - removes first match to the parameter
 // Returns true if the item was found and removed, false otherwise
+template <class T>
 bool DoublyLinkedList::RemoveItem(int item)
 {
     DoublyLinkedListNode* curr = SearchNodes(item);
@@ -233,6 +241,7 @@ bool DoublyLinkedList::RemoveItem(int item)
 
 // Search - searches for the parameter
 // Returns true if the item is found, false otherwise
+template <class T>
 bool DoublyLinkedList::Search(int item) const
 {
     DoublyLinkedListNode* curr = SearchNodes(item);
@@ -241,6 +250,7 @@ bool DoublyLinkedList::Search(int item) const
 
 // SearchNodes - searches for the parameter and returns its node
 // Returns NULL if the item was not found
+template <class T>
 DoublyLinkedListNode* DoublyLinkedList::SearchNodes(int item) const
 {
     DoublyLinkedListNode* curr = m_head;
@@ -261,6 +271,7 @@ DoublyLinkedListNode* DoublyLinkedList::SearchNodes(int item) const
 }
 
 // Size - returns the number of items in the list
+template <class T>
 int DoublyLinkedList::Size() const
 {
     return m_count - 1;
@@ -276,6 +287,7 @@ int DoublyLinkedList::Size() const
 // as it can find up to the count (prevents infinite
 // looping from pointer errors!).  Displays memory
 // location and node values
+template <class T>
 void DoublyLinkedList::PrintFullNodes() const
 {
 	cout << "Head: " << m_head << endl;
@@ -293,6 +305,7 @@ void DoublyLinkedList::PrintFullNodes() const
 // GetHead - returns the head as a constant pointer to constant data, 
 // allowing the calling function to verify that the elements of the list
 // are correct without altering the list in any way
+template <class T>
 const DoublyLinkedListNode* const DoublyLinkedList::GetHead() const
 {
 	return m_head;
@@ -301,12 +314,14 @@ const DoublyLinkedListNode* const DoublyLinkedList::GetHead() const
 // GetTail - returns the tail as a constant pointer to constant data, 
 // allowing the calling function to verify that the elements of the list
 // are correct without altering the list in any way
+template <class T>
 const DoublyLinkedListNode* const DoublyLinkedList::GetTail() const
 {
 	return m_tail;
 }
 
 // GetCount - returns the count as an int to verify its value
+template <class T>
 int DoublyLinkedList::GetCount() const
 {
 	return m_count;
@@ -315,6 +330,7 @@ int DoublyLinkedList::GetCount() const
 // operator<< displays the list in a reasonable format
 // Displays the nodes forward and backward (to check both
 // directions of pointers)
+template <class T>
 ostream& operator<<(ostream& sout, const DoublyLinkedList& list)
 {
 	DoublyLinkedListNode* curr = list.m_head;
@@ -365,6 +381,7 @@ ostream& operator<<(ostream& sout, const DoublyLinkedList& list)
 	return sout;
 }
 
+template <class T>
 DoublyLinkedList& DoublyLinkedList::operator=(const DoublyLinkedList& rhsList)
 {
 	// If this is NOT the same object as rs

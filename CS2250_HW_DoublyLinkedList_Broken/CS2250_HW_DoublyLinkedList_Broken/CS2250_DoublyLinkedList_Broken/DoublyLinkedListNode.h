@@ -6,41 +6,43 @@ using namespace std;
 #define DOUBLY_LINKED_LIST_NODE_H
 
 #define NULL 0
-
+template <class T>
 class DoublyLinkedListNode
 {
 public:
 	// Constructors
 	DoublyLinkedListNode(void);       // Default
-	DoublyLinkedListNode(const DoublyLinkedListNode& node);    // Copy
-	DoublyLinkedListNode(int data);
-	DoublyLinkedListNode(int data, DoublyLinkedListNode* prev, DoublyLinkedListNode* next);
+	DoublyLinkedListNode(const DoublyLinkedListNode<T>& node);    // Copy
+	DoublyLinkedListNode(T data);
+	DoublyLinkedListNode(T data, DoublyLinkedListNode<T>* prev, DoublyLinkedListNode<T>* next);
 
 	// Destructor
 	~DoublyLinkedListNode(void);
 
 	// Accessors/Inspectors
 	int GetData() const;
-	DoublyLinkedListNode* GetNext() const;
-	DoublyLinkedListNode* GetPrev() const;
+	DoublyLinkedListNode<T>* GetNext() const;
+	DoublyLinkedListNode<T>* GetPrev() const;
 
 	// Mutators/Manipulators
-	void SetData(int data);
-	void SetNext(DoublyLinkedListNode* next);
-	void SetPrev(DoublyLinkedListNode* prev);
+	void SetData(T data);
+	void SetNext(DoublyLinkedListNode<T>* next);
+	void SetPrev(DoublyLinkedListNode<T>* prev);
 
-	DoublyLinkedListNode& operator=(const DoublyLinkedListNode& list);
-	friend ostream& operator<<(ostream& sout, const DoublyLinkedListNode& list);
+	DoublyLinkedListNode<T>& operator=(const DoublyLinkedListNode<T>& list);
+	friend ostream& operator<< <> (ostream& sout, const DoublyLinkedListNode<T>& list);
 
 	static int GetNbrOfNodes();
 
 private:
-	int m_data;             // node's item
-	DoublyLinkedListNode* m_next; // next in list
-	DoublyLinkedListNode* m_prev;
+	T m_data;             // node's item
+	DoublyLinkedListNode<T>* m_next; // next in list
+	DoublyLinkedListNode<T>* m_prev;
 
 	// Static members for TESTING ONLY
 	static int nbrOfNodes;
 };
+
+#include "DoublyLinkedListNode.cpp"
 
 #endif
