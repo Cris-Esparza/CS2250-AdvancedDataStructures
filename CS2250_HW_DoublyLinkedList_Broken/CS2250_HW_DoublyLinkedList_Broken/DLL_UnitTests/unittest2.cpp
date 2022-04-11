@@ -800,30 +800,30 @@ namespace DLL_UnitTests
 		////////////////////////////////////////////////////////////////////////////////
 		TEST_METHOD(Size)
 		{
-			DoublyLinkedList<int> list;
+			DoublyLinkedList<string> list;
 
 			// Add 100 items to the list
 			for (int i = 0; i < 100; ++i)
 			{
-				list.AddFront(i);
-				Assert::AreEqual(i + 1, list.GetCount(), L"SizeAdd Count Incorrect", LINE_INFO());
-				Assert::AreEqual(i + 1, list.Size(), L"SizeAdd Size Incorrect", LINE_INFO());
+				list.AddFront(to_string(i));
+				Assert::AreEqual(to_string(i) + "1", list.GetCount(), L"SizeAdd Count Incorrect", LINE_INFO());
+				Assert::AreEqual(to_string(i) + "1", list.Size(), L"SizeAdd Size Incorrect", LINE_INFO());
 			}
 			Assert::AreNotEqual(NULL, (int)list.GetHead(), L"Size Head Incorrect", LINE_INFO());
 			Assert::AreNotEqual(NULL, (int)list.GetTail(), L"Size Tail Incorrect", LINE_INFO());
-			Assert::AreEqual(100, DoublyLinkedListNode<int>::GetNbrOfNodes(), L"Size GetNbrOfNodes Incorrect", LINE_INFO());
+			Assert::AreEqual("100", DoublyLinkedListNode<string>::GetNbrOfNodes(), L"Size GetNbrOfNodes Incorrect", LINE_INFO());
 
 			// Remove 100 items from the list
 			for (int i = 99; i >= 0; --i)
 			{
-				int item = list.RemoveFront();
-				Assert::AreEqual(item, i, L"SizeRemove Item Incorrect", LINE_INFO());
-				Assert::AreEqual(i, list.GetCount(), L"SizeRemove Count Incorrect", LINE_INFO());
-				Assert::AreEqual(i, list.Size(), L"SizeRemove Size Incorrect", LINE_INFO());
+				string item = list.RemoveFront();
+				Assert::AreEqual(item, to_string(i), L"SizeRemove Item Incorrect", LINE_INFO());
+				Assert::AreEqual(to_string(i), list.GetCount(), L"SizeRemove Count Incorrect", LINE_INFO());
+				Assert::AreEqual(to_string(i), list.Size(), L"SizeRemove Size Incorrect", LINE_INFO());
 			}
 			Assert::AreEqual(NULL, (int)list.GetHead(), L"Size Head Incorrect", LINE_INFO());
 			Assert::AreEqual(NULL, (int)list.GetTail(), L"Size Tail Incorrect", LINE_INFO());
-			Assert::AreEqual(0, DoublyLinkedListNode<int>::GetNbrOfNodes(), L"Size GetNbrOfNodes Incorrect", LINE_INFO());
+			Assert::AreEqual("0", DoublyLinkedListNode<string>::GetNbrOfNodes(), L"Size GetNbrOfNodes Incorrect", LINE_INFO());
 		}
 
 		////////////////////////////////////////////////////////////////////////////////
@@ -831,29 +831,29 @@ namespace DLL_UnitTests
 		////////////////////////////////////////////////////////////////////////////////
 		TEST_METHOD(AssignmentOperatorEmpty)
 		{
-			DoublyLinkedList<int> origList;
-			DoublyLinkedList<int> newList = origList;
+			DoublyLinkedList<string> origList;
+			DoublyLinkedList<string> newList = origList;
 
-			Assert::AreEqual(0, newList.GetCount(), L"AssignmentOperatorEmpty Count Incorrect", LINE_INFO());
+			Assert::AreEqual("0", newList.GetCount(), L"AssignmentOperatorEmpty Count Incorrect", LINE_INFO());
 			Assert::AreEqual(NULL, (int)newList.GetHead(), L"AssignmentOperatorEmpty Head Incorrect", LINE_INFO());
 			Assert::AreEqual(NULL, (int)newList.GetTail(), L"AssignmentOperatorEmpty Tail Incorrect", LINE_INFO());
 			Assert::AreEqual(NULL, (int)origList.GetHead(), L"AssignmentOperatorEmpty Head Incorrect", LINE_INFO());
 			Assert::AreEqual(NULL, (int)origList.GetTail(), L"AssignmentOperatorEmpty Tail Incorrect", LINE_INFO());
-			Assert::AreEqual(0, DoublyLinkedListNode<int>::GetNbrOfNodes(), L"AssignmentOperatorEmpty GetNbrOfNodes Incorrect", LINE_INFO());
+			Assert::AreEqual("0", DoublyLinkedListNode<string>::GetNbrOfNodes(), L"AssignmentOperatorEmpty GetNbrOfNodes Incorrect", LINE_INFO());
 		}
 
 		TEST_METHOD(AssignmentOperatorSingleItem)
 		{
-			DoublyLinkedList<int> origList;
-			origList.AddFront(1);
-			DoublyLinkedList<int> newList = origList;
+			DoublyLinkedList<string> origList;
+			origList.AddFront("1");
+			DoublyLinkedList<string> newList = origList;
 
-			Assert::AreEqual(1, newList.GetCount(), L"AssignmentOperatorSingleItem Count Incorrect", LINE_INFO());
+			Assert::AreEqual("1", newList.GetCount(), L"AssignmentOperatorSingleItem Count Incorrect", LINE_INFO());
 			Assert::AreNotEqual(NULL, (int)newList.GetHead(), L"AssignmentOperatorSingleItem Head Incorrect", LINE_INFO());
 			Assert::AreNotEqual(NULL, (int)newList.GetTail(), L"AssignmentOperatorSingleItem Tail Incorrect", LINE_INFO());
 			Assert::AreNotEqual((int)origList.GetHead(), (int)newList.GetHead(), L"AssignmentOperatorSingleItem Head Incorrect", LINE_INFO());
 			Assert::AreNotEqual((int)origList.GetTail(), (int)newList.GetTail(), L"AssignmentOperatorSingleItem Tail Incorrect", LINE_INFO());
-			Assert::AreEqual(2, DoublyLinkedListNode<int>::GetNbrOfNodes(), L"AssignmentOperatorSingleItem GetNbrOfNodes Incorrect", LINE_INFO());
+			Assert::AreEqual("2", DoublyLinkedListNode<string>::GetNbrOfNodes(), L"AssignmentOperatorSingleItem GetNbrOfNodes Incorrect", LINE_INFO());
 
 			{
 				ostringstream stream;
@@ -873,9 +873,9 @@ namespace DLL_UnitTests
 
 			{
 				// Remove last item
-				int item = newList.RemoveFront();
-				Assert::AreEqual(1, item, L"AssignmentOperatorSingleItem Remove Item Incorrect", LINE_INFO());
-				Assert::AreEqual(1, DoublyLinkedListNode<int>::GetNbrOfNodes(), L"AssignmentOperatorSingleItem GetNbrOfNodes Incorrect", LINE_INFO());
+				string item = newList.RemoveFront();
+				Assert::AreEqual("1", item, L"AssignmentOperatorSingleItem Remove Item Incorrect", LINE_INFO());
+				Assert::AreEqual("1", DoublyLinkedListNode<string>::GetNbrOfNodes(), L"AssignmentOperatorSingleItem GetNbrOfNodes Incorrect", LINE_INFO());
 				Assert::AreNotEqual((int)origList.GetHead(), (int)newList.GetHead(), L"AssignmentOperatorSingleItem Head Incorrect", LINE_INFO());
 				Assert::AreNotEqual((int)origList.GetTail(), (int)newList.GetTail(), L"AssignmentOperatorSingleItem Tail Incorrect", LINE_INFO());
 
@@ -891,21 +891,21 @@ namespace DLL_UnitTests
 
 		TEST_METHOD(AssignmentOperator)
 		{
-			DoublyLinkedList<int> origList;
-			origList.AddFront(1);
-			origList.AddFront(2);
-			origList.AddFront(3);
-			origList.AddFront(4);
-			origList.AddFront(5);
+			DoublyLinkedList<string> origList;
+			origList.AddFront("1");
+			origList.AddFront("2");
+			origList.AddFront("3");
+			origList.AddFront("4");
+			origList.AddFront("5");
 
-			DoublyLinkedList<int> newList = origList;
+			DoublyLinkedList<string> newList = origList;
 
-			Assert::AreEqual(5, newList.GetCount(), L"AssignmentOperator Count Incorrect", LINE_INFO());
+			Assert::AreEqual("5", newList.GetCount(), L"AssignmentOperator Count Incorrect", LINE_INFO());
 			Assert::AreNotEqual(NULL, (int)newList.GetHead(), L"AssignmentOperator Head Incorrect", LINE_INFO());
 			Assert::AreNotEqual(NULL, (int)newList.GetTail(), L"AssignmentOperator Tail Incorrect", LINE_INFO());
 			Assert::AreNotEqual((int)origList.GetHead(), (int)newList.GetHead(), L"AssignmentOperator Head Incorrect", LINE_INFO());
 			Assert::AreNotEqual((int)origList.GetTail(), (int)newList.GetTail(), L"AssignmentOperator Tail Incorrect", LINE_INFO());
-			Assert::AreEqual(10, DoublyLinkedListNode<int>::GetNbrOfNodes(), L"AssignmentOperator GetNbrOfNodes Incorrect", LINE_INFO());
+			Assert::AreEqual("10", DoublyLinkedListNode<string>::GetNbrOfNodes(), L"AssignmentOperator GetNbrOfNodes Incorrect", LINE_INFO());
 
 			{
 				ostringstream stream;
@@ -925,9 +925,9 @@ namespace DLL_UnitTests
 
 			{
 				// Remove from one of the lists
-				int item = newList.RemoveBack();
-				Assert::AreEqual(1, item, L"AssignmentOperator Remove Item Incorrect", LINE_INFO());
-				Assert::AreEqual(9, DoublyLinkedListNode<int>::GetNbrOfNodes(), L"AssignmentOperator GetNbrOfNodes Incorrect", LINE_INFO());
+				string item = newList.RemoveBack();
+				Assert::AreEqual("1", item, L"AssignmentOperator Remove Item Incorrect", LINE_INFO());
+				Assert::AreEqual("9", DoublyLinkedListNode<string>::GetNbrOfNodes(), L"AssignmentOperator GetNbrOfNodes Incorrect", LINE_INFO());
 				Assert::AreNotEqual((int)origList.GetHead(), (int)newList.GetHead(), L"AssignmentOperator Head Incorrect", LINE_INFO());
 				Assert::AreNotEqual((int)origList.GetTail(), (int)newList.GetTail(), L"AssignmentOperator Tail Incorrect", LINE_INFO());
 
@@ -940,9 +940,9 @@ namespace DLL_UnitTests
 
 			{
 				// Remove another item
-				int item = newList.RemoveFront();
-				Assert::AreEqual(5, item, L"AssignmentOperator Remove Item Incorrect", LINE_INFO());
-				Assert::AreEqual(8, DoublyLinkedListNode<int>::GetNbrOfNodes(), L"AssignmentOperator GetNbrOfNodes Incorrect", LINE_INFO());
+				string item = newList.RemoveFront();
+				Assert::AreEqual("5", item, L"AssignmentOperator Remove Item Incorrect", LINE_INFO());
+				Assert::AreEqual("8", DoublyLinkedListNode<string>::GetNbrOfNodes(), L"AssignmentOperator GetNbrOfNodes Incorrect", LINE_INFO());
 				Assert::AreNotEqual((int)origList.GetHead(), (int)newList.GetHead(), L"AssignmentOperator Head Incorrect", LINE_INFO());
 				Assert::AreNotEqual((int)origList.GetTail(), (int)newList.GetTail(), L"AssignmentOperator Tail Incorrect", LINE_INFO());
 
@@ -955,9 +955,9 @@ namespace DLL_UnitTests
 
 			{
 				// Remove another item
-				int item = newList.RemoveBack();
-				Assert::AreEqual(2, item, L"AssignmentOperator Remove Item Incorrect", LINE_INFO());
-				Assert::AreEqual(7, DoublyLinkedListNode<int>::GetNbrOfNodes(), L"AssignmentOperator GetNbrOfNodes Incorrect", LINE_INFO());
+				string item = newList.RemoveBack();
+				Assert::AreEqual("2", item, L"AssignmentOperator Remove Item Incorrect", LINE_INFO());
+				Assert::AreEqual("7", DoublyLinkedListNode<string>::GetNbrOfNodes(), L"AssignmentOperator GetNbrOfNodes Incorrect", LINE_INFO());
 				Assert::AreNotEqual((int)origList.GetHead(), (int)newList.GetHead(), L"AssignmentOperator Head Incorrect", LINE_INFO());
 				Assert::AreNotEqual((int)origList.GetTail(), (int)newList.GetTail(), L"AssignmentOperator Tail Incorrect", LINE_INFO());
 
@@ -970,9 +970,9 @@ namespace DLL_UnitTests
 
 			{
 				// Remove another item
-				int item = newList.RemoveFront();
-				Assert::AreEqual(4, item, L"AssignmentOperator Remove Item Incorrect", LINE_INFO());
-				Assert::AreEqual(6, DoublyLinkedListNode<int>::GetNbrOfNodes(), L"AssignmentOperator GetNbrOfNodes Incorrect", LINE_INFO());
+				string item = newList.RemoveFront();
+				Assert::AreEqual("4", item, L"AssignmentOperator Remove Item Incorrect", LINE_INFO());
+				Assert::AreEqual("6", DoublyLinkedListNode<string>::GetNbrOfNodes(), L"AssignmentOperator GetNbrOfNodes Incorrect", LINE_INFO());
 				Assert::AreNotEqual((int)origList.GetHead(), (int)newList.GetHead(), L"AssignmentOperator Head Incorrect", LINE_INFO());
 				Assert::AreNotEqual((int)origList.GetTail(), (int)newList.GetTail(), L"AssignmentOperator Tail Incorrect", LINE_INFO());
 
@@ -985,9 +985,9 @@ namespace DLL_UnitTests
 
 			{
 				// Remove another item
-				int item = newList.RemoveFront();
-				Assert::AreEqual(3, item, L"AssignmentOperator Remove Item Incorrect", LINE_INFO());
-				Assert::AreEqual(5, DoublyLinkedListNode<int>::GetNbrOfNodes(), L"AssignmentOperator GetNbrOfNodes Incorrect", LINE_INFO());
+				string item = newList.RemoveFront();
+				Assert::AreEqual("3", item, L"AssignmentOperator Remove Item Incorrect", LINE_INFO());
+				Assert::AreEqual("5", DoublyLinkedListNode<string>::GetNbrOfNodes(), L"AssignmentOperator GetNbrOfNodes Incorrect", LINE_INFO());
 				Assert::AreNotEqual((int)origList.GetHead(), (int)newList.GetHead(), L"AssignmentOperator Head Incorrect", LINE_INFO());
 				Assert::AreNotEqual((int)origList.GetTail(), (int)newList.GetTail(), L"AssignmentOperator Tail Incorrect", LINE_INFO());
 
@@ -1003,22 +1003,22 @@ namespace DLL_UnitTests
 
 		TEST_METHOD(AssignmentOperatorOverwriteExisting)
 		{
-			DoublyLinkedList<int> origList;
-			DoublyLinkedList<int> newList;
+			DoublyLinkedList<string> origList;
+			DoublyLinkedList<string> newList;
 			for (int i = 1; i < 6; ++i)
 			{
-				origList.AddFront(i);
-				newList.AddBack(i);
+				origList.AddFront(to_string(i));
+				newList.AddBack(to_string(i));
 			}
 
 			newList = origList;
 
-			Assert::AreEqual(5, newList.GetCount(), L"AssignmentOperator Count Incorrect", LINE_INFO());
+			Assert::AreEqual("5", newList.GetCount(), L"AssignmentOperator Count Incorrect", LINE_INFO());
 			Assert::AreNotEqual(NULL, (int)newList.GetHead(), L"AssignmentOperator Head Incorrect", LINE_INFO());
 			Assert::AreNotEqual(NULL, (int)newList.GetTail(), L"AssignmentOperator Tail Incorrect", LINE_INFO());
 			Assert::AreNotEqual((int)origList.GetHead(), (int)newList.GetHead(), L"AssignmentOperator Head Incorrect", LINE_INFO());
 			Assert::AreNotEqual((int)origList.GetTail(), (int)newList.GetTail(), L"AssignmentOperator Tail Incorrect", LINE_INFO());
-			Assert::AreEqual(10, DoublyLinkedListNode<int>::GetNbrOfNodes(), L"AssignmentOperator GetNbrOfNodes Incorrect", LINE_INFO());
+			Assert::AreEqual("10", DoublyLinkedListNode<string>::GetNbrOfNodes(), L"AssignmentOperator GetNbrOfNodes Incorrect", LINE_INFO());
 
 			{
 				ostringstream stream;
@@ -1038,9 +1038,9 @@ namespace DLL_UnitTests
 
 			{
 				// Remove from one of the lists
-				int item = newList.RemoveBack();
-				Assert::AreEqual(1, item, L"AssignmentOperator Remove Item Incorrect", LINE_INFO());
-				Assert::AreEqual(9, DoublyLinkedListNode<int>::GetNbrOfNodes(), L"AssignmentOperator GetNbrOfNodes Incorrect", LINE_INFO());
+				string item = newList.RemoveBack();
+				Assert::AreEqual("1", item, L"AssignmentOperator Remove Item Incorrect", LINE_INFO());
+				Assert::AreEqual("9", DoublyLinkedListNode<string>::GetNbrOfNodes(), L"AssignmentOperator GetNbrOfNodes Incorrect", LINE_INFO());
 				Assert::AreNotEqual((int)origList.GetHead(), (int)newList.GetHead(), L"AssignmentOperator Head Incorrect", LINE_INFO());
 				Assert::AreNotEqual((int)origList.GetTail(), (int)newList.GetTail(), L"AssignmentOperator Tail Incorrect", LINE_INFO());
 
@@ -1053,9 +1053,9 @@ namespace DLL_UnitTests
 
 			{
 				// Remove another item
-				int item = newList.RemoveFront();
-				Assert::AreEqual(5, item, L"AssignmentOperator Remove Item Incorrect", LINE_INFO());
-				Assert::AreEqual(8, DoublyLinkedListNode<int>::GetNbrOfNodes(), L"AssignmentOperator GetNbrOfNodes Incorrect", LINE_INFO());
+				string item = newList.RemoveFront();
+				Assert::AreEqual("5", item, L"AssignmentOperator Remove Item Incorrect", LINE_INFO());
+				Assert::AreEqual("8", DoublyLinkedListNode<string>::GetNbrOfNodes(), L"AssignmentOperator GetNbrOfNodes Incorrect", LINE_INFO());
 				Assert::AreNotEqual((int)origList.GetHead(), (int)newList.GetHead(), L"AssignmentOperator Head Incorrect", LINE_INFO());
 				Assert::AreNotEqual((int)origList.GetTail(), (int)newList.GetTail(), L"AssignmentOperator Tail Incorrect", LINE_INFO());
 
@@ -1068,9 +1068,9 @@ namespace DLL_UnitTests
 
 			{
 				// Remove another item
-				int item = newList.RemoveBack();
-				Assert::AreEqual(2, item, L"AssignmentOperator Remove Item Incorrect", LINE_INFO());
-				Assert::AreEqual(7, DoublyLinkedListNode<int>::GetNbrOfNodes(), L"AssignmentOperator GetNbrOfNodes Incorrect", LINE_INFO());
+				string item = newList.RemoveBack();
+				Assert::AreEqual("2", item, L"AssignmentOperator Remove Item Incorrect", LINE_INFO());
+				Assert::AreEqual("7", DoublyLinkedListNode<string>::GetNbrOfNodes(), L"AssignmentOperator GetNbrOfNodes Incorrect", LINE_INFO());
 				Assert::AreNotEqual((int)origList.GetHead(), (int)newList.GetHead(), L"AssignmentOperator Head Incorrect", LINE_INFO());
 				Assert::AreNotEqual((int)origList.GetTail(), (int)newList.GetTail(), L"AssignmentOperator Tail Incorrect", LINE_INFO());
 
@@ -1083,9 +1083,9 @@ namespace DLL_UnitTests
 
 			{
 				// Remove another item
-				int item = newList.RemoveFront();
-				Assert::AreEqual(4, item, L"AssignmentOperator Remove Item Incorrect", LINE_INFO());
-				Assert::AreEqual(6, DoublyLinkedListNode<int>::GetNbrOfNodes(), L"AssignmentOperator GetNbrOfNodes Incorrect", LINE_INFO());
+				string item = newList.RemoveFront();
+				Assert::AreEqual("4", item, L"AssignmentOperator Remove Item Incorrect", LINE_INFO());
+				Assert::AreEqual("6", DoublyLinkedListNode<string>::GetNbrOfNodes(), L"AssignmentOperator GetNbrOfNodes Incorrect", LINE_INFO());
 				Assert::AreNotEqual((int)origList.GetHead(), (int)newList.GetHead(), L"AssignmentOperator Head Incorrect", LINE_INFO());
 				Assert::AreNotEqual((int)origList.GetTail(), (int)newList.GetTail(), L"AssignmentOperator Tail Incorrect", LINE_INFO());
 
@@ -1098,9 +1098,9 @@ namespace DLL_UnitTests
 
 			{
 				// Remove another item
-				int item = newList.RemoveFront();
-				Assert::AreEqual(3, item, L"AssignmentOperator Remove Item Incorrect", LINE_INFO());
-				Assert::AreEqual(5, DoublyLinkedListNode<int>::GetNbrOfNodes(), L"AssignmentOperator GetNbrOfNodes Incorrect", LINE_INFO());
+				string item = newList.RemoveFront();
+				Assert::AreEqual("3", item, L"AssignmentOperator Remove Item Incorrect", LINE_INFO());
+				Assert::AreEqual("5", DoublyLinkedListNode<string>::GetNbrOfNodes(), L"AssignmentOperator GetNbrOfNodes Incorrect", LINE_INFO());
 				Assert::AreNotEqual((int)origList.GetHead(), (int)newList.GetHead(), L"AssignmentOperator Head Incorrect", LINE_INFO());
 				Assert::AreNotEqual((int)origList.GetTail(), (int)newList.GetTail(), L"AssignmentOperator Tail Incorrect", LINE_INFO());
 
@@ -1116,21 +1116,21 @@ namespace DLL_UnitTests
 
 		TEST_METHOD(AssignmentOperatorSelf)
 		{
-			DoublyLinkedList<int> list;
-			list.AddFront(1);
-			list.AddFront(2);
-			list.AddFront(3);
-			list.AddFront(4);
-			list.AddFront(5);
+			DoublyLinkedList<string> list;
+			list.AddFront("1");
+			list.AddFront("2");
+			list.AddFront("3");
+			list.AddFront("4");
+			list.AddFront("5");
 
 			list = list;
 
-			const DoublyLinkedListNode<int>* const headNext = list.GetHead()->GetNext();
-			const DoublyLinkedListNode<int>* const tailPrev = list.GetTail()->GetPrev();
-			Assert::AreEqual(5, list.GetCount(), L"AssignmentOperatorSelf Count Incorrect", LINE_INFO());
+			const DoublyLinkedListNode<string>* const headNext = list.GetHead()->GetNext();
+			const DoublyLinkedListNode<string>* const tailPrev = list.GetTail()->GetPrev();
+			Assert::AreEqual("5", list.GetCount(), L"AssignmentOperatorSelf Count Incorrect", LINE_INFO());
 			Assert::AreNotEqual(NULL, (int)list.GetHead(), L"AssignmentOperatorSelf Head Incorrect", LINE_INFO());
 			Assert::AreNotEqual(NULL, (int)list.GetTail(), L"AssignmentOperatorSelf Tail Incorrect", LINE_INFO());
-			Assert::AreEqual(5, DoublyLinkedListNode<int>::GetNbrOfNodes(), L"AssignmentOperatorSelf GetNbrOfNodes Incorrect", LINE_INFO());
+			Assert::AreEqual("5", DoublyLinkedListNode<string>::GetNbrOfNodes(), L"AssignmentOperatorSelf GetNbrOfNodes Incorrect", LINE_INFO());
 			Assert::AreEqual(NULL, (int)list.GetHead()->GetPrev(), L"AssignmentOperatorSelf Head->Prev Incorrect", LINE_INFO());
 			Assert::AreEqual(NULL, (int)list.GetTail()->GetNext(), L"AssignmentOperatorSelf Tail->Next Incorrect", LINE_INFO());
 			Assert::AreEqual((int)headNext, (int)list.GetHead()->GetNext(), L"AddMultipleItemBackRemoveMultipleItemBack Tail Incorrect", LINE_INFO());
@@ -1142,21 +1142,21 @@ namespace DLL_UnitTests
 		////////////////////////////////////////////////////////////////////////////////
 		TEST_METHOD(CopyConstructor)
 		{
-			DoublyLinkedList<int> origList;
-			origList.AddFront(1);
-			origList.AddFront(2);
-			origList.AddFront(3);
-			origList.AddFront(4);
-			origList.AddFront(5);
+			DoublyLinkedList<string> origList;
+			origList.AddFront("1");
+			origList.AddFront("2");
+			origList.AddFront("3");
+			origList.AddFront("4");
+			origList.AddFront("5");
 
-			DoublyLinkedList<int> newList(origList);
+			DoublyLinkedList<string> newList(origList);
 
-			Assert::AreEqual(5, newList.GetCount(), L"CopyConstructor Count Incorrect", LINE_INFO());
+			Assert::AreEqual("5", newList.GetCount(), L"CopyConstructor Count Incorrect", LINE_INFO());
 			Assert::AreNotEqual(NULL, (int)newList.GetHead(), L"CopyConstructor Head Incorrect", LINE_INFO());
 			Assert::AreNotEqual(NULL, (int)newList.GetTail(), L"CopyConstructor Tail Incorrect", LINE_INFO());
 			Assert::AreNotEqual((int)origList.GetHead(), (int)newList.GetHead(), L"CopyConstructor Head Incorrect", LINE_INFO());
 			Assert::AreNotEqual((int)origList.GetTail(), (int)newList.GetTail(), L"CopyConstructor Tail Incorrect", LINE_INFO());
-			Assert::AreEqual(10, DoublyLinkedListNode<int>::GetNbrOfNodes(), L"CopyConstructor GetNbrOfNodes Incorrect", LINE_INFO());
+			Assert::AreEqual("10", DoublyLinkedListNode<string>::GetNbrOfNodes(), L"CopyConstructor GetNbrOfNodes Incorrect", LINE_INFO());
 
 			{
 				ostringstream stream;
@@ -1176,9 +1176,9 @@ namespace DLL_UnitTests
 
 			{
 				// Remove from one of the lists
-				int item = newList.RemoveBack();
-				Assert::AreEqual(1, item, L"CopyConstructor Remove Item Incorrect", LINE_INFO());
-				Assert::AreEqual(9, DoublyLinkedListNode<int>::GetNbrOfNodes(), L"CopyConstructor GetNbrOfNodes Incorrect", LINE_INFO());
+				string item = newList.RemoveBack();
+				Assert::AreEqual("1", item, L"CopyConstructor Remove Item Incorrect", LINE_INFO());
+				Assert::AreEqual("9", DoublyLinkedListNode<string>::GetNbrOfNodes(), L"CopyConstructor GetNbrOfNodes Incorrect", LINE_INFO());
 				Assert::AreNotEqual((int)origList.GetHead(), (int)newList.GetHead(), L"CopyConstructor Head Incorrect", LINE_INFO());
 				Assert::AreNotEqual((int)origList.GetTail(), (int)newList.GetTail(), L"CopyConstructor Tail Incorrect", LINE_INFO());
 
@@ -1191,9 +1191,9 @@ namespace DLL_UnitTests
 
 			{
 				// Remove another item
-				int item = newList.RemoveFront();
-				Assert::AreEqual(5, item, L"CopyConstructor Remove Item Incorrect", LINE_INFO());
-				Assert::AreEqual(8, DoublyLinkedListNode<int>::GetNbrOfNodes(), L"CopyConstructor GetNbrOfNodes Incorrect", LINE_INFO());
+				string item = newList.RemoveFront();
+				Assert::AreEqual("5", item, L"CopyConstructor Remove Item Incorrect", LINE_INFO());
+				Assert::AreEqual("8", DoublyLinkedListNode<string>::GetNbrOfNodes(), L"CopyConstructor GetNbrOfNodes Incorrect", LINE_INFO());
 				Assert::AreNotEqual((int)origList.GetHead(), (int)newList.GetHead(), L"CopyConstructor Head Incorrect", LINE_INFO());
 				Assert::AreNotEqual((int)origList.GetTail(), (int)newList.GetTail(), L"CopyConstructor Tail Incorrect", LINE_INFO());
 
@@ -1206,9 +1206,9 @@ namespace DLL_UnitTests
 
 			{
 				// Remove another item
-				int item = newList.RemoveBack();
-				Assert::AreEqual(2, item, L"CopyConstructor Remove Item Incorrect", LINE_INFO());
-				Assert::AreEqual(7, DoublyLinkedListNode<int>::GetNbrOfNodes(), L"CopyConstructor GetNbrOfNodes Incorrect", LINE_INFO());
+				string item = newList.RemoveBack();
+				Assert::AreEqual("2", item, L"CopyConstructor Remove Item Incorrect", LINE_INFO());
+				Assert::AreEqual("7", DoublyLinkedListNode<string>::GetNbrOfNodes(), L"CopyConstructor GetNbrOfNodes Incorrect", LINE_INFO());
 				Assert::AreNotEqual((int)origList.GetHead(), (int)newList.GetHead(), L"CopyConstructor Head Incorrect", LINE_INFO());
 				Assert::AreNotEqual((int)origList.GetTail(), (int)newList.GetTail(), L"CopyConstructor Tail Incorrect", LINE_INFO());
 
@@ -1221,9 +1221,9 @@ namespace DLL_UnitTests
 
 			{
 				// Remove another item
-				int item = newList.RemoveFront();
-				Assert::AreEqual(4, item, L"CopyConstructor Remove Item Incorrect", LINE_INFO());
-				Assert::AreEqual(6, DoublyLinkedListNode<int>::GetNbrOfNodes(), L"CopyConstructor GetNbrOfNodes Incorrect", LINE_INFO());
+				string item = newList.RemoveFront();
+				Assert::AreEqual("4", item, L"CopyConstructor Remove Item Incorrect", LINE_INFO());
+				Assert::AreEqual("6", DoublyLinkedListNode<string>::GetNbrOfNodes(), L"CopyConstructor GetNbrOfNodes Incorrect", LINE_INFO());
 				Assert::AreNotEqual((int)origList.GetHead(), (int)newList.GetHead(), L"CopyConstructor Head Incorrect", LINE_INFO());
 				Assert::AreNotEqual((int)origList.GetTail(), (int)newList.GetTail(), L"CopyConstructor Tail Incorrect", LINE_INFO());
 
@@ -1236,9 +1236,9 @@ namespace DLL_UnitTests
 
 			{
 				// Remove another item
-				int item = newList.RemoveFront();
-				Assert::AreEqual(3, item, L"CopyConstructor Remove Item Incorrect", LINE_INFO());
-				Assert::AreEqual(5, DoublyLinkedListNode<int>::GetNbrOfNodes(), L"CopyConstructor GetNbrOfNodes Incorrect", LINE_INFO());
+				string item = newList.RemoveFront();
+				Assert::AreEqual("3", item, L"CopyConstructor Remove Item Incorrect", LINE_INFO());
+				Assert::AreEqual("5", DoublyLinkedListNode<string>::GetNbrOfNodes(), L"CopyConstructor GetNbrOfNodes Incorrect", LINE_INFO());
 				Assert::AreNotEqual((int)origList.GetHead(), (int)newList.GetHead(), L"CopyConstructor Head Incorrect", LINE_INFO());
 				Assert::AreNotEqual((int)origList.GetTail(), (int)newList.GetTail(), L"CopyConstructor Tail Incorrect", LINE_INFO());
 
@@ -1255,27 +1255,27 @@ namespace DLL_UnitTests
 		////////////////////////////////////////////////////////////////////////////////
 		TEST_METHOD(Destructor)
 		{
-			DoublyLinkedList<int>* list = new DoublyLinkedList<int>();
+			DoublyLinkedList<string>* list = new DoublyLinkedList<string>();
 			delete list;
-			Assert::AreEqual(0, DoublyLinkedListNode<int>::GetNbrOfNodes(), L"Destructor GetNbrOfNodes Empty List Incorrect", LINE_INFO());
+			Assert::AreEqual("0", DoublyLinkedListNode<string>::GetNbrOfNodes(), L"Destructor GetNbrOfNodes Empty List Incorrect", LINE_INFO());
 
-			list = new DoublyLinkedList<int>();
-			list->AddFront(1);
-			list->AddFront(2);
-			list->AddFront(3);
-			list->AddFront(4);
-			list->AddFront(5);
+			list = new DoublyLinkedList<string>();
+			list->AddFront("1");
+			list->AddFront("2");
+			list->AddFront("3");
+			list->AddFront("4");
+			list->AddFront("5");
 
-			Assert::AreEqual(5, list->GetCount(), L"Destructor Count Incorrect", LINE_INFO());
+			Assert::AreEqual("5", list->GetCount(), L"Destructor Count Incorrect", LINE_INFO());
 			Assert::AreNotEqual(NULL, (int)list->GetHead(), L"Destructor Head Incorrect", LINE_INFO());
 			Assert::AreNotEqual(NULL, (int)list->GetTail(), L"Destructor Tail Incorrect", LINE_INFO());
-			Assert::AreEqual(5, DoublyLinkedListNode<int>::GetNbrOfNodes(), L"Destructor GetNbrOfNodes Incorrect", LINE_INFO());
+			Assert::AreEqual("5", DoublyLinkedListNode<string>::GetNbrOfNodes(), L"Destructor GetNbrOfNodes Incorrect", LINE_INFO());
 			Assert::AreEqual(NULL, (int)list->GetHead()->GetPrev(), L"Destructor Head->Prev Incorrect", LINE_INFO());
 			Assert::AreEqual(NULL, (int)list->GetTail()->GetNext(), L"Destructor Tail->Next Incorrect", LINE_INFO());
 
 			delete list;
 
-			Assert::AreEqual(0, DoublyLinkedListNode<int>::GetNbrOfNodes(), L"Destructor GetNbrOfNodes Incorrect", LINE_INFO());
+			Assert::AreEqual("0", DoublyLinkedListNode<string>::GetNbrOfNodes(), L"Destructor GetNbrOfNodes Incorrect", LINE_INFO());
 		}
 
 		////////////////////////////////////////////////////////////////////////////////
@@ -1283,7 +1283,7 @@ namespace DLL_UnitTests
 		////////////////////////////////////////////////////////////////////////////////
 		TEST_METHOD(Insertion)
 		{
-			DoublyLinkedList<int> origList;
+			DoublyLinkedList<string> origList;
 			{
 				ostringstream stream;
 				stream << origList;
@@ -1294,7 +1294,7 @@ namespace DLL_UnitTests
 
 			for (int i = 1; i < 6; ++i)
 			{
-				origList.AddFront(i);
+				origList.AddFront(to_string(i));
 			}
 
 			{
