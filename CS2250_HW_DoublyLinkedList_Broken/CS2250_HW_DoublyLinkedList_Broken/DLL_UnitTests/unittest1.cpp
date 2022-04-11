@@ -8,7 +8,7 @@ using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 
 namespace DLL_UnitTests
 {
-	TEST_CLASS(UnitTest1)
+	TEST_CLASS(IntTest)
 	{
 	public:
 		ostringstream stream;
