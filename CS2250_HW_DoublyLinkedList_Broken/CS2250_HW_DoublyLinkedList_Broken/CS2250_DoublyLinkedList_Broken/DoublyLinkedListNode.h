@@ -5,7 +5,7 @@ using namespace std;
 #ifndef DOUBLY_LINKED_LIST_NODE_H
 #define DOUBLY_LINKED_LIST_NODE_H
 
-#define NULL 0
+#define nullptr 0
 template <class T>
 class DoublyLinkedListNode
 {
@@ -33,6 +33,7 @@ public:
 	friend ostream& operator<< <> (ostream& sout, const DoublyLinkedListNode<T>& list);
 
 	static int GetNbrOfNodes();
+	static void ResetNodes();
 
 private:
 	T m_data;             // node's item

@@ -13,16 +13,22 @@ int DoublyLinkedListNode<T>::GetNbrOfNodes()
 	return nbrOfNodes;
 }
 
+template <class T>
+void DoublyLinkedListNode<T>::ResetNodes()
+{
+	nbrOfNodes = 0;
+}
+
 // Constructors
 // Default constructor
-// Initializes next and previous pointers to NULL
+// Initializes next and previous pointers to nullptr
 // Initializes data to a "safe" value of 0
 template <class T>
 DoublyLinkedListNode<T>::DoublyLinkedListNode(void)
 {
 	m_data = 0;
-	m_next = NULL;
-	m_prev = NULL;
+	m_next = nullptr;
+	m_prev = nullptr;
 
 	++nbrOfNodes;
 }
@@ -41,13 +47,13 @@ DoublyLinkedListNode<T>::DoublyLinkedListNode(const DoublyLinkedListNode<T>& nod
 
 // Constructor
 // Accepts the data to store in the node as the parameter
-// Initializes previous and next pointers to NULL
+// Initializes previous and next pointers to nullptr
 template <class T>
 DoublyLinkedListNode<T>::DoublyLinkedListNode(T data)
 {
 	m_data = data;
-	m_next = NULL;
-	m_prev = NULL;
+	m_next = nullptr;
+	m_prev = nullptr;
 
 	++nbrOfNodes;
 }
@@ -68,8 +74,8 @@ DoublyLinkedListNode<T>::DoublyLinkedListNode(T data, DoublyLinkedListNode<T>* p
 template <class T>
 DoublyLinkedListNode<T>::~DoublyLinkedListNode(void)
 {
-	m_next = NULL;
-	m_prev = NULL;
+	m_next = nullptr;
+	m_prev = nullptr;
 
 	--nbrOfNodes;
 }

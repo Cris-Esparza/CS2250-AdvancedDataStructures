@@ -4,14 +4,14 @@
 #include "DoublyLinkedList.h"
 
 // Default Constructor
-// Initializes first and last pointers to NULL (empty list)
+// Initializes first and last pointers to nullptr (empty list)
 // Sets number of nodes to zero
 template <class T>
 DoublyLinkedList<T>::DoublyLinkedList()
 {
     m_count = 0;
-    m_head = NULL;
-    m_tail = NULL;
+    m_head = nullptr;
+    m_tail = nullptr;
 }
 
 // Copy Constructor
@@ -22,21 +22,35 @@ DoublyLinkedList<T>::DoublyLinkedList(const DoublyLinkedList<T>& list)
 {
     // Copy each item into new list
     DoublyLinkedListNode<T>* listCurr = list.m_head;
+    m_head = nullptr;
+    m_tail = nullptr;
+    m_count = 0;
 
     // Check to see if list has any items
     if (list.m_head != nullptr)
     {
-        m_head = new DoublyLinkedListNode<T>(list.m_head->GetData());
+        while (listCurr != nullptr)
+        {
+            // Add the current node
+            AddBack(listCurr->GetData());
+
+            // Go to the next node
+            listCurr = listCurr->GetNext();
+        }
+       /* m_head = new DoublyLinkedListNode<T>(list.m_head->GetData());
         DoublyLinkedListNode<T>* curr = m_head;
         listCurr = listCurr->GetNext();
+        ++m_count;
 
         while (listCurr != nullptr)
         {
             DoublyLinkedListNode<T>* temp = new DoublyLinkedListNode<T>(listCurr->GetData());
             curr->SetNext(temp);
+            temp->SetPrev(curr);
             curr = temp;
             listCurr = listCurr->GetNext();
-        }
+            ++m_count;
+        }*/
     }
 }
 
@@ -61,7 +75,7 @@ template <class T>
 void DoublyLinkedList<T>::AddFront( T item )
 {
     //check for empty list
-    if (m_head == NULL)
+    if (m_head == nullptr)
     {
         //set head and tail to point to only node
         m_head = new DoublyLinkedListNode<T>(item);
@@ -87,7 +101,7 @@ template <class T>
 void DoublyLinkedList<T>::AddBack( T item )
 {
     // Check if list is empty
-    if (m_tail == NULL)
+    if (m_tail == nullptr)
     {
         // Set head and tail to point to only node
         m_tail = new DoublyLinkedListNode<T>(item);
@@ -101,7 +115,6 @@ void DoublyLinkedList<T>::AddBack( T item )
 
         // Connect the new node to the back of the list
         m_tail->SetNext(newNode);
-        newNode->SetNext(nullptr);
         newNode->SetPrev(m_tail);
 
         // Set tail to point to new node
@@ -116,22 +129,24 @@ void DoublyLinkedList<T>::AddBack( T item )
 template <class T>
 T DoublyLinkedList<T>::RemoveFront()
 {
+    T data;
+
     // If there are no items in the list
-    if (m_head == NULL)
+    if (m_head == nullptr)
     {
-        cerr << "ERROR: Cannot remove from an empty list" << endl;
-        return 0;
+        throw  string("ERROR:  Cannot remove from an empty list");
+        return data;
 	}
     // If there at least one item
     else if (m_head == m_tail)
     {
         //Store data to be removed
-        T data = m_head->GetData();
+        data = m_head->GetData();
 
         //Delete only node
         delete m_head;
-        m_head = NULL;
-        m_tail = NULL;
+        m_head = nullptr;
+        m_tail = nullptr;
         --m_count;
         return data;
     }
@@ -139,7 +154,7 @@ T DoublyLinkedList<T>::RemoveFront()
     else
     {
         // Store data to be removed
-        T data = m_head->GetData();
+        data = m_head->GetData();
 
         // Create a temp pointer to node to remove
         DoublyLinkedListNode<T>* temp = m_head;
@@ -148,7 +163,7 @@ T DoublyLinkedList<T>::RemoveFront()
         m_head = m_head->GetNext();
 
         // Fix new "head" node's pointer
-        m_head->SetPrev(NULL);
+        m_head->SetPrev(nullptr);
 
         // Delete old head node
         delete temp;
@@ -164,22 +179,23 @@ T DoublyLinkedList<T>::RemoveFront()
 template <class T>
 T DoublyLinkedList<T>::RemoveBack()
 {
+    T data;
     // If there are no items in the list
-    if (m_tail == NULL)
+    if (m_tail == nullptr)
     {
-		cerr << "ERROR:  Cannot remove from an empty list" << endl;
-        return 0;
+		throw string("ERROR:  Cannot remove from an empty list");
+        return data;
 	}
     // If theres one item in the list
     else if (m_tail == m_head)
     {
         //Store data to be removed
-        T data = m_tail->GetData();
+        data = m_tail->GetData();
 
         //Delete only node
         delete m_tail;
-        m_head = NULL;
-        m_tail = NULL;
+        m_head = nullptr;
+        m_tail = nullptr;
         --m_count;
         return data;
     }
@@ -187,7 +203,7 @@ T DoublyLinkedList<T>::RemoveBack()
     else
     {
         // Store data to be removed
-        T data = m_tail->GetData();
+        data = m_tail->GetData();
 
         // Create a temp pointer to node to remove
         DoublyLinkedListNode<T>* temp = m_tail;
@@ -196,7 +212,7 @@ T DoublyLinkedList<T>::RemoveBack()
         m_tail = m_tail->GetPrev();
 
         // Fix new "tail" node's pointer
-        m_tail->SetNext(NULL);
+        m_tail->SetNext(nullptr);
 
         // Delete old head node
         delete temp;
@@ -214,7 +230,7 @@ bool DoublyLinkedList<T>::RemoveItem(T item)
     DoublyLinkedListNode<T>* curr = SearchNodes(item);
 
     // If item was not found or list is empty
-    if (curr == NULL)
+    if (curr == nullptr)
     {
         return false;
     }
@@ -248,7 +264,7 @@ template <class T>
 bool DoublyLinkedList<T>::Search(T item) const
 {
     DoublyLinkedListNode<T>* curr = SearchNodes(item);
-    if (curr != NULL)
+    if (curr != nullptr)
     {
         return true;
     }
@@ -259,14 +275,14 @@ bool DoublyLinkedList<T>::Search(T item) const
 }
 
 // SearchNodes - searches for the parameter and returns its node
-// Returns NULL if the item was not found
+// Returns nullptr if the item was not found
 template <class T>
 DoublyLinkedListNode<T>* DoublyLinkedList<T>::SearchNodes(T item) const
 {
     DoublyLinkedListNode<T>* curr = m_head;
 
     // Iterate through the list of nodes
-    while (curr != NULL)
+    while (curr != nullptr)
     {
         // If this node's data matches the parameter
         // return it
@@ -276,8 +292,8 @@ DoublyLinkedListNode<T>* DoublyLinkedList<T>::SearchNodes(T item) const
         curr = curr->GetNext();
     }
 
-    // Item was not found, return NULL
-    return NULL;
+    // Item was not found, return nullptr
+    return nullptr;
 }
 
 // Size - returns the number of items in the list
@@ -304,7 +320,7 @@ void DoublyLinkedList<T>::PrintFullNodes() const
 
 	int cnt = 0;
 	DoublyLinkedListNode<T>* curr = m_head;
-	while (curr != NULL && cnt++ <= m_count)
+	while (curr != nullptr && cnt++ <= m_count)
 	{
 		cout << "Node: " << curr << " " << *curr << endl;
 		curr = curr->GetNext();
@@ -346,7 +362,7 @@ ostream& operator<<(ostream& sout, const DoublyLinkedList<T>& list)
 	DoublyLinkedListNode<T>* curr = list.m_head;
 
 	// If the list is empty, display an appropriate message
-	if (curr == NULL)
+	if (curr == nullptr)
 	{
 		sout << "EMPTY LIST";
 		return sout;
@@ -357,7 +373,7 @@ ostream& operator<<(ostream& sout, const DoublyLinkedList<T>& list)
 	curr = curr->GetNext();
 
 	// While there are more nodes
-	while (curr != NULL)
+	while (curr != nullptr)
 	{
 		// Display an arrow (pointer!) and the next node
         sout << "->" << curr->GetData();
@@ -369,7 +385,7 @@ ostream& operator<<(ostream& sout, const DoublyLinkedList<T>& list)
 	sout << "....";
 
 	// If there are no nodes, display an appropriate message
-	if (curr == NULL)
+	if (curr == nullptr)
 	{
 		sout << "EMPTY LIST";
 		return sout;
@@ -380,7 +396,7 @@ ostream& operator<<(ostream& sout, const DoublyLinkedList<T>& list)
 	curr = curr->GetPrev();
 
 	// While there are more nodes, display them
-	while (curr != NULL)
+	while (curr != nullptr)
 	{
 		// Display an arrow (pointer!) and the next node
 		sout << "->" << curr->GetData();
@@ -405,7 +421,7 @@ DoublyLinkedList<T>& DoublyLinkedList<T>::operator=(const DoublyLinkedList<T>& r
 		DoublyLinkedListNode<T>* curr = rhsList.m_head;
 
 		// While there are still nodes left
-		while (curr != NULL)
+		while (curr != nullptr)
 		{
 			// Add the current node
 			AddBack(curr->GetData());
