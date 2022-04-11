@@ -2,6 +2,7 @@
 #include "CppUnitTest.h"
 #include "DoublyLinkedList.h"
 #include "DoublyLinkedListNode.h"
+#include <string>
 
 using namespace std;
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
@@ -24,10 +25,10 @@ namespace DLL_UnitTests
 			// The "L" that prefixes the string means that the string is stored
 			// as 16-bit characters instead of 8-bit characters and is
 			// required by the assert 
-			Assert::AreEqual("0", list.GetCount(), L"Constructor Count Incorrect", LINE_INFO());
+			Assert::AreEqual(0, list.GetCount(), L"Constructor Count Incorrect", LINE_INFO());
 			Assert::AreEqual(NULL, (int)list.GetHead(), L"Constructor Head Incorrect", LINE_INFO());
 			Assert::AreEqual(NULL, (int)list.GetTail(), L"Constructor Tail Incorrect", LINE_INFO());
-			Assert::AreEqual("0", DoublyLinkedListNode<string>::GetNbrOfNodes(), L"Constructor GetNbrOfNodes Incorrect", LINE_INFO());
+			Assert::AreEqual(0, DoublyLinkedListNode<string>::GetNbrOfNodes(), L"Constructor GetNbrOfNodes Incorrect", LINE_INFO());
 
 			stream << list;
 			actualResult = stream.str();
@@ -43,12 +44,12 @@ namespace DLL_UnitTests
 			DoublyLinkedList<string> list;
 			list.AddFront("1");
 
-			Assert::AreEqual("1", list.GetCount(), L"AddSingleItemFront Count Incorrect", LINE_INFO());
+			Assert::AreEqual(1, list.GetCount(), L"AddSingleItemFront Count Incorrect", LINE_INFO());
 			Assert::AreNotEqual(NULL, (int)list.GetHead(), L"AddSingleItemFront Head Incorrect", LINE_INFO());
 			Assert::AreNotEqual(NULL, (int)list.GetTail(), L"AddSingleItemFront Tail Incorrect", LINE_INFO());
 			Assert::AreEqual(NULL, (int)list.GetHead()->GetPrev(), L"AddSingleItemFront Head->Prev Incorrect", LINE_INFO());
 			Assert::AreEqual(NULL, (int)list.GetTail()->GetNext(), L"AddSingleItemFront Tail->Next Incorrect", LINE_INFO());
-			Assert::AreEqual("1", DoublyLinkedListNode<int>::GetNbrOfNodes(), L"AddSingleItemFront GetNbrOfNodes Incorrect", LINE_INFO());
+			Assert::AreEqual(1, DoublyLinkedListNode<string>::GetNbrOfNodes(), L"AddSingleItemFront GetNbrOfNodes Incorrect", LINE_INFO());
 
 			stream << list;
 			actualResult = stream.str();
@@ -65,10 +66,10 @@ namespace DLL_UnitTests
 			list.AddFront("4");
 			list.AddFront("5");
 
-			Assert::AreEqual("5", list.GetCount(), L"AddMultipleItemFront Count Incorrect", LINE_INFO());
+			Assert::AreEqual(5, list.GetCount(), L"AddMultipleItemFront Count Incorrect", LINE_INFO());
 			Assert::AreNotEqual(NULL, (int)list.GetHead(), L"AddMultipleItemFront Head Incorrect", LINE_INFO());
 			Assert::AreNotEqual(NULL, (int)list.GetTail(), L"AddMultipleItemFront Tail Incorrect", LINE_INFO());
-			Assert::AreEqual("5", DoublyLinkedListNode<int>::GetNbrOfNodes(), L"AddMultipleItemFront GetNbrOfNodes Incorrect", LINE_INFO());
+			Assert::AreEqual(5, DoublyLinkedListNode<string>::GetNbrOfNodes(), L"AddMultipleItemFront GetNbrOfNodes Incorrect", LINE_INFO());
 			Assert::AreEqual(NULL, (int)list.GetHead()->GetPrev(), L"AddMultipleItemFront Head->Prev Incorrect", LINE_INFO());
 			Assert::AreEqual(NULL, (int)list.GetTail()->GetNext(), L"AddMultipleItemFront Tail->Next Incorrect", LINE_INFO());
 
@@ -86,10 +87,10 @@ namespace DLL_UnitTests
 			DoublyLinkedList<string> list;
 			list.AddBack("1");
 
-			Assert::AreEqual("1", list.GetCount(), L"AddSingleItemBack Count Incorrect", LINE_INFO());
+			Assert::AreEqual(1, list.GetCount(), L"AddSingleItemBack Count Incorrect", LINE_INFO());
 			Assert::AreNotEqual(NULL, (int)list.GetHead(), L"AddSingleItemBack Head Incorrect", LINE_INFO());
 			Assert::AreNotEqual(NULL, (int)list.GetTail(), L"AddSingleItemBack Tail Incorrect", LINE_INFO());
-			Assert::AreEqual("1", DoublyLinkedListNode<int>::GetNbrOfNodes(), L"AddSingleItemBack GetNbrOfNodes Incorrect", LINE_INFO());
+			Assert::AreEqual(1, DoublyLinkedListNode<int>::GetNbrOfNodes(), L"AddSingleItemBack GetNbrOfNodes Incorrect", LINE_INFO());
 			Assert::AreEqual(NULL, (int)list.GetHead()->GetPrev(), L"AddSingleItemBack Head->Prev Incorrect", LINE_INFO());
 			Assert::AreEqual(NULL, (int)list.GetTail()->GetNext(), L"AddSingleItemBack Tail->Next Incorrect", LINE_INFO());
 
@@ -108,10 +109,10 @@ namespace DLL_UnitTests
 			list.AddBack("4");
 			list.AddBack("5");
 
-			Assert::AreEqual("5", list.GetCount(), L"AddMultipleItemBack Count Incorrect", LINE_INFO());
+			Assert::AreEqual(5, list.GetCount(), L"AddMultipleItemBack Count Incorrect", LINE_INFO());
 			Assert::AreNotEqual(NULL, (int)list.GetHead(), L"AddMultipleItemBack Head Incorrect", LINE_INFO());
 			Assert::AreNotEqual(NULL, (int)list.GetTail(), L"AddMultipleItemBack Tail Incorrect", LINE_INFO());
-			Assert::AreEqual("5", DoublyLinkedListNode<int>::GetNbrOfNodes(), L"AddMultipleItemBack GetNbrOfNodes Incorrect", LINE_INFO());
+			Assert::AreEqual(5, DoublyLinkedListNode<int>::GetNbrOfNodes(), L"AddMultipleItemBack GetNbrOfNodes Incorrect", LINE_INFO());
 			Assert::AreEqual(NULL, (int)list.GetHead()->GetPrev(), L"AddMultipleItemBack Head->Prev Incorrect", LINE_INFO());
 			Assert::AreEqual(NULL, (int)list.GetTail()->GetNext(), L"AddMultipleItemBack Tail->Next Incorrect", LINE_INFO());
 
@@ -130,10 +131,10 @@ namespace DLL_UnitTests
 			list.AddFront("1");
 			list.AddBack("2");
 
-			Assert::AreEqual("2", list.GetCount(), L"AddSingleItemFrontAddSingleItemBack Count Incorrect", LINE_INFO());
+			Assert::AreEqual(2, list.GetCount(), L"AddSingleItemFrontAddSingleItemBack Count Incorrect", LINE_INFO());
 			Assert::AreNotEqual(NULL, (int)list.GetHead(), L"AddSingleItemFrontAddSingleItemBack Head Incorrect", LINE_INFO());
 			Assert::AreNotEqual(NULL, (int)list.GetTail(), L"AddSingleItemFrontAddSingleItemBack Tail Incorrect", LINE_INFO());
-			Assert::AreEqual("2", DoublyLinkedListNode<int>::GetNbrOfNodes(), L"AddSingleItemFrontAddSingleItemBack GetNbrOfNodes Incorrect", LINE_INFO());
+			Assert::AreEqual(2, DoublyLinkedListNode<int>::GetNbrOfNodes(), L"AddSingleItemFrontAddSingleItemBack GetNbrOfNodes Incorrect", LINE_INFO());
 			Assert::AreEqual(NULL, (int)list.GetHead()->GetPrev(), L"AddSingleItemFrontAddSingleItemBack Head->Prev Incorrect", LINE_INFO());
 			Assert::AreEqual(NULL, (int)list.GetTail()->GetNext(), L"AddSingleItemFrontAddSingleItemBack Tail->Next Incorrect", LINE_INFO());
 
@@ -153,10 +154,10 @@ namespace DLL_UnitTests
 			list.AddFront("5");
 			list.AddBack("6");
 
-			Assert::AreEqual("6", list.GetCount(), L"AddMultipleItemBack Count Incorrect", LINE_INFO());
+			Assert::AreEqual(6, list.GetCount(), L"AddMultipleItemBack Count Incorrect", LINE_INFO());
 			Assert::AreNotEqual(NULL, (int)list.GetHead(), L"AddMultipleItemBack Head Incorrect", LINE_INFO());
 			Assert::AreNotEqual(NULL, (int)list.GetTail(), L"AddMultipleItemBack Tail Incorrect", LINE_INFO());
-			Assert::AreEqual("6", DoublyLinkedListNode<int>::GetNbrOfNodes(), L"AddMultipleItemBack GetNbrOfNodes Incorrect", LINE_INFO());
+			Assert::AreEqual(6, DoublyLinkedListNode<int>::GetNbrOfNodes(), L"AddMultipleItemBack GetNbrOfNodes Incorrect", LINE_INFO());
 			Assert::AreEqual(NULL, (int)list.GetHead()->GetPrev(), L"AddMultipleItemBack Head->Prev Incorrect", LINE_INFO());
 			Assert::AreEqual(NULL, (int)list.GetTail()->GetNext(), L"AddMultipleItemBack Tail->Next Incorrect", LINE_INFO());
 
@@ -174,12 +175,12 @@ namespace DLL_UnitTests
 			DoublyLinkedList<string> list;
 			list.AddFront("1");
 			string item = list.RemoveFront();
-			Assert::AreEqual("1", item, L"AddSingleItemFrontRemoveSingleItemFront Item Incorrect", LINE_INFO());
+			Assert::AreEqual<string>("1", item, L"AddSingleItemFrontRemoveSingleItemFront Item Incorrect", LINE_INFO());
 
-			Assert::AreEqual("0", list.GetCount(), L"AddSingleItemFrontRemoveSingleItemFront Count Incorrect", LINE_INFO());
+			Assert::AreEqual(0, list.GetCount(), L"AddSingleItemFrontRemoveSingleItemFront Count Incorrect", LINE_INFO());
 			Assert::AreEqual(NULL, (int)list.GetHead(), L"AddSingleItemFrontRemoveSingleItemFront Head Incorrect", LINE_INFO());
 			Assert::AreEqual(NULL, (int)list.GetTail(), L"AddSingleItemFrontRemoveSingleItemFront Tail Incorrect", LINE_INFO());
-			Assert::AreEqual("0", DoublyLinkedListNode<string>::GetNbrOfNodes(), L"AddSingleItemFrontRemoveSingleItemFront GetNbrOfNodes Incorrect", LINE_INFO());
+			Assert::AreEqual(0, DoublyLinkedListNode<string>::GetNbrOfNodes(), L"AddSingleItemFrontRemoveSingleItemFront GetNbrOfNodes Incorrect", LINE_INFO());
 
 			stream << list;
 			actualResult = stream.str();
@@ -200,11 +201,11 @@ namespace DLL_UnitTests
 			{
 				const DoublyLinkedListNode<string>* const headNext = list.GetHead()->GetNext();
 				item = list.RemoveFront();
-				Assert::AreEqual("5", item, L"AddMultipleItemFrontRemoveMultipleItemFront Item Incorrect", LINE_INFO());
-				Assert::AreEqual("4", list.GetCount(), L"AddMultipleItemFrontRemoveMultipleItemFront Count Incorrect", LINE_INFO());
+				Assert::AreEqual(5, item, L"AddMultipleItemFrontRemoveMultipleItemFront Item Incorrect", LINE_INFO());
+				Assert::AreEqual(4, list.GetCount(), L"AddMultipleItemFrontRemoveMultipleItemFront Count Incorrect", LINE_INFO());
 				Assert::AreNotEqual(NULL, (int)list.GetHead(), L"AddMultipleItemFrontRemoveMultipleItemFront Head Incorrect", LINE_INFO());
 				Assert::AreNotEqual(NULL, (int)list.GetTail(), L"AddMultipleItemFrontRemoveMultipleItemFront Tail Incorrect", LINE_INFO());
-				Assert::AreEqual("4", DoublyLinkedListNode<string>::GetNbrOfNodes(), L"AddMultipleItemFrontRemoveMultipleItemFront GetNbrOfNodes Incorrect", LINE_INFO());
+				Assert::AreEqual(4, DoublyLinkedListNode<string>::GetNbrOfNodes(), L"AddMultipleItemFrontRemoveMultipleItemFront GetNbrOfNodes Incorrect", LINE_INFO());
 				Assert::AreEqual((int)headNext, (int)list.GetHead(), L"AddMultipleItemFrontRemoveMultipleItemFront Tail Incorrect", LINE_INFO());
 				Assert::AreEqual(NULL, (int)list.GetHead()->GetPrev(), L"AddMultipleItemFrontRemoveMultipleItemFront Head->Prev Incorrect", LINE_INFO());
 				Assert::AreEqual(NULL, (int)list.GetTail()->GetNext(), L"AddMultipleItemFrontRemoveMultipleItemFront Tail->Next Incorrect", LINE_INFO());
@@ -220,11 +221,11 @@ namespace DLL_UnitTests
 			{
 				const DoublyLinkedListNode<string>* const headNext = list.GetHead()->GetNext();
 				item = list.RemoveFront();
-				Assert::AreEqual("4", item, L"AddMultipleItemFrontRemoveMultipleItemFront Item Incorrect", LINE_INFO());
-				Assert::AreEqual("3", list.GetCount(), L"AddMultipleItemFrontRemoveMultipleItemFront Count Incorrect", LINE_INFO());
+				Assert::AreEqual(4, item, L"AddMultipleItemFrontRemoveMultipleItemFront Item Incorrect", LINE_INFO());
+				Assert::AreEqual(3, list.GetCount(), L"AddMultipleItemFrontRemoveMultipleItemFront Count Incorrect", LINE_INFO());
 				Assert::AreNotEqual(NULL, (int)list.GetHead(), L"AddMultipleItemFrontRemoveMultipleItemFront Head Incorrect", LINE_INFO());
 				Assert::AreNotEqual(NULL, (int)list.GetTail(), L"AddMultipleItemFrontRemoveMultipleItemFront Tail Incorrect", LINE_INFO());
-				Assert::AreEqual("3", DoublyLinkedListNode<string>::GetNbrOfNodes(), L"AddMultipleItemFrontRemoveMultipleItemFront GetNbrOfNodes Incorrect", LINE_INFO());
+				Assert::AreEqual(3, DoublyLinkedListNode<string>::GetNbrOfNodes(), L"AddMultipleItemFrontRemoveMultipleItemFront GetNbrOfNodes Incorrect", LINE_INFO());
 				Assert::AreEqual((int)headNext, (int)list.GetHead(), L"AddMultipleItemFrontRemoveMultipleItemFront Tail Incorrect", LINE_INFO());
 				Assert::AreEqual(NULL, (int)list.GetHead()->GetPrev(), L"AddMultipleItemFrontRemoveMultipleItemFront Head->Prev Incorrect", LINE_INFO());
 				Assert::AreEqual(NULL, (int)list.GetTail()->GetNext(), L"AddMultipleItemFrontRemoveMultipleItemFront Tail->Next Incorrect", LINE_INFO());
@@ -240,11 +241,11 @@ namespace DLL_UnitTests
 			{
 				const DoublyLinkedListNode<string>* const headNext = list.GetHead()->GetNext();
 				item = list.RemoveFront();
-				Assert::AreEqual("3", item, L"AddMultipleItemFrontRemoveMultipleItemFront Item Incorrect", LINE_INFO());
-				Assert::AreEqual("2", list.GetCount(), L"AddMultipleItemFrontRemoveMultipleItemFront Count Incorrect", LINE_INFO());
+				Assert::AreEqual(3, item, L"AddMultipleItemFrontRemoveMultipleItemFront Item Incorrect", LINE_INFO());
+				Assert::AreEqual(2, list.GetCount(), L"AddMultipleItemFrontRemoveMultipleItemFront Count Incorrect", LINE_INFO());
 				Assert::AreNotEqual(NULL, (int)list.GetHead(), L"AddMultipleItemFrontRemoveMultipleItemFront Head Incorrect", LINE_INFO());
 				Assert::AreNotEqual(NULL, (int)list.GetTail(), L"AddMultipleItemFrontRemoveMultipleItemFront Tail Incorrect", LINE_INFO());
-				Assert::AreEqual("2", DoublyLinkedListNode<string>::GetNbrOfNodes(), L"AddMultipleItemFrontRemoveMultipleItemFront GetNbrOfNodes Incorrect", LINE_INFO());
+				Assert::AreEqual(2, DoublyLinkedListNode<string>::GetNbrOfNodes(), L"AddMultipleItemFrontRemoveMultipleItemFront GetNbrOfNodes Incorrect", LINE_INFO());
 				Assert::AreEqual((int)headNext, (int)list.GetHead(), L"AddMultipleItemFrontRemoveMultipleItemFront Tail Incorrect", LINE_INFO());
 				Assert::AreEqual(NULL, (int)list.GetHead()->GetPrev(), L"AddMultipleItemFrontRemoveMultipleItemFront Head->Prev Incorrect", LINE_INFO());
 				Assert::AreEqual(NULL, (int)list.GetTail()->GetNext(), L"AddMultipleItemFrontRemoveMultipleItemFront Tail->Next Incorrect", LINE_INFO());
@@ -260,11 +261,11 @@ namespace DLL_UnitTests
 			{
 				const DoublyLinkedListNode<string>* const headNext = list.GetHead()->GetNext();
 				item = list.RemoveFront();
-				Assert::AreEqual("2", item, L"AddMultipleItemFrontRemoveMultipleItemFront Item Incorrect", LINE_INFO());
-				Assert::AreEqual("1", list.GetCount(), L"AddMultipleItemFrontRemoveMultipleItemFront Count Incorrect", LINE_INFO());
+				Assert::AreEqual(2, item, L"AddMultipleItemFrontRemoveMultipleItemFront Item Incorrect", LINE_INFO());
+				Assert::AreEqual(1, list.GetCount(), L"AddMultipleItemFrontRemoveMultipleItemFront Count Incorrect", LINE_INFO());
 				Assert::AreNotEqual(NULL, (int)list.GetHead(), L"AddMultipleItemFrontRemoveMultipleItemFront Head Incorrect", LINE_INFO());
 				Assert::AreNotEqual(NULL, (int)list.GetTail(), L"AddMultipleItemFrontRemoveMultipleItemFront Tail Incorrect", LINE_INFO());
-				Assert::AreEqual("1", DoublyLinkedListNode<string>::GetNbrOfNodes(), L"AddMultipleItemFrontRemoveMultipleItemFront GetNbrOfNodes Incorrect", LINE_INFO());
+				Assert::AreEqual(1, DoublyLinkedListNode<string>::GetNbrOfNodes(), L"AddMultipleItemFrontRemoveMultipleItemFront GetNbrOfNodes Incorrect", LINE_INFO());
 				Assert::AreEqual((int)headNext, (int)list.GetHead(), L"AddMultipleItemFrontRemoveMultipleItemFront Tail Incorrect", LINE_INFO());
 				Assert::AreEqual(NULL, (int)list.GetHead()->GetPrev(), L"AddMultipleItemFrontRemoveMultipleItemFront Head->Prev Incorrect", LINE_INFO());
 				Assert::AreEqual(NULL, (int)list.GetTail()->GetNext(), L"AddMultipleItemFrontRemoveMultipleItemFront Tail->Next Incorrect", LINE_INFO());
@@ -279,11 +280,11 @@ namespace DLL_UnitTests
 
 			{
 				item = list.RemoveFront();
-				Assert::AreEqual("1", item, L"AddMultipleItemFrontRemoveMultipleItemFront Item Incorrect", LINE_INFO());
-				Assert::AreEqual("0", list.GetCount(), L"AddMultipleItemFrontRemoveMultipleItemFront Count Incorrect", LINE_INFO());
+				Assert::AreEqual(1, item, L"AddMultipleItemFrontRemoveMultipleItemFront Item Incorrect", LINE_INFO());
+				Assert::AreEqual(0, list.GetCount(), L"AddMultipleItemFrontRemoveMultipleItemFront Count Incorrect", LINE_INFO());
 				Assert::AreEqual(NULL, (int)list.GetHead(), L"AddMultipleItemFrontRemoveMultipleItemFront Head Incorrect", LINE_INFO());
 				Assert::AreEqual(NULL, (int)list.GetTail(), L"AddMultipleItemFrontRemoveMultipleItemFront Tail Incorrect", LINE_INFO());
-				Assert::AreEqual("0", DoublyLinkedListNode<string>::GetNbrOfNodes(), L"AddMultipleItemFrontRemoveMultipleItemFront GetNbrOfNodes Incorrect", LINE_INFO());
+				Assert::AreEqual(0, DoublyLinkedListNode<string>::GetNbrOfNodes(), L"AddMultipleItemFrontRemoveMultipleItemFront GetNbrOfNodes Incorrect", LINE_INFO());
 
 				ostringstream stream;
 				stream << list;
@@ -301,11 +302,11 @@ namespace DLL_UnitTests
 			DoublyLinkedList<string> list;
 			list.AddFront("1");
 			string item = list.RemoveBack();
-			Assert::AreEqual("1", item, L"AddSingleItemFrontRemoveSingleItemBack Item Incorrect", LINE_INFO());
-			Assert::AreEqual("0", list.GetCount(), L"AddSingleItemFrontRemoveSingleItemBack Count Incorrect", LINE_INFO());
+			Assert::AreEqual(1, item, L"AddSingleItemFrontRemoveSingleItemBack Item Incorrect", LINE_INFO());
+			Assert::AreEqual(0, list.GetCount(), L"AddSingleItemFrontRemoveSingleItemBack Count Incorrect", LINE_INFO());
 			Assert::AreEqual(NULL, (int)list.GetHead(), L"AddSingleItemFrontRemoveSingleItemBack Head Incorrect", LINE_INFO());
 			Assert::AreEqual(NULL, (int)list.GetTail(), L"AddSingleItemFrontRemoveSingleItemBack Tail Incorrect", LINE_INFO());
-			Assert::AreEqual("0", DoublyLinkedListNode<string>::GetNbrOfNodes(), L"AddSingleItemFrontRemoveSingleItemBack GetNbrOfNodes Incorrect", LINE_INFO());
+			Assert::AreEqual(0, DoublyLinkedListNode<string>::GetNbrOfNodes(), L"AddSingleItemFrontRemoveSingleItemBack GetNbrOfNodes Incorrect", LINE_INFO());
 
 			stream << list;
 			actualResult = stream.str();
@@ -327,11 +328,11 @@ namespace DLL_UnitTests
 			{
 				const DoublyLinkedListNode<string>* const tailPrev = list.GetTail()->GetPrev();
 				item = list.RemoveBack();
-				Assert::AreEqual("1", item, L"AddMultipleItemFrontRemoveMultipleItemBack Item Incorrect", LINE_INFO());
-				Assert::AreEqual("4", list.GetCount(), L"AddMultipleItemFrontRemoveMultipleItemBack Count Incorrect", LINE_INFO());
+				Assert::AreEqual(1, item, L"AddMultipleItemFrontRemoveMultipleItemBack Item Incorrect", LINE_INFO());
+				Assert::AreEqual(4, list.GetCount(), L"AddMultipleItemFrontRemoveMultipleItemBack Count Incorrect", LINE_INFO());
 				Assert::AreNotEqual(NULL, (int)list.GetHead(), L"AddMultipleItemFrontRemoveMultipleItemBack Head Incorrect", LINE_INFO());
 				Assert::AreNotEqual(NULL, (int)list.GetTail(), L"AddMultipleItemFrontRemoveMultipleItemBack Tail Incorrect", LINE_INFO());
-				Assert::AreEqual("4", DoublyLinkedListNode<string>::GetNbrOfNodes(), L"AddMultipleItemFrontRemoveMultipleItemBack GetNbrOfNodes Incorrect", LINE_INFO());
+				Assert::AreEqual(4, DoublyLinkedListNode<string>::GetNbrOfNodes(), L"AddMultipleItemFrontRemoveMultipleItemBack GetNbrOfNodes Incorrect", LINE_INFO());
 				Assert::AreEqual((int)tailPrev, (int)list.GetTail(), L"AddMultipleItemFrontRemoveMultipleItemBack Tail Incorrect", LINE_INFO());
 				Assert::AreEqual(NULL, (int)list.GetHead()->GetPrev(), L"AddMultipleItemFrontRemoveMultipleItemBack Head->Prev Incorrect", LINE_INFO());
 				Assert::AreEqual(NULL, (int)list.GetTail()->GetNext(), L"AddMultipleItemFrontRemoveMultipleItemBack Tail->Next Incorrect", LINE_INFO());
@@ -346,11 +347,11 @@ namespace DLL_UnitTests
 			{
 				const DoublyLinkedListNode<string>* const tailPrev = list.GetTail()->GetPrev();
 				item = list.RemoveBack();
-				Assert::AreEqual("2", item, L"AddMultipleItemFrontRemoveMultipleItemBack Item Incorrect", LINE_INFO());
-				Assert::AreEqual("3", list.GetCount(), L"AddMultipleItemFrontRemoveMultipleItemBack Count Incorrect", LINE_INFO());
+				Assert::AreEqual(2, item, L"AddMultipleItemFrontRemoveMultipleItemBack Item Incorrect", LINE_INFO());
+				Assert::AreEqual(3, list.GetCount(), L"AddMultipleItemFrontRemoveMultipleItemBack Count Incorrect", LINE_INFO());
 				Assert::AreNotEqual(NULL, (int)list.GetHead(), L"AddMultipleItemFrontRemoveMultipleItemBack Head Incorrect", LINE_INFO());
 				Assert::AreNotEqual(NULL, (int)list.GetTail(), L"AddMultipleItemFrontRemoveMultipleItemBack Tail Incorrect", LINE_INFO());
-				Assert::AreEqual("3", DoublyLinkedListNode<string>::GetNbrOfNodes(), L"AddMultipleItemFrontRemoveMultipleItemBack GetNbrOfNodes Incorrect", LINE_INFO());
+				Assert::AreEqual(3, DoublyLinkedListNode<string>::GetNbrOfNodes(), L"AddMultipleItemFrontRemoveMultipleItemBack GetNbrOfNodes Incorrect", LINE_INFO());
 				Assert::AreEqual((int)tailPrev, (int)list.GetTail(), L"AddMultipleItemFrontRemoveMultipleItemBack Tail Incorrect", LINE_INFO());
 				Assert::AreEqual(NULL, (int)list.GetHead()->GetPrev(), L"AddMultipleItemFrontRemoveMultipleItemBack Head->Prev Incorrect", LINE_INFO());
 				Assert::AreEqual(NULL, (int)list.GetTail()->GetNext(), L"AddMultipleItemFrontRemoveMultipleItemBack Tail->Next Incorrect", LINE_INFO());
@@ -365,11 +366,11 @@ namespace DLL_UnitTests
 			{
 				const DoublyLinkedListNode<string>* const tailPrev = list.GetTail()->GetPrev();
 				item = list.RemoveBack();
-				Assert::AreEqual("3", item, L"AddMultipleItemFrontRemoveMultipleItemBack Item Incorrect", LINE_INFO());
-				Assert::AreEqual("2", list.GetCount(), L"AddMultipleItemFrontRemoveMultipleItemBack Count Incorrect", LINE_INFO());
+				Assert::AreEqual(3, item, L"AddMultipleItemFrontRemoveMultipleItemBack Item Incorrect", LINE_INFO());
+				Assert::AreEqua(2, list.GetCount(), L"AddMultipleItemFrontRemoveMultipleItemBack Count Incorrect", LINE_INFO());
 				Assert::AreNotEqual(NULL, (int)list.GetHead(), L"AddMultipleItemFrontRemoveMultipleItemBack Head Incorrect", LINE_INFO());
 				Assert::AreNotEqual(NULL, (int)list.GetTail(), L"AddMultipleItemFrontRemoveMultipleItemBack Tail Incorrect", LINE_INFO());
-				Assert::AreEqual("2", DoublyLinkedListNode<string>::GetNbrOfNodes(), L"AddMultipleItemFrontRemoveMultipleItemBack GetNbrOfNodes Incorrect", LINE_INFO());
+				Assert::AreEqual(2, DoublyLinkedListNode<string>::GetNbrOfNodes(), L"AddMultipleItemFrontRemoveMultipleItemBack GetNbrOfNodes Incorrect", LINE_INFO());
 				Assert::AreEqual((int)tailPrev, (int)list.GetTail(), L"AddMultipleItemFrontRemoveMultipleItemBack Tail Incorrect", LINE_INFO());
 				Assert::AreEqual(NULL, (int)list.GetHead()->GetPrev(), L"AddMultipleItemFrontRemoveMultipleItemBack Head->Prev Incorrect", LINE_INFO());
 				Assert::AreEqual(NULL, (int)list.GetTail()->GetNext(), L"AddMultipleItemFrontRemoveMultipleItemBack Tail->Next Incorrect", LINE_INFO());
@@ -384,11 +385,11 @@ namespace DLL_UnitTests
 			{
 				const DoublyLinkedListNode<string>* const tailPrev = list.GetTail()->GetPrev();
 				item = list.RemoveBack();
-				Assert::AreEqual("4", item, L"AddMultipleItemFrontRemoveMultipleItemBack Item Incorrect", LINE_INFO());
-				Assert::AreEqual("1", list.GetCount(), L"AddMultipleItemFrontRemoveMultipleItemBack Count Incorrect", LINE_INFO());
+				Assert::AreEqual(4, item, L"AddMultipleItemFrontRemoveMultipleItemBack Item Incorrect", LINE_INFO());
+				Assert::AreEqual(1, list.GetCount(), L"AddMultipleItemFrontRemoveMultipleItemBack Count Incorrect", LINE_INFO());
 				Assert::AreNotEqual(NULL, (int)list.GetHead(), L"AddMultipleItemFrontRemoveMultipleItemBack Head Incorrect", LINE_INFO());
 				Assert::AreNotEqual(NULL, (int)list.GetTail(), L"AddMultipleItemFrontRemoveMultipleItemBack Tail Incorrect", LINE_INFO());
-				Assert::AreEqual("1", DoublyLinkedListNode<string>::GetNbrOfNodes(), L"AddMultipleItemFrontRemoveMultipleItemBack GetNbrOfNodes Incorrect", LINE_INFO());
+				Assert::AreEqual(1, DoublyLinkedListNode<string>::GetNbrOfNodes(), L"AddMultipleItemFrontRemoveMultipleItemBack GetNbrOfNodes Incorrect", LINE_INFO());
 				Assert::AreEqual((int)tailPrev, (int)list.GetTail(), L"AddMultipleItemFrontRemoveMultipleItemBack Tail Incorrect", LINE_INFO());
 				Assert::AreEqual(NULL, (int)list.GetHead()->GetPrev(), L"AddMultipleItemFrontRemoveMultipleItemBack Head->Prev Incorrect", LINE_INFO());
 				Assert::AreEqual(NULL, (int)list.GetTail()->GetNext(), L"AddMultipleItemFrontRemoveMultipleItemBack Tail->Next Incorrect", LINE_INFO());
@@ -402,11 +403,11 @@ namespace DLL_UnitTests
 
 			{
 				item = list.RemoveBack();
-				Assert::AreEqual("5", item, L"AddMultipleItemFrontRemoveMultipleItemBack Item Incorrect", LINE_INFO());
-				Assert::AreEqual("0", list.GetCount(), L"AddMultipleItemFrontRemoveMultipleItemBack Count Incorrect", LINE_INFO());
+				Assert::AreEqual(5, item, L"AddMultipleItemFrontRemoveMultipleItemBack Item Incorrect", LINE_INFO());
+				Assert::AreEqual(0, list.GetCount(), L"AddMultipleItemFrontRemoveMultipleItemBack Count Incorrect", LINE_INFO());
 				Assert::AreEqual(NULL, (int)list.GetHead(), L"AddMultipleItemFrontRemoveMultipleItemBack Head Incorrect", LINE_INFO());
 				Assert::AreEqual(NULL, (int)list.GetTail(), L"AddMultipleItemFrontRemoveMultipleItemBack Tail Incorrect", LINE_INFO());
-				Assert::AreEqual("0", DoublyLinkedListNode<string>::GetNbrOfNodes(), L"AddMultipleItemFrontRemoveMultipleItemBack GetNbrOfNodes Incorrect", LINE_INFO());
+				Assert::AreEqual(0, DoublyLinkedListNode<string>::GetNbrOfNodes(), L"AddMultipleItemFrontRemoveMultipleItemBack GetNbrOfNodes Incorrect", LINE_INFO());
 
 				ostringstream stream;
 				stream << list;
@@ -424,11 +425,11 @@ namespace DLL_UnitTests
 			DoublyLinkedList<string> list;
 			list.AddBack("1");
 			string item = list.RemoveBack();
-			Assert::AreEqual("1", item, L"AddSingleItemBackRemoveSingleItemBack Item Incorrect", LINE_INFO());
-			Assert::AreEqual("0", list.GetCount(), L"AddSingleItemBackRemoveSingleItemBack Count Incorrect", LINE_INFO());
+			Assert::AreEqual(1, item, L"AddSingleItemBackRemoveSingleItemBack Item Incorrect", LINE_INFO());
+			Assert::AreEqual(0, list.GetCount(), L"AddSingleItemBackRemoveSingleItemBack Count Incorrect", LINE_INFO());
 			Assert::AreEqual(NULL, (int)list.GetHead(), L"AddSingleItemBackRemoveSingleItemBack Head Incorrect", LINE_INFO());
 			Assert::AreEqual(NULL, (int)list.GetTail(), L"AddSingleItemBackRemoveSingleItemBack Tail Incorrect", LINE_INFO());
-			Assert::AreEqual("0", DoublyLinkedListNode<string>::GetNbrOfNodes(), L"AddSingleItemBackRemoveSingleItemBack GetNbrOfNodes Incorrect", LINE_INFO());
+			Assert::AreEqual(0, DoublyLinkedListNode<string>::GetNbrOfNodes(), L"AddSingleItemBackRemoveSingleItemBack GetNbrOfNodes Incorrect", LINE_INFO());
 
 			stream << list;
 			actualResult = stream.str();
@@ -450,11 +451,11 @@ namespace DLL_UnitTests
 			{
 				const DoublyLinkedListNode<string>* const tailPrev = list.GetTail()->GetPrev();
 				item = list.RemoveBack();
-				Assert::AreEqual("5", item, L"AddMultipleItemBackRemoveMultipleItemBack Item Incorrect", LINE_INFO());
-				Assert::AreEqual("4", list.GetCount(), L"AddMultipleItemBackRemoveMultipleItemBack Count Incorrect", LINE_INFO());
+				Assert::AreEqual(5, item, L"AddMultipleItemBackRemoveMultipleItemBack Item Incorrect", LINE_INFO());
+				Assert::AreEqual(4, list.GetCount(), L"AddMultipleItemBackRemoveMultipleItemBack Count Incorrect", LINE_INFO());
 				Assert::AreNotEqual(NULL, (int)list.GetHead(), L"AddMultipleItemBackRemoveMultipleItemBack Head Incorrect", LINE_INFO());
 				Assert::AreNotEqual(NULL, (int)list.GetTail(), L"AddMultipleItemBackRemoveMultipleItemBack Tail Incorrect", LINE_INFO());
-				Assert::AreEqual("4", DoublyLinkedListNode<string>::GetNbrOfNodes(), L"AddMultipleItemBackRemoveMultipleItemBack GetNbrOfNodes Incorrect", LINE_INFO());
+				Assert::AreEqual(4, DoublyLinkedListNode<string>::GetNbrOfNodes(), L"AddMultipleItemBackRemoveMultipleItemBack GetNbrOfNodes Incorrect", LINE_INFO());
 				Assert::AreEqual((int)tailPrev, (int)list.GetTail(), L"AddMultipleItemBackRemoveMultipleItemBack Tail Incorrect", LINE_INFO());
 				Assert::AreEqual(NULL, (int)list.GetHead()->GetPrev(), L"AddMultipleItemBackRemoveMultipleItemBack Head->Prev Incorrect", LINE_INFO());
 				Assert::AreEqual(NULL, (int)list.GetTail()->GetNext(), L"AddMultipleItemBackRemoveMultipleItemBack Tail->Next Incorrect", LINE_INFO());
@@ -469,11 +470,11 @@ namespace DLL_UnitTests
 			{
 				const DoublyLinkedListNode<string>* const tailPrev = list.GetTail()->GetPrev();
 				item = list.RemoveBack();
-				Assert::AreEqual("4", item, L"AddMultipleItemBackRemoveMultipleItemBack Item Incorrect", LINE_INFO());
-				Assert::AreEqual("3", list.GetCount(), L"AddMultipleItemBackRemoveMultipleItemBack Count Incorrect", LINE_INFO());
+				Assert::AreEqual(4, item, L"AddMultipleItemBackRemoveMultipleItemBack Item Incorrect", LINE_INFO());
+				Assert::AreEqual(3, list.GetCount(), L"AddMultipleItemBackRemoveMultipleItemBack Count Incorrect", LINE_INFO());
 				Assert::AreNotEqual(NULL, (int)list.GetHead(), L"AddMultipleItemBackRemoveMultipleItemBack Head Incorrect", LINE_INFO());
 				Assert::AreNotEqual(NULL, (int)list.GetTail(), L"AddMultipleItemBackRemoveMultipleItemBack Tail Incorrect", LINE_INFO());
-				Assert::AreEqual("3", DoublyLinkedListNode<string>::GetNbrOfNodes(), L"AddMultipleItemBackRemoveMultipleItemBack GetNbrOfNodes Incorrect", LINE_INFO());
+				Assert::AreEqual(3, DoublyLinkedListNode<string>::GetNbrOfNodes(), L"AddMultipleItemBackRemoveMultipleItemBack GetNbrOfNodes Incorrect", LINE_INFO());
 				Assert::AreEqual((int)tailPrev, (int)list.GetTail(), L"AddMultipleItemBackRemoveMultipleItemBack Tail Incorrect", LINE_INFO());
 				Assert::AreEqual(NULL, (int)list.GetHead()->GetPrev(), L"AddMultipleItemBackRemoveMultipleItemBack Head->Prev Incorrect", LINE_INFO());
 				Assert::AreEqual(NULL, (int)list.GetTail()->GetNext(), L"AddMultipleItemBackRemoveMultipleItemBack Tail->Next Incorrect", LINE_INFO());
@@ -488,11 +489,11 @@ namespace DLL_UnitTests
 			{
 				const DoublyLinkedListNode<string>* const tailPrev = list.GetTail()->GetPrev();
 				item = list.RemoveBack();
-				Assert::AreEqual("3", item, L"AddMultipleItemBackRemoveMultipleItemBack Item Incorrect", LINE_INFO());
-				Assert::AreEqual("2", list.GetCount(), L"AddMultipleItemBackRemoveMultipleItemBack Count Incorrect", LINE_INFO());
+				Assert::AreEqual(3, item, L"AddMultipleItemBackRemoveMultipleItemBack Item Incorrect", LINE_INFO());
+				Assert::AreEqual(2, list.GetCount(), L"AddMultipleItemBackRemoveMultipleItemBack Count Incorrect", LINE_INFO());
 				Assert::AreNotEqual(NULL, (int)list.GetHead(), L"AddMultipleItemBackRemoveMultipleItemBack Head Incorrect", LINE_INFO());
 				Assert::AreNotEqual(NULL, (int)list.GetTail(), L"AddMultipleItemBackRemoveMultipleItemBack Tail Incorrect", LINE_INFO());
-				Assert::AreEqual("2", DoublyLinkedListNode<string>::GetNbrOfNodes(), L"AddMultipleItemBackRemoveMultipleItemBack GetNbrOfNodes Incorrect", LINE_INFO());
+				Assert::AreEqual(2, DoublyLinkedListNode<string>::GetNbrOfNodes(), L"AddMultipleItemBackRemoveMultipleItemBack GetNbrOfNodes Incorrect", LINE_INFO());
 				Assert::AreEqual((int)tailPrev, (int)list.GetTail(), L"AddMultipleItemBackRemoveMultipleItemBack Tail Incorrect", LINE_INFO());
 				Assert::AreEqual(NULL, (int)list.GetHead()->GetPrev(), L"AddMultipleItemBackRemoveMultipleItemBack Head->Prev Incorrect", LINE_INFO());
 				Assert::AreEqual(NULL, (int)list.GetTail()->GetNext(), L"AddMultipleItemBackRemoveMultipleItemBack Tail->Next Incorrect", LINE_INFO());
@@ -507,11 +508,11 @@ namespace DLL_UnitTests
 			{
 				const DoublyLinkedListNode<string>* const tailPrev = list.GetTail()->GetPrev();
 				item = list.RemoveBack();
-				Assert::AreEqual("2", item, L"AddMultipleItemBackRemoveMultipleItemBack Item Incorrect", LINE_INFO());
-				Assert::AreEqual("1", list.GetCount(), L"AddMultipleItemBackRemoveMultipleItemBack Count Incorrect", LINE_INFO());
+				Assert::AreEqual(2, item, L"AddMultipleItemBackRemoveMultipleItemBack Item Incorrect", LINE_INFO());
+				Assert::AreEqual(1, list.GetCount(), L"AddMultipleItemBackRemoveMultipleItemBack Count Incorrect", LINE_INFO());
 				Assert::AreNotEqual(NULL, (int)list.GetHead(), L"AddMultipleItemBackRemoveMultipleItemBack Head Incorrect", LINE_INFO());
 				Assert::AreNotEqual(NULL, (int)list.GetTail(), L"AddMultipleItemBackRemoveMultipleItemBack Tail Incorrect", LINE_INFO());
-				Assert::AreEqual("1", DoublyLinkedListNode<string>::GetNbrOfNodes(), L"AddMultipleItemBackRemoveMultipleItemBack GetNbrOfNodes Incorrect", LINE_INFO());
+				Assert::AreEqual(1, DoublyLinkedListNode<string>::GetNbrOfNodes(), L"AddMultipleItemBackRemoveMultipleItemBack GetNbrOfNodes Incorrect", LINE_INFO());
 				Assert::AreEqual((int)tailPrev, (int)list.GetTail(), L"AddMultipleItemBackRemoveMultipleItemBack Tail Incorrect", LINE_INFO());
 				Assert::AreEqual(NULL, (int)list.GetHead()->GetPrev(), L"AddMultipleItemBackRemoveMultipleItemBack Head->Prev Incorrect", LINE_INFO());
 				Assert::AreEqual(NULL, (int)list.GetTail()->GetNext(), L"AddMultipleItemBackRemoveMultipleItemBack Tail->Next Incorrect", LINE_INFO());
@@ -525,11 +526,11 @@ namespace DLL_UnitTests
 
 			{
 				item = list.RemoveBack();
-				Assert::AreEqual("1", item, L"AddMultipleItemBackRemoveMultipleItemBack Item Incorrect", LINE_INFO());
-				Assert::AreEqual("0", list.GetCount(), L"AddMultipleItemBackRemoveMultipleItemBack Count Incorrect", LINE_INFO());
+				Assert::AreEqual(1, item, L"AddMultipleItemBackRemoveMultipleItemBack Item Incorrect", LINE_INFO());
+				Assert::AreEqual(0, list.GetCount(), L"AddMultipleItemBackRemoveMultipleItemBack Count Incorrect", LINE_INFO());
 				Assert::AreEqual(NULL, (int)list.GetHead(), L"AddMultipleItemBackRemoveMultipleItemBack Head Incorrect", LINE_INFO());
 				Assert::AreEqual(NULL, (int)list.GetTail(), L"AddMultipleItemBackRemoveMultipleItemBack Tail Incorrect", LINE_INFO());
-				Assert::AreEqual("0", DoublyLinkedListNode<string>::GetNbrOfNodes(), L"AddMultipleItemBackRemoveMultipleItemBack GetNbrOfNodes Incorrect", LINE_INFO());
+				Assert::AreEqual(0, DoublyLinkedListNode<string>::GetNbrOfNodes(), L"AddMultipleItemBackRemoveMultipleItemBack GetNbrOfNodes Incorrect", LINE_INFO());
 
 				ostringstream stream;
 				stream << list;
@@ -547,11 +548,11 @@ namespace DLL_UnitTests
 			DoublyLinkedList<string> list;
 			list.AddBack("1");
 			string item = list.RemoveFront();
-			Assert::AreEqual("1", item, L"AddSingleItemBackRemoveSingleItemFront Item Incorrect", LINE_INFO());
-			Assert::AreEqual("0", list.GetCount(), L"AddSingleItemBackRemoveSingleItemFront Count Incorrect", LINE_INFO());
+			Assert::AreEqual(1, item, L"AddSingleItemBackRemoveSingleItemFront Item Incorrect", LINE_INFO());
+			Assert::AreEqual(0, list.GetCount(), L"AddSingleItemBackRemoveSingleItemFront Count Incorrect", LINE_INFO());
 			Assert::AreEqual(NULL, (int)list.GetHead(), L"AddSingleItemBackRemoveSingleItemFront Head Incorrect", LINE_INFO());
 			Assert::AreEqual(NULL, (int)list.GetTail(), L"AddSingleItemBackRemoveSingleItemFront Tail Incorrect", LINE_INFO());
-			Assert::AreEqual("0", DoublyLinkedListNode<string>::GetNbrOfNodes(), L"AddSingleItemBackRemoveSingleItemFront GetNbrOfNodes Incorrect", LINE_INFO());
+			Assert::AreEqual(0, DoublyLinkedListNode<string>::GetNbrOfNodes(), L"AddSingleItemBackRemoveSingleItemFront GetNbrOfNodes Incorrect", LINE_INFO());
 
 			stream << list;
 			actualResult = stream.str();
@@ -573,11 +574,11 @@ namespace DLL_UnitTests
 			{
 				const DoublyLinkedListNode<string>* const headNext = list.GetHead()->GetNext();
 				item = list.RemoveFront();
-				Assert::AreEqual("1", item, L"AddMultipleItemBackRemoveMultipleItemFront Item Incorrect", LINE_INFO());
-				Assert::AreEqual("4", list.GetCount(), L"AddMultipleItemBackRemoveMultipleItemFront Count Incorrect", LINE_INFO());
+				Assert::AreEqual(1, item, L"AddMultipleItemBackRemoveMultipleItemFront Item Incorrect", LINE_INFO());
+				Assert::AreEqual(4, list.GetCount(), L"AddMultipleItemBackRemoveMultipleItemFront Count Incorrect", LINE_INFO());
 				Assert::AreNotEqual(NULL, (int)list.GetHead(), L"AddMultipleItemBackRemoveMultipleItemFront Head Incorrect", LINE_INFO());
 				Assert::AreNotEqual(NULL, (int)list.GetTail(), L"AddMultipleItemBackRemoveMultipleItemFront Tail Incorrect", LINE_INFO());
-				Assert::AreEqual("4", DoublyLinkedListNode<string>::GetNbrOfNodes(), L"AddMultipleItemBackRemoveMultipleItemFront GetNbrOfNodes Incorrect", LINE_INFO());
+				Assert::AreEqual(4, DoublyLinkedListNode<string>::GetNbrOfNodes(), L"AddMultipleItemBackRemoveMultipleItemFront GetNbrOfNodes Incorrect", LINE_INFO());
 				Assert::AreEqual((int)headNext, (int)list.GetHead(), L"AddMultipleItemBackRemoveMultipleItemFront Tail Incorrect", LINE_INFO());
 				Assert::AreEqual(NULL, (int)list.GetHead()->GetPrev(), L"AddMultipleItemBackRemoveMultipleItemFront Head->Prev Incorrect", LINE_INFO());
 				Assert::AreEqual(NULL, (int)list.GetTail()->GetNext(), L"AddMultipleItemBackRemoveMultipleItemFront Tail->Next Incorrect", LINE_INFO());
@@ -592,11 +593,11 @@ namespace DLL_UnitTests
 			{
 				const DoublyLinkedListNode<string>* const headNext = list.GetHead()->GetNext();
 				item = list.RemoveFront();
-				Assert::AreEqual("2", item, L"AddMultipleItemBackRemoveMultipleItemFront Item Incorrect", LINE_INFO());
-				Assert::AreEqual("3", list.GetCount(), L"AddMultipleItemBackRemoveMultipleItemFront Count Incorrect", LINE_INFO());
+				Assert::AreEqual(2, item, L"AddMultipleItemBackRemoveMultipleItemFront Item Incorrect", LINE_INFO());
+				Assert::AreEqual(3, list.GetCount(), L"AddMultipleItemBackRemoveMultipleItemFront Count Incorrect", LINE_INFO());
 				Assert::AreNotEqual(NULL, (int)list.GetHead(), L"AddMultipleItemBackRemoveMultipleItemFront Head Incorrect", LINE_INFO());
 				Assert::AreNotEqual(NULL, (int)list.GetTail(), L"AddMultipleItemBackRemoveMultipleItemFront Tail Incorrect", LINE_INFO());
-				Assert::AreEqual("3", DoublyLinkedListNode<string>::GetNbrOfNodes(), L"AddMultipleItemBackRemoveMultipleItemFront GetNbrOfNodes Incorrect", LINE_INFO());
+				Assert::AreEqual(3, DoublyLinkedListNode<string>::GetNbrOfNodes(), L"AddMultipleItemBackRemoveMultipleItemFront GetNbrOfNodes Incorrect", LINE_INFO());
 				Assert::AreEqual((int)headNext, (int)list.GetHead(), L"AddMultipleItemBackRemoveMultipleItemFront Tail Incorrect", LINE_INFO());
 				Assert::AreEqual(NULL, (int)list.GetHead()->GetPrev(), L"AddMultipleItemBackRemoveMultipleItemFront Head->Prev Incorrect", LINE_INFO());
 				Assert::AreEqual(NULL, (int)list.GetTail()->GetNext(), L"AddMultipleItemBackRemoveMultipleItemFront Tail->Next Incorrect", LINE_INFO());
@@ -611,11 +612,11 @@ namespace DLL_UnitTests
 			{
 				const DoublyLinkedListNode<string>* const headNext = list.GetHead()->GetNext();
 				item = list.RemoveFront();
-				Assert::AreEqual("3", item, L"AddMultipleItemBackRemoveMultipleItemFront Item Incorrect", LINE_INFO());
-				Assert::AreEqual("2", list.GetCount(), L"AddMultipleItemBackRemoveMultipleItemFront Count Incorrect", LINE_INFO());
+				Assert::AreEqual(3, item, L"AddMultipleItemBackRemoveMultipleItemFront Item Incorrect", LINE_INFO());
+				Assert::AreEqual(2, list.GetCount(), L"AddMultipleItemBackRemoveMultipleItemFront Count Incorrect", LINE_INFO());
 				Assert::AreNotEqual(NULL, (int)list.GetHead(), L"AddMultipleItemBackRemoveMultipleItemFront Head Incorrect", LINE_INFO());
 				Assert::AreNotEqual(NULL, (int)list.GetTail(), L"AddMultipleItemBackRemoveMultipleItemFront Tail Incorrect", LINE_INFO());
-				Assert::AreEqual("2", DoublyLinkedListNode<string>::GetNbrOfNodes(), L"AddMultipleItemBackRemoveMultipleItemFront GetNbrOfNodes Incorrect", LINE_INFO());
+				Assert::AreEqual(2, DoublyLinkedListNode<string>::GetNbrOfNodes(), L"AddMultipleItemBackRemoveMultipleItemFront GetNbrOfNodes Incorrect", LINE_INFO());
 				Assert::AreEqual((int)headNext, (int)list.GetHead(), L"AddMultipleItemBackRemoveMultipleItemFront Tail Incorrect", LINE_INFO());
 				Assert::AreEqual(NULL, (int)list.GetHead()->GetPrev(), L"AddMultipleItemBackRemoveMultipleItemFront Head->Prev Incorrect", LINE_INFO());
 				Assert::AreEqual(NULL, (int)list.GetTail()->GetNext(), L"AddMultipleItemBackRemoveMultipleItemFront Tail->Next Incorrect", LINE_INFO());
@@ -630,11 +631,11 @@ namespace DLL_UnitTests
 			{
 				const DoublyLinkedListNode<string>* const headNext = list.GetHead()->GetNext();
 				item = list.RemoveFront();
-				Assert::AreEqual("4", item, L"AddMultipleItemBackRemoveMultipleItemFront Item Incorrect", LINE_INFO());
-				Assert::AreEqual("1", list.GetCount(), L"AddMultipleItemBackRemoveMultipleItemFront Count Incorrect", LINE_INFO());
+				Assert::AreEqual(4, item, L"AddMultipleItemBackRemoveMultipleItemFront Item Incorrect", LINE_INFO());
+				Assert::AreEqual(1, list.GetCount(), L"AddMultipleItemBackRemoveMultipleItemFront Count Incorrect", LINE_INFO());
 				Assert::AreNotEqual(NULL, (int)list.GetHead(), L"AddMultipleItemBackRemoveMultipleItemFront Head Incorrect", LINE_INFO());
 				Assert::AreNotEqual(NULL, (int)list.GetTail(), L"AddMultipleItemBackRemoveMultipleItemFront Tail Incorrect", LINE_INFO());
-				Assert::AreEqual("1", DoublyLinkedListNode<string>::GetNbrOfNodes(), L"AddMultipleItemBackRemoveMultipleItemFront GetNbrOfNodes Incorrect", LINE_INFO());
+				Assert::AreEqual(1, DoublyLinkedListNode<string>::GetNbrOfNodes(), L"AddMultipleItemBackRemoveMultipleItemFront GetNbrOfNodes Incorrect", LINE_INFO());
 				Assert::AreEqual((int)headNext, (int)list.GetHead(), L"AddMultipleItemBackRemoveMultipleItemFront Tail Incorrect", LINE_INFO());
 				Assert::AreEqual(NULL, (int)list.GetHead()->GetPrev(), L"AddMultipleItemBackRemoveMultipleItemFront Head->Prev Incorrect", LINE_INFO());
 				Assert::AreEqual(NULL, (int)list.GetTail()->GetNext(), L"AddMultipleItemBackRemoveMultipleItemFront Tail->Next Incorrect", LINE_INFO());
@@ -648,11 +649,11 @@ namespace DLL_UnitTests
 
 			{
 				item = list.RemoveFront();
-				Assert::AreEqual("5", item, L"AddMultipleItemBackRemoveMultipleItemFront Item Incorrect", LINE_INFO());
-				Assert::AreEqual("0", list.GetCount(), L"AddMultipleItemBackRemoveMultipleItemFront Count Incorrect", LINE_INFO());
+				Assert::AreEqual(5, item, L"AddMultipleItemBackRemoveMultipleItemFront Item Incorrect", LINE_INFO());
+				Assert::AreEqual(0, list.GetCount(), L"AddMultipleItemBackRemoveMultipleItemFront Count Incorrect", LINE_INFO());
 				Assert::AreEqual(NULL, (int)list.GetHead(), L"AddMultipleItemBackRemoveMultipleItemFront Head Incorrect", LINE_INFO());
 				Assert::AreEqual(NULL, (int)list.GetTail(), L"AddMultipleItemBackRemoveMultipleItemFront Tail Incorrect", LINE_INFO());
-				Assert::AreEqual("0", DoublyLinkedListNode<string>::GetNbrOfNodes(), L"AddMultipleItemBackRemoveMultipleItemFront GetNbrOfNodes Incorrect", LINE_INFO());
+				Assert::AreEqual(0, DoublyLinkedListNode<string>::GetNbrOfNodes(), L"AddMultipleItemBackRemoveMultipleItemFront GetNbrOfNodes Incorrect", LINE_INFO());
 
 				ostringstream stream;
 				stream << list;
@@ -710,7 +711,7 @@ namespace DLL_UnitTests
 				Assert::AreEqual(false, list.RemoveItem("0"), L"RemoveFromMultipleItemList Does Not Exist Incorrect", LINE_INFO());
 				Assert::AreEqual(NULL, (int)list.GetHead(), L"RemoveFromMultipleItemList Head Incorrect", LINE_INFO());
 				Assert::AreEqual(NULL, (int)list.GetTail(), L"RemoveFromMultipleItemList Tail Incorrect", LINE_INFO());
-				Assert::AreEqual("0", DoublyLinkedListNode<string>::GetNbrOfNodes(), L"RemoveFromMultipleItemList GetNbrOfNodes Incorrect", LINE_INFO());
+				Assert::AreEqual(0, DoublyLinkedListNode<string>::GetNbrOfNodes(), L"RemoveFromMultipleItemList GetNbrOfNodes Incorrect", LINE_INFO());
 			}
 
 			{   // Remove items from middle
@@ -732,7 +733,7 @@ namespace DLL_UnitTests
 				Assert::AreEqual(false, list.RemoveItem("0"), L"RemoveFromMultipleItemList Does Not Exist Incorrect", LINE_INFO());
 				Assert::AreEqual(NULL, (int)list.GetHead(), L"RemoveFromMultipleItemList Head Incorrect", LINE_INFO());
 				Assert::AreEqual(NULL, (int)list.GetTail(), L"RemoveFromMultipleItemList Tail Incorrect", LINE_INFO());
-				Assert::AreEqual("0", DoublyLinkedListNode<string>::GetNbrOfNodes(), L"RemoveFromMultipleItemList GetNbrOfNodes Incorrect", LINE_INFO());
+				Assert::AreEqual(0, DoublyLinkedListNode<string>::GetNbrOfNodes(), L"RemoveFromMultipleItemList GetNbrOfNodes Incorrect", LINE_INFO());
 			}
 		}
 
@@ -773,7 +774,7 @@ namespace DLL_UnitTests
 			Assert::AreEqual(false, list.Search("0"), L"SearchSingleItem Does Not Exist Incorrect", LINE_INFO());
 			Assert::AreNotEqual(NULL, (int)list.GetHead(), L"SearchSingleItem Head Incorrect", LINE_INFO());
 			Assert::AreNotEqual(NULL, (int)list.GetTail(), L"SearchSingleItem Tail Incorrect", LINE_INFO());
-			Assert::AreEqual("1", DoublyLinkedListNode<string>::GetNbrOfNodes(), L"SearchSingleItem GetNbrOfNodes Incorrect", LINE_INFO());
+			Assert::AreEqual(1, DoublyLinkedListNode<string>::GetNbrOfNodes(), L"SearchSingleItem GetNbrOfNodes Incorrect", LINE_INFO());
 		}
 
 		TEST_METHOD(SearchMultipleItems)
@@ -792,7 +793,7 @@ namespace DLL_UnitTests
 			Assert::AreEqual(false, list.Search("0"), L"SearchMultipleItems Does Not Exist Incorrect", LINE_INFO());
 			Assert::AreNotEqual(NULL, (int)list.GetHead(), L"SearchMultipleItems Head Incorrect", LINE_INFO());
 			Assert::AreNotEqual(NULL, (int)list.GetTail(), L"SearchMultipleItems Tail Incorrect", LINE_INFO());
-			Assert::AreEqual("5", DoublyLinkedListNode<string>::GetNbrOfNodes(), L"SearchMultipleItems GetNbrOfNodes Incorrect", LINE_INFO());
+			Assert::AreEqual(5, DoublyLinkedListNode<string>::GetNbrOfNodes(), L"SearchMultipleItems GetNbrOfNodes Incorrect", LINE_INFO());
 		}
 
 		////////////////////////////////////////////////////////////////////////////////
@@ -811,7 +812,7 @@ namespace DLL_UnitTests
 			}
 			Assert::AreNotEqual(NULL, (int)list.GetHead(), L"Size Head Incorrect", LINE_INFO());
 			Assert::AreNotEqual(NULL, (int)list.GetTail(), L"Size Tail Incorrect", LINE_INFO());
-			Assert::AreEqual("100", DoublyLinkedListNode<string>::GetNbrOfNodes(), L"Size GetNbrOfNodes Incorrect", LINE_INFO());
+			Assert::AreEqual(100, DoublyLinkedListNode<string>::GetNbrOfNodes(), L"Size GetNbrOfNodes Incorrect", LINE_INFO());
 
 			// Remove 100 items from the list
 			for (int i = 99; i >= 0; --i)
@@ -823,7 +824,7 @@ namespace DLL_UnitTests
 			}
 			Assert::AreEqual(NULL, (int)list.GetHead(), L"Size Head Incorrect", LINE_INFO());
 			Assert::AreEqual(NULL, (int)list.GetTail(), L"Size Tail Incorrect", LINE_INFO());
-			Assert::AreEqual("0", DoublyLinkedListNode<string>::GetNbrOfNodes(), L"Size GetNbrOfNodes Incorrect", LINE_INFO());
+			Assert::AreEqual(0, DoublyLinkedListNode<string>::GetNbrOfNodes(), L"Size GetNbrOfNodes Incorrect", LINE_INFO());
 		}
 
 		////////////////////////////////////////////////////////////////////////////////
@@ -834,12 +835,12 @@ namespace DLL_UnitTests
 			DoublyLinkedList<string> origList;
 			DoublyLinkedList<string> newList = origList;
 
-			Assert::AreEqual("0", newList.GetCount(), L"AssignmentOperatorEmpty Count Incorrect", LINE_INFO());
+			Assert::AreEqual(0, newList.GetCount(), L"AssignmentOperatorEmpty Count Incorrect", LINE_INFO());
 			Assert::AreEqual(NULL, (int)newList.GetHead(), L"AssignmentOperatorEmpty Head Incorrect", LINE_INFO());
 			Assert::AreEqual(NULL, (int)newList.GetTail(), L"AssignmentOperatorEmpty Tail Incorrect", LINE_INFO());
 			Assert::AreEqual(NULL, (int)origList.GetHead(), L"AssignmentOperatorEmpty Head Incorrect", LINE_INFO());
 			Assert::AreEqual(NULL, (int)origList.GetTail(), L"AssignmentOperatorEmpty Tail Incorrect", LINE_INFO());
-			Assert::AreEqual("0", DoublyLinkedListNode<string>::GetNbrOfNodes(), L"AssignmentOperatorEmpty GetNbrOfNodes Incorrect", LINE_INFO());
+			Assert::AreEqual(0, DoublyLinkedListNode<string>::GetNbrOfNodes(), L"AssignmentOperatorEmpty GetNbrOfNodes Incorrect", LINE_INFO());
 		}
 
 		TEST_METHOD(AssignmentOperatorSingleItem)
@@ -848,12 +849,12 @@ namespace DLL_UnitTests
 			origList.AddFront("1");
 			DoublyLinkedList<string> newList = origList;
 
-			Assert::AreEqual("1", newList.GetCount(), L"AssignmentOperatorSingleItem Count Incorrect", LINE_INFO());
+			Assert::AreEqual(1, newList.GetCount(), L"AssignmentOperatorSingleItem Count Incorrect", LINE_INFO());
 			Assert::AreNotEqual(NULL, (int)newList.GetHead(), L"AssignmentOperatorSingleItem Head Incorrect", LINE_INFO());
 			Assert::AreNotEqual(NULL, (int)newList.GetTail(), L"AssignmentOperatorSingleItem Tail Incorrect", LINE_INFO());
 			Assert::AreNotEqual((int)origList.GetHead(), (int)newList.GetHead(), L"AssignmentOperatorSingleItem Head Incorrect", LINE_INFO());
 			Assert::AreNotEqual((int)origList.GetTail(), (int)newList.GetTail(), L"AssignmentOperatorSingleItem Tail Incorrect", LINE_INFO());
-			Assert::AreEqual("2", DoublyLinkedListNode<string>::GetNbrOfNodes(), L"AssignmentOperatorSingleItem GetNbrOfNodes Incorrect", LINE_INFO());
+			Assert::AreEqual(2, DoublyLinkedListNode<string>::GetNbrOfNodes(), L"AssignmentOperatorSingleItem GetNbrOfNodes Incorrect", LINE_INFO());
 
 			{
 				ostringstream stream;
@@ -874,8 +875,8 @@ namespace DLL_UnitTests
 			{
 				// Remove last item
 				string item = newList.RemoveFront();
-				Assert::AreEqual("1", item, L"AssignmentOperatorSingleItem Remove Item Incorrect", LINE_INFO());
-				Assert::AreEqual("1", DoublyLinkedListNode<string>::GetNbrOfNodes(), L"AssignmentOperatorSingleItem GetNbrOfNodes Incorrect", LINE_INFO());
+				Assert::AreEqual(1, item, L"AssignmentOperatorSingleItem Remove Item Incorrect", LINE_INFO());
+				Assert::AreEqual(1, DoublyLinkedListNode<string>::GetNbrOfNodes(), L"AssignmentOperatorSingleItem GetNbrOfNodes Incorrect", LINE_INFO());
 				Assert::AreNotEqual((int)origList.GetHead(), (int)newList.GetHead(), L"AssignmentOperatorSingleItem Head Incorrect", LINE_INFO());
 				Assert::AreNotEqual((int)origList.GetTail(), (int)newList.GetTail(), L"AssignmentOperatorSingleItem Tail Incorrect", LINE_INFO());
 
@@ -900,12 +901,12 @@ namespace DLL_UnitTests
 
 			DoublyLinkedList<string> newList = origList;
 
-			Assert::AreEqual("5", newList.GetCount(), L"AssignmentOperator Count Incorrect", LINE_INFO());
+			Assert::AreEqual(5, newList.GetCount(), L"AssignmentOperator Count Incorrect", LINE_INFO());
 			Assert::AreNotEqual(NULL, (int)newList.GetHead(), L"AssignmentOperator Head Incorrect", LINE_INFO());
 			Assert::AreNotEqual(NULL, (int)newList.GetTail(), L"AssignmentOperator Tail Incorrect", LINE_INFO());
 			Assert::AreNotEqual((int)origList.GetHead(), (int)newList.GetHead(), L"AssignmentOperator Head Incorrect", LINE_INFO());
 			Assert::AreNotEqual((int)origList.GetTail(), (int)newList.GetTail(), L"AssignmentOperator Tail Incorrect", LINE_INFO());
-			Assert::AreEqual("10", DoublyLinkedListNode<string>::GetNbrOfNodes(), L"AssignmentOperator GetNbrOfNodes Incorrect", LINE_INFO());
+			Assert::AreEqual(10, DoublyLinkedListNode<string>::GetNbrOfNodes(), L"AssignmentOperator GetNbrOfNodes Incorrect", LINE_INFO());
 
 			{
 				ostringstream stream;
@@ -926,8 +927,8 @@ namespace DLL_UnitTests
 			{
 				// Remove from one of the lists
 				string item = newList.RemoveBack();
-				Assert::AreEqual("1", item, L"AssignmentOperator Remove Item Incorrect", LINE_INFO());
-				Assert::AreEqual("9", DoublyLinkedListNode<string>::GetNbrOfNodes(), L"AssignmentOperator GetNbrOfNodes Incorrect", LINE_INFO());
+				Assert::AreEqual(1, item, L"AssignmentOperator Remove Item Incorrect", LINE_INFO());
+				Assert::AreEqual(9, DoublyLinkedListNode<string>::GetNbrOfNodes(), L"AssignmentOperator GetNbrOfNodes Incorrect", LINE_INFO());
 				Assert::AreNotEqual((int)origList.GetHead(), (int)newList.GetHead(), L"AssignmentOperator Head Incorrect", LINE_INFO());
 				Assert::AreNotEqual((int)origList.GetTail(), (int)newList.GetTail(), L"AssignmentOperator Tail Incorrect", LINE_INFO());
 
@@ -941,8 +942,8 @@ namespace DLL_UnitTests
 			{
 				// Remove another item
 				string item = newList.RemoveFront();
-				Assert::AreEqual("5", item, L"AssignmentOperator Remove Item Incorrect", LINE_INFO());
-				Assert::AreEqual("8", DoublyLinkedListNode<string>::GetNbrOfNodes(), L"AssignmentOperator GetNbrOfNodes Incorrect", LINE_INFO());
+				Assert::AreEqual(5, item, L"AssignmentOperator Remove Item Incorrect", LINE_INFO());
+				Assert::AreEqual(8, DoublyLinkedListNode<string>::GetNbrOfNodes(), L"AssignmentOperator GetNbrOfNodes Incorrect", LINE_INFO());
 				Assert::AreNotEqual((int)origList.GetHead(), (int)newList.GetHead(), L"AssignmentOperator Head Incorrect", LINE_INFO());
 				Assert::AreNotEqual((int)origList.GetTail(), (int)newList.GetTail(), L"AssignmentOperator Tail Incorrect", LINE_INFO());
 
@@ -956,8 +957,8 @@ namespace DLL_UnitTests
 			{
 				// Remove another item
 				string item = newList.RemoveBack();
-				Assert::AreEqual("2", item, L"AssignmentOperator Remove Item Incorrect", LINE_INFO());
-				Assert::AreEqual("7", DoublyLinkedListNode<string>::GetNbrOfNodes(), L"AssignmentOperator GetNbrOfNodes Incorrect", LINE_INFO());
+				Assert::AreEqual(2, item, L"AssignmentOperator Remove Item Incorrect", LINE_INFO());
+				Assert::AreEqual(7, DoublyLinkedListNode<string>::GetNbrOfNodes(), L"AssignmentOperator GetNbrOfNodes Incorrect", LINE_INFO());
 				Assert::AreNotEqual((int)origList.GetHead(), (int)newList.GetHead(), L"AssignmentOperator Head Incorrect", LINE_INFO());
 				Assert::AreNotEqual((int)origList.GetTail(), (int)newList.GetTail(), L"AssignmentOperator Tail Incorrect", LINE_INFO());
 
@@ -971,8 +972,8 @@ namespace DLL_UnitTests
 			{
 				// Remove another item
 				string item = newList.RemoveFront();
-				Assert::AreEqual("4", item, L"AssignmentOperator Remove Item Incorrect", LINE_INFO());
-				Assert::AreEqual("6", DoublyLinkedListNode<string>::GetNbrOfNodes(), L"AssignmentOperator GetNbrOfNodes Incorrect", LINE_INFO());
+				Assert::AreEqual(4, item, L"AssignmentOperator Remove Item Incorrect", LINE_INFO());
+				Assert::AreEqual(6, DoublyLinkedListNode<string>::GetNbrOfNodes(), L"AssignmentOperator GetNbrOfNodes Incorrect", LINE_INFO());
 				Assert::AreNotEqual((int)origList.GetHead(), (int)newList.GetHead(), L"AssignmentOperator Head Incorrect", LINE_INFO());
 				Assert::AreNotEqual((int)origList.GetTail(), (int)newList.GetTail(), L"AssignmentOperator Tail Incorrect", LINE_INFO());
 
@@ -986,8 +987,8 @@ namespace DLL_UnitTests
 			{
 				// Remove another item
 				string item = newList.RemoveFront();
-				Assert::AreEqual("3", item, L"AssignmentOperator Remove Item Incorrect", LINE_INFO());
-				Assert::AreEqual("5", DoublyLinkedListNode<string>::GetNbrOfNodes(), L"AssignmentOperator GetNbrOfNodes Incorrect", LINE_INFO());
+				Assert::AreEqual(3, item, L"AssignmentOperator Remove Item Incorrect", LINE_INFO());
+				Assert::AreEqual(5, DoublyLinkedListNode<string>::GetNbrOfNodes(), L"AssignmentOperator GetNbrOfNodes Incorrect", LINE_INFO());
 				Assert::AreNotEqual((int)origList.GetHead(), (int)newList.GetHead(), L"AssignmentOperator Head Incorrect", LINE_INFO());
 				Assert::AreNotEqual((int)origList.GetTail(), (int)newList.GetTail(), L"AssignmentOperator Tail Incorrect", LINE_INFO());
 
@@ -1013,12 +1014,12 @@ namespace DLL_UnitTests
 
 			newList = origList;
 
-			Assert::AreEqual("5", newList.GetCount(), L"AssignmentOperator Count Incorrect", LINE_INFO());
+			Assert::AreEqual<string>("5", newList.GetCount(), L"AssignmentOperator Count Incorrect", LINE_INFO());
 			Assert::AreNotEqual(NULL, (int)newList.GetHead(), L"AssignmentOperator Head Incorrect", LINE_INFO());
 			Assert::AreNotEqual(NULL, (int)newList.GetTail(), L"AssignmentOperator Tail Incorrect", LINE_INFO());
 			Assert::AreNotEqual((int)origList.GetHead(), (int)newList.GetHead(), L"AssignmentOperator Head Incorrect", LINE_INFO());
 			Assert::AreNotEqual((int)origList.GetTail(), (int)newList.GetTail(), L"AssignmentOperator Tail Incorrect", LINE_INFO());
-			Assert::AreEqual("10", DoublyLinkedListNode<string>::GetNbrOfNodes(), L"AssignmentOperator GetNbrOfNodes Incorrect", LINE_INFO());
+			Assert::AreEqual<string>("10", DoublyLinkedListNode<string>::GetNbrOfNodes(), L"AssignmentOperator GetNbrOfNodes Incorrect", LINE_INFO());
 
 			{
 				ostringstream stream;
@@ -1039,8 +1040,8 @@ namespace DLL_UnitTests
 			{
 				// Remove from one of the lists
 				string item = newList.RemoveBack();
-				Assert::AreEqual("1", item, L"AssignmentOperator Remove Item Incorrect", LINE_INFO());
-				Assert::AreEqual("9", DoublyLinkedListNode<string>::GetNbrOfNodes(), L"AssignmentOperator GetNbrOfNodes Incorrect", LINE_INFO());
+				Assert::AreEqual<string>("1", item, L"AssignmentOperator Remove Item Incorrect", LINE_INFO());
+				Assert::AreEqual<string>("9", DoublyLinkedListNode<string>::GetNbrOfNodes(), L"AssignmentOperator GetNbrOfNodes Incorrect", LINE_INFO());
 				Assert::AreNotEqual((int)origList.GetHead(), (int)newList.GetHead(), L"AssignmentOperator Head Incorrect", LINE_INFO());
 				Assert::AreNotEqual((int)origList.GetTail(), (int)newList.GetTail(), L"AssignmentOperator Tail Incorrect", LINE_INFO());
 
@@ -1054,8 +1055,8 @@ namespace DLL_UnitTests
 			{
 				// Remove another item
 				string item = newList.RemoveFront();
-				Assert::AreEqual("5", item, L"AssignmentOperator Remove Item Incorrect", LINE_INFO());
-				Assert::AreEqual("8", DoublyLinkedListNode<string>::GetNbrOfNodes(), L"AssignmentOperator GetNbrOfNodes Incorrect", LINE_INFO());
+				Assert::AreEqual<string>("5", item, L"AssignmentOperator Remove Item Incorrect", LINE_INFO());
+				Assert::AreEqual<string>("8", DoublyLinkedListNode<string>::GetNbrOfNodes(), L"AssignmentOperator GetNbrOfNodes Incorrect", LINE_INFO());
 				Assert::AreNotEqual((int)origList.GetHead(), (int)newList.GetHead(), L"AssignmentOperator Head Incorrect", LINE_INFO());
 				Assert::AreNotEqual((int)origList.GetTail(), (int)newList.GetTail(), L"AssignmentOperator Tail Incorrect", LINE_INFO());
 
@@ -1069,8 +1070,8 @@ namespace DLL_UnitTests
 			{
 				// Remove another item
 				string item = newList.RemoveBack();
-				Assert::AreEqual("2", item, L"AssignmentOperator Remove Item Incorrect", LINE_INFO());
-				Assert::AreEqual("7", DoublyLinkedListNode<string>::GetNbrOfNodes(), L"AssignmentOperator GetNbrOfNodes Incorrect", LINE_INFO());
+				Assert::AreEqual<string>("2", item, L"AssignmentOperator Remove Item Incorrect", LINE_INFO());
+				Assert::AreEqual<string>("7", DoublyLinkedListNode<string>::GetNbrOfNodes(), L"AssignmentOperator GetNbrOfNodes Incorrect", LINE_INFO());
 				Assert::AreNotEqual((int)origList.GetHead(), (int)newList.GetHead(), L"AssignmentOperator Head Incorrect", LINE_INFO());
 				Assert::AreNotEqual((int)origList.GetTail(), (int)newList.GetTail(), L"AssignmentOperator Tail Incorrect", LINE_INFO());
 
@@ -1084,8 +1085,8 @@ namespace DLL_UnitTests
 			{
 				// Remove another item
 				string item = newList.RemoveFront();
-				Assert::AreEqual("4", item, L"AssignmentOperator Remove Item Incorrect", LINE_INFO());
-				Assert::AreEqual("6", DoublyLinkedListNode<string>::GetNbrOfNodes(), L"AssignmentOperator GetNbrOfNodes Incorrect", LINE_INFO());
+				Assert::AreEqual<string>("4", item, L"AssignmentOperator Remove Item Incorrect", LINE_INFO());
+				Assert::AreEqual<string>("6", DoublyLinkedListNode<string>::GetNbrOfNodes(), L"AssignmentOperator GetNbrOfNodes Incorrect", LINE_INFO());
 				Assert::AreNotEqual((int)origList.GetHead(), (int)newList.GetHead(), L"AssignmentOperator Head Incorrect", LINE_INFO());
 				Assert::AreNotEqual((int)origList.GetTail(), (int)newList.GetTail(), L"AssignmentOperator Tail Incorrect", LINE_INFO());
 
@@ -1099,8 +1100,8 @@ namespace DLL_UnitTests
 			{
 				// Remove another item
 				string item = newList.RemoveFront();
-				Assert::AreEqual("3", item, L"AssignmentOperator Remove Item Incorrect", LINE_INFO());
-				Assert::AreEqual("5", DoublyLinkedListNode<string>::GetNbrOfNodes(), L"AssignmentOperator GetNbrOfNodes Incorrect", LINE_INFO());
+				Assert::AreEqual<string>("3", item, L"AssignmentOperator Remove Item Incorrect", LINE_INFO());
+				Assert::AreEqual<string>("5", DoublyLinkedListNode<string>::GetNbrOfNodes(), L"AssignmentOperator GetNbrOfNodes Incorrect", LINE_INFO());
 				Assert::AreNotEqual((int)origList.GetHead(), (int)newList.GetHead(), L"AssignmentOperator Head Incorrect", LINE_INFO());
 				Assert::AreNotEqual((int)origList.GetTail(), (int)newList.GetTail(), L"AssignmentOperator Tail Incorrect", LINE_INFO());
 
@@ -1127,10 +1128,10 @@ namespace DLL_UnitTests
 
 			const DoublyLinkedListNode<string>* const headNext = list.GetHead()->GetNext();
 			const DoublyLinkedListNode<string>* const tailPrev = list.GetTail()->GetPrev();
-			Assert::AreEqual("5", list.GetCount(), L"AssignmentOperatorSelf Count Incorrect", LINE_INFO());
+			Assert::AreEqual<string>("5", list.GetCount(), L"AssignmentOperatorSelf Count Incorrect", LINE_INFO());
 			Assert::AreNotEqual(NULL, (int)list.GetHead(), L"AssignmentOperatorSelf Head Incorrect", LINE_INFO());
 			Assert::AreNotEqual(NULL, (int)list.GetTail(), L"AssignmentOperatorSelf Tail Incorrect", LINE_INFO());
-			Assert::AreEqual("5", DoublyLinkedListNode<string>::GetNbrOfNodes(), L"AssignmentOperatorSelf GetNbrOfNodes Incorrect", LINE_INFO());
+			Assert::AreEqual<string>("5", DoublyLinkedListNode<string>::GetNbrOfNodes(), L"AssignmentOperatorSelf GetNbrOfNodes Incorrect", LINE_INFO());
 			Assert::AreEqual(NULL, (int)list.GetHead()->GetPrev(), L"AssignmentOperatorSelf Head->Prev Incorrect", LINE_INFO());
 			Assert::AreEqual(NULL, (int)list.GetTail()->GetNext(), L"AssignmentOperatorSelf Tail->Next Incorrect", LINE_INFO());
 			Assert::AreEqual((int)headNext, (int)list.GetHead()->GetNext(), L"AddMultipleItemBackRemoveMultipleItemBack Tail Incorrect", LINE_INFO());
@@ -1151,12 +1152,12 @@ namespace DLL_UnitTests
 
 			DoublyLinkedList<string> newList(origList);
 
-			Assert::AreEqual("5", newList.GetCount(), L"CopyConstructor Count Incorrect", LINE_INFO());
+			Assert::AreEqual<string>("5", newList.GetCount(), L"CopyConstructor Count Incorrect", LINE_INFO());
 			Assert::AreNotEqual(NULL, (int)newList.GetHead(), L"CopyConstructor Head Incorrect", LINE_INFO());
 			Assert::AreNotEqual(NULL, (int)newList.GetTail(), L"CopyConstructor Tail Incorrect", LINE_INFO());
 			Assert::AreNotEqual((int)origList.GetHead(), (int)newList.GetHead(), L"CopyConstructor Head Incorrect", LINE_INFO());
 			Assert::AreNotEqual((int)origList.GetTail(), (int)newList.GetTail(), L"CopyConstructor Tail Incorrect", LINE_INFO());
-			Assert::AreEqual("10", DoublyLinkedListNode<string>::GetNbrOfNodes(), L"CopyConstructor GetNbrOfNodes Incorrect", LINE_INFO());
+			Assert::AreEqual<string>("10", DoublyLinkedListNode<string>::GetNbrOfNodes(), L"CopyConstructor GetNbrOfNodes Incorrect", LINE_INFO());
 
 			{
 				ostringstream stream;
@@ -1177,8 +1178,8 @@ namespace DLL_UnitTests
 			{
 				// Remove from one of the lists
 				string item = newList.RemoveBack();
-				Assert::AreEqual("1", item, L"CopyConstructor Remove Item Incorrect", LINE_INFO());
-				Assert::AreEqual("9", DoublyLinkedListNode<string>::GetNbrOfNodes(), L"CopyConstructor GetNbrOfNodes Incorrect", LINE_INFO());
+				Assert::AreEqual<string>("1", item, L"CopyConstructor Remove Item Incorrect", LINE_INFO());
+				Assert::AreEqual<string>("9", DoublyLinkedListNode<string>::GetNbrOfNodes(), L"CopyConstructor GetNbrOfNodes Incorrect", LINE_INFO());
 				Assert::AreNotEqual((int)origList.GetHead(), (int)newList.GetHead(), L"CopyConstructor Head Incorrect", LINE_INFO());
 				Assert::AreNotEqual((int)origList.GetTail(), (int)newList.GetTail(), L"CopyConstructor Tail Incorrect", LINE_INFO());
 
@@ -1192,8 +1193,8 @@ namespace DLL_UnitTests
 			{
 				// Remove another item
 				string item = newList.RemoveFront();
-				Assert::AreEqual("5", item, L"CopyConstructor Remove Item Incorrect", LINE_INFO());
-				Assert::AreEqual("8", DoublyLinkedListNode<string>::GetNbrOfNodes(), L"CopyConstructor GetNbrOfNodes Incorrect", LINE_INFO());
+				Assert::AreEqual<string>("5", item, L"CopyConstructor Remove Item Incorrect", LINE_INFO());
+				Assert::AreEqual<string>("8", DoublyLinkedListNode<string>::GetNbrOfNodes(), L"CopyConstructor GetNbrOfNodes Incorrect", LINE_INFO());
 				Assert::AreNotEqual((int)origList.GetHead(), (int)newList.GetHead(), L"CopyConstructor Head Incorrect", LINE_INFO());
 				Assert::AreNotEqual((int)origList.GetTail(), (int)newList.GetTail(), L"CopyConstructor Tail Incorrect", LINE_INFO());
 
@@ -1207,8 +1208,8 @@ namespace DLL_UnitTests
 			{
 				// Remove another item
 				string item = newList.RemoveBack();
-				Assert::AreEqual("2", item, L"CopyConstructor Remove Item Incorrect", LINE_INFO());
-				Assert::AreEqual("7", DoublyLinkedListNode<string>::GetNbrOfNodes(), L"CopyConstructor GetNbrOfNodes Incorrect", LINE_INFO());
+				Assert::AreEqual<string>("2", item, L"CopyConstructor Remove Item Incorrect", LINE_INFO());
+				Assert::AreEqual<string>("7", DoublyLinkedListNode<string>::GetNbrOfNodes(), L"CopyConstructor GetNbrOfNodes Incorrect", LINE_INFO());
 				Assert::AreNotEqual((int)origList.GetHead(), (int)newList.GetHead(), L"CopyConstructor Head Incorrect", LINE_INFO());
 				Assert::AreNotEqual((int)origList.GetTail(), (int)newList.GetTail(), L"CopyConstructor Tail Incorrect", LINE_INFO());
 
@@ -1222,8 +1223,8 @@ namespace DLL_UnitTests
 			{
 				// Remove another item
 				string item = newList.RemoveFront();
-				Assert::AreEqual("4", item, L"CopyConstructor Remove Item Incorrect", LINE_INFO());
-				Assert::AreEqual("6", DoublyLinkedListNode<string>::GetNbrOfNodes(), L"CopyConstructor GetNbrOfNodes Incorrect", LINE_INFO());
+				Assert::AreEqual<string>("4", item, L"CopyConstructor Remove Item Incorrect", LINE_INFO());
+				Assert::AreEqual<string>("6", DoublyLinkedListNode<string>::GetNbrOfNodes(), L"CopyConstructor GetNbrOfNodes Incorrect", LINE_INFO());
 				Assert::AreNotEqual((int)origList.GetHead(), (int)newList.GetHead(), L"CopyConstructor Head Incorrect", LINE_INFO());
 				Assert::AreNotEqual((int)origList.GetTail(), (int)newList.GetTail(), L"CopyConstructor Tail Incorrect", LINE_INFO());
 
@@ -1237,8 +1238,8 @@ namespace DLL_UnitTests
 			{
 				// Remove another item
 				string item = newList.RemoveFront();
-				Assert::AreEqual("3", item, L"CopyConstructor Remove Item Incorrect", LINE_INFO());
-				Assert::AreEqual("5", DoublyLinkedListNode<string>::GetNbrOfNodes(), L"CopyConstructor GetNbrOfNodes Incorrect", LINE_INFO());
+				Assert::AreEqual<string>("3", item, L"CopyConstructor Remove Item Incorrect", LINE_INFO());
+				Assert::AreEqual<string>("5", DoublyLinkedListNode<string>::GetNbrOfNodes(), L"CopyConstructor GetNbrOfNodes Incorrect", LINE_INFO());
 				Assert::AreNotEqual((int)origList.GetHead(), (int)newList.GetHead(), L"CopyConstructor Head Incorrect", LINE_INFO());
 				Assert::AreNotEqual((int)origList.GetTail(), (int)newList.GetTail(), L"CopyConstructor Tail Incorrect", LINE_INFO());
 
@@ -1257,7 +1258,7 @@ namespace DLL_UnitTests
 		{
 			DoublyLinkedList<string>* list = new DoublyLinkedList<string>();
 			delete list;
-			Assert::AreEqual("0", DoublyLinkedListNode<string>::GetNbrOfNodes(), L"Destructor GetNbrOfNodes Empty List Incorrect", LINE_INFO());
+			Assert::AreEqual<string>("0", DoublyLinkedListNode<string>::GetNbrOfNodes(), L"Destructor GetNbrOfNodes Empty List Incorrect", LINE_INFO());
 
 			list = new DoublyLinkedList<string>();
 			list->AddFront("1");
@@ -1266,16 +1267,16 @@ namespace DLL_UnitTests
 			list->AddFront("4");
 			list->AddFront("5");
 
-			Assert::AreEqual("5", list->GetCount(), L"Destructor Count Incorrect", LINE_INFO());
+			Assert::AreEqual<string>("5", list->GetCount(), L"Destructor Count Incorrect", LINE_INFO());
 			Assert::AreNotEqual(NULL, (int)list->GetHead(), L"Destructor Head Incorrect", LINE_INFO());
 			Assert::AreNotEqual(NULL, (int)list->GetTail(), L"Destructor Tail Incorrect", LINE_INFO());
-			Assert::AreEqual("5", DoublyLinkedListNode<string>::GetNbrOfNodes(), L"Destructor GetNbrOfNodes Incorrect", LINE_INFO());
+			Assert::AreEqual<string>("5", DoublyLinkedListNode<string>::GetNbrOfNodes(), L"Destructor GetNbrOfNodes Incorrect", LINE_INFO());
 			Assert::AreEqual(NULL, (int)list->GetHead()->GetPrev(), L"Destructor Head->Prev Incorrect", LINE_INFO());
 			Assert::AreEqual(NULL, (int)list->GetTail()->GetNext(), L"Destructor Tail->Next Incorrect", LINE_INFO());
 
 			delete list;
 
-			Assert::AreEqual("0", DoublyLinkedListNode<string>::GetNbrOfNodes(), L"Destructor GetNbrOfNodes Incorrect", LINE_INFO());
+			Assert::AreEqual<string>("0", DoublyLinkedListNode<string>::GetNbrOfNodes(), L"Destructor GetNbrOfNodes Incorrect", LINE_INFO());
 		}
 
 		////////////////////////////////////////////////////////////////////////////////
