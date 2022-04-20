@@ -164,13 +164,31 @@ bool BinaryTree::Remove(const string& item, BinaryTreeNode* curr)
 	{
 		if (curr->GetData() == item)
 		{
-			Remove(item);
+			RemoveNode(curr);
 		}
 		else
 		{
-			if (item < curr->GetData() && curr->GetLeft())
+			if (item < curr->GetData() && curr->GetLeft() != NULL)
 			{
-				
+				if(curr->GetLeft() == curr)
+				{
+					RemoveNode(curr);
+				}
+				else
+				{
+					Remove(item, curr->GetLeft());
+				}
+			}
+			else if (item > curr->GetData() && curr->GetRight() != NULL)
+			{
+				if (curr->GetRight() == curr)
+				{
+					RemoveNode(curr);
+				}
+				else
+				{
+					Remove(item, curr->GetRight());
+				}
 			}
 		}
 	}
@@ -188,8 +206,53 @@ bool BinaryTree::Remove(const string& item, BinaryTreeNode* curr)
 BinaryTreeNode* BinaryTree::RemoveNode(BinaryTreeNode* curr)
 {
 	// TODO: Add your code here
-
-	return NULL;
+	if (curr->GetLeft() == NULL && curr->GetRight() == NULL)
+	{
+		delete curr;
+		return NULL;
+	}
+	else
+	{
+		if (curr->GetLeft() != NULL && curr->GetRight() == NULL)
+		{
+			if (curr == curr->GetLeft())
+			{
+				curr->SetLeft(curr->GetLeft());
+			}
+			else if (curr == curr->GetRight())
+			{
+				curr->SetRight(curr->GetLeft());
+			}
+			curr->SetLeft(NULL);
+			RemoveNode(curr);
+			return curr;
+		}
+		else if (curr->GetLeft() == NULL && curr->GetRight() != NULL)
+		{
+			if (curr == curr->GetLeft())
+			{
+				curr->SetLeft(curr->GetRight());
+			}
+			else if (curr == curr->GetRight())
+			{
+				curr->SetRight(curr->GetRight());
+			}
+			curr->SetRight(NULL);
+			RemoveNode(curr);
+			return curr;
+		}
+		else
+		{
+			if (curr->GetLeft() != NULL)
+			{
+				return RemoveNode(curr);
+			}
+			else
+			{
+				return curr;
+			}
+		}
+	}
 }
 
 /////////////////////////////////////////////////////////////////
