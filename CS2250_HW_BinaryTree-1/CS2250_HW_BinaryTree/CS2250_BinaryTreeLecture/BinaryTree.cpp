@@ -17,7 +17,14 @@ BinaryTree::BinaryTree(bool isAVL)
 BinaryTree::~BinaryTree(void)
 {
 	// TODO: Add your code here
-
+	if (root->GetLeft() == NULL && root->GetRight() == NULL)
+	{
+		delete root;
+	}
+	else
+	{
+		MakeEmpty(root);
+	}
 }
 
 // MakeEmpty
@@ -25,6 +32,15 @@ BinaryTree::~BinaryTree(void)
 void BinaryTree::MakeEmpty(BinaryTreeNode* curr)
 {
 	// TODO: Add your code here
+	if (curr->GetLeft() != NULL)
+	{
+		MakeEmpty(curr->GetLeft());
+	}
+	else if(curr->GetRight() != NULL)
+	{
+		MakeEmpty(curr->GetRight());
+	}
+	delete curr;
 }
 
 /////////////////////////////////////////////////////////////////
