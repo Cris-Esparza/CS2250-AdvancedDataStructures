@@ -179,7 +179,7 @@ bool BinaryTree::Remove(const string& item)
 bool BinaryTree::Remove(const string& item, BinaryTreeNode* curr)
 {
 	// TODO: Add your code here
-	if (root != nullptr)
+	if (curr != nullptr)
 	{
 		if (curr->GetData() == item)
 		{
@@ -189,24 +189,26 @@ bool BinaryTree::Remove(const string& item, BinaryTreeNode* curr)
 		{
 			if (item < curr->GetData())
 			{
-				if(curr->GetLeft() == nullptr)
+				if (item == curr->GetLeft()->GetData())
 				{
-					RemoveNode(curr);
+					//RemoveNode(curr->GetLeft());
+					curr->SetLeft(RemoveNode(curr->GetLeft()));
 				}
 				else
 				{
-					Remove(item, curr->GetLeft());
+					Remove(item, curr);
 				}
 			}
 			else if (item > curr->GetData())
 			{
-				if (curr->GetRight() == nullptr)
+				if (item == curr->GetRight()->GetData())
 				{
-					RemoveNode(curr);
+					//RemoveNode(curr->GetRight());
+					curr->SetRight(RemoveNode(curr->GetRight()));
 				}
 				else
 				{
-					Remove(item, curr->GetRight());
+					Remove(item, curr);
 				}
 			}
 		}
