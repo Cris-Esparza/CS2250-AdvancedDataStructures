@@ -8,7 +8,7 @@
 BinaryTree::BinaryTree(bool isAVL)
 {
 	isAVLTree = isAVL;
-	root = NULL;
+	root = nullptr;
 }
 
 // BinaryTree Destructor
@@ -17,7 +17,7 @@ BinaryTree::BinaryTree(bool isAVL)
 BinaryTree::~BinaryTree(void)
 {
 	// TODO: Add your code here
-	if (root->GetLeft() == NULL && root->GetRight() == NULL)
+	if (root->GetLeft() == nullptr && root->GetRight() == nullptr)
 	{
 		delete root;
 	}
@@ -32,11 +32,11 @@ BinaryTree::~BinaryTree(void)
 void BinaryTree::MakeEmpty(BinaryTreeNode* curr)
 {
 	// TODO: Add your code here
-	if (curr->GetLeft() != NULL)
+	if (curr->GetLeft() != nullptr)
 	{
 		MakeEmpty(curr->GetLeft());
 	}
-	else if(curr->GetRight() != NULL)
+	else if(curr->GetRight() != nullptr)
 	{
 		MakeEmpty(curr->GetRight());
 	}
@@ -54,7 +54,7 @@ void BinaryTree::MakeEmpty(BinaryTreeNode* curr)
 void BinaryTree::Insert(const string& item)
 {
 	// TODO: Add your code here
-	if (root == NULL)
+	if (root == nullptr)
 	{
 		root = new BinaryTreeNode(item);
 	}
@@ -76,7 +76,7 @@ void BinaryTree::Insert(const string& item, BinaryTreeNode* curr)
 	// TODO: Add your code here
 	if (item < curr->GetData())
 	{
-		if (curr->GetLeft() == NULL)
+		if (curr->GetLeft() == nullptr)
 		{
 			curr->SetLeft(new BinaryTreeNode(item));
 		}
@@ -87,7 +87,7 @@ void BinaryTree::Insert(const string& item, BinaryTreeNode* curr)
 	}
 	else if (curr->GetData() < item)
 	{
-		if (curr->GetRight() == NULL)
+		if (curr->GetRight() == nullptr)
 		{
 			curr->SetRight(new BinaryTreeNode(item));
 		}
@@ -109,13 +109,13 @@ void BinaryTree::Insert(const string& item, BinaryTreeNode* curr)
 bool BinaryTree::Search(const string& item) const
 {
 	// TODO: Add your code here
-	if (root == NULL)
+	if (root == nullptr)
 	{
 		return false;
 	}
 	else
 	{
-		return Search(item, root);
+		Search(item, root);
 	}
 }
 
@@ -131,11 +131,11 @@ bool BinaryTree::Search(const string& item, BinaryTreeNode* curr) const
 	// TODO: Add your code here
 	if (item < curr->GetData())
 	{
-		return Search(item, curr->GetLeft());
+		Search(item, curr->GetLeft());
 	}
 	else if (item > curr->GetData())
 	{
-		return Search(item, curr->GetRight());
+		Search(item, curr->GetRight());
 	}
 	else if (item == curr->GetData())
 	{
@@ -158,7 +158,7 @@ bool BinaryTree::Search(const string& item, BinaryTreeNode* curr) const
 bool BinaryTree::Remove(const string& item)
 {
 	// TODO: Add your code here
-	if (root == NULL)
+	if (root == nullptr)
 	{
 		return false;
 	}
@@ -176,7 +176,7 @@ bool BinaryTree::Remove(const string& item)
 bool BinaryTree::Remove(const string& item, BinaryTreeNode* curr)
 {
 	// TODO: Add your code here
-	if (root != NULL)
+	if (root != nullptr)
 	{
 		if (curr->GetData() == item)
 		{
@@ -184,7 +184,7 @@ bool BinaryTree::Remove(const string& item, BinaryTreeNode* curr)
 		}
 		else
 		{
-			if (item < curr->GetData() && curr->GetLeft() != NULL)
+			if (item < curr->GetData() && curr->GetLeft() != nullptr)
 			{
 				if(curr->GetLeft() == curr)
 				{
@@ -195,7 +195,7 @@ bool BinaryTree::Remove(const string& item, BinaryTreeNode* curr)
 					Remove(item, curr->GetLeft());
 				}
 			}
-			else if (item > curr->GetData() && curr->GetRight() != NULL)
+			else if (item > curr->GetData() && curr->GetRight() != nullptr)
 			{
 				if (curr->GetRight() == curr)
 				{
@@ -218,18 +218,18 @@ bool BinaryTree::Remove(const string& item, BinaryTreeNode* curr)
 // Removes the curr node by determining which node should take its
 // place in the revised tree.  Returns the node that should take
 // curr's place in the tree with restructured children as appropriate.
-// If curr had no children, null is returned.
+// If curr had no children, nullptr is returned.
 BinaryTreeNode* BinaryTree::RemoveNode(BinaryTreeNode* curr)
 {
 	// TODO: Add your code here
-	if (curr->GetLeft() == NULL && curr->GetRight() == NULL)
+	if (curr->GetLeft() == nullptr && curr->GetRight() == nullptr)
 	{
 		delete curr;
-		return NULL;
+		return nullptr;
 	}
 	else
 	{
-		if (curr->GetLeft() != NULL && curr->GetRight() == NULL)
+		if (curr->GetLeft() != nullptr && curr->GetRight() == nullptr)
 		{
 			if (curr == curr->GetLeft())
 			{
@@ -239,11 +239,11 @@ BinaryTreeNode* BinaryTree::RemoveNode(BinaryTreeNode* curr)
 			{
 				curr->SetRight(curr->GetLeft());
 			}
-			curr->SetLeft(NULL);
+			curr->SetLeft(nullptr);
 			RemoveNode(curr);
 			return curr;
 		}
-		else if (curr->GetLeft() == NULL && curr->GetRight() != NULL)
+		else if (curr->GetLeft() == nullptr && curr->GetRight() != nullptr)
 		{
 			if (curr == curr->GetLeft())
 			{
@@ -253,13 +253,13 @@ BinaryTreeNode* BinaryTree::RemoveNode(BinaryTreeNode* curr)
 			{
 				curr->SetRight(curr->GetRight());
 			}
-			curr->SetRight(NULL);
+			curr->SetRight(nullptr);
 			RemoveNode(curr);
 			return curr;
 		}
 		else
 		{
-			if (curr->GetLeft() != NULL)
+			if (curr->GetLeft() != nullptr)
 			{
 				return RemoveNode(curr);
 			}
@@ -306,7 +306,7 @@ BinaryTreeNode* BinaryTree::RebalanceNode(BinaryTreeNode* curr)
 {
 	// TODO: Add your code here for week 2
 
-	return NULL;
+	return nullptr;
 }
 
 // FixHeight
@@ -369,12 +369,12 @@ void BinaryTree::PostOrderPrint(ostream& sout) const
 void BinaryTree::InOrderPrint(ostream& sout, BinaryTreeNode* curr) const
 {
 	// If the current Node exists
-	if (curr == NULL)
+	if (curr == nullptr)
 	{
 		return;
 	}
 	// If the node has a left subtree, print that first
-	if (curr->GetLeft() != NULL)
+	if (curr->GetLeft() != nullptr)
 	{
 		// Print the left subtree
 		InOrderPrint(sout, curr->GetLeft());
@@ -385,7 +385,7 @@ void BinaryTree::InOrderPrint(ostream& sout, BinaryTreeNode* curr) const
 	sout << *curr << " ";
 
 	// If the node has a right subtree, print it last
-	if (curr->GetRight() != NULL)
+	if (curr->GetRight() != nullptr)
 	{
 		// Print the right subtree
 		InOrderPrint(sout, curr->GetRight());
@@ -398,7 +398,7 @@ void BinaryTree::InOrderPrint(ostream& sout, BinaryTreeNode* curr) const
 void BinaryTree::PreOrderPrint(ostream& sout, BinaryTreeNode* curr) const
 {
 	// If the current Node exists
-	if (curr == NULL)
+	if (curr == nullptr)
 	{
 		return;
 	}
@@ -408,14 +408,14 @@ void BinaryTree::PreOrderPrint(ostream& sout, BinaryTreeNode* curr) const
 	sout << *curr << " ";
 
 	// If the node has a left subtree, print that first
-	if (curr->GetLeft() != NULL)
+	if (curr->GetLeft() != nullptr)
 	{
 		// Print the left subtree
 		PreOrderPrint(sout, curr->GetLeft());
 	}
 
 	// If the node has a right subtree, print it last
-	if (curr->GetRight() != NULL)
+	if (curr->GetRight() != nullptr)
 	{
 		// Print the right subtree
 		PreOrderPrint(sout, curr->GetRight());
@@ -428,20 +428,20 @@ void BinaryTree::PreOrderPrint(ostream& sout, BinaryTreeNode* curr) const
 void BinaryTree::PostOrderPrint(ostream& sout, BinaryTreeNode* curr) const
 {
 	// If the current Node exists
-	if (curr == NULL)
+	if (curr == nullptr)
 	{
 		return;
 	}
 
 	// If the node has a left subtree, print that first
-	if (curr->GetLeft() != NULL)
+	if (curr->GetLeft() != nullptr)
 	{
 		// Print the left subtree
 		PostOrderPrint(sout, curr->GetLeft());
 	}
 
 	// If the node has a right subtree, print it last
-	if (curr->GetRight() != NULL)
+	if (curr->GetRight() != nullptr)
 	{
 		// Print the right subtree
 		PostOrderPrint(sout, curr->GetRight());

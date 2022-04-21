@@ -34,8 +34,8 @@ void BinaryTreeNode::ResetNbrNodes()
 BinaryTreeNode::BinaryTreeNode(const string& item)
 {
 	data = item;
-	right = NULL;
-	left = NULL;
+	right = nullptr;
+	left = nullptr;
 	height = 0;
 
 	++nbrNodes;
