@@ -129,17 +129,20 @@ bool BinaryTree::Search(const string& item) const
 bool BinaryTree::Search(const string& item, BinaryTreeNode* curr) const
 {
 	// TODO: Add your code here
-	if (item < curr->GetData())
+	if (curr != nullptr)
 	{
-		Search(item, curr->GetLeft());
-	}
-	else if (item > curr->GetData())
-	{
-		Search(item, curr->GetRight());
-	}
-	else if (item == curr->GetData())
-	{
-		return true;
+		if (item < curr->GetData())
+		{
+			Search(item, curr->GetLeft());
+		}
+		else if (item > curr->GetData())
+		{
+			Search(item, curr->GetRight());
+		}
+		else if (item == curr->GetData())
+		{
+			return true;
+		}
 	}
 	else
 	{
@@ -184,9 +187,9 @@ bool BinaryTree::Remove(const string& item, BinaryTreeNode* curr)
 		}
 		else
 		{
-			if (item < curr->GetData() && curr->GetLeft() != nullptr)
+			if (item < curr->GetData())
 			{
-				if(curr->GetLeft() == curr)
+				if(curr->GetLeft() == nullptr)
 				{
 					RemoveNode(curr);
 				}
@@ -195,9 +198,9 @@ bool BinaryTree::Remove(const string& item, BinaryTreeNode* curr)
 					Remove(item, curr->GetLeft());
 				}
 			}
-			else if (item > curr->GetData() && curr->GetRight() != nullptr)
+			else if (item > curr->GetData())
 			{
-				if (curr->GetRight() == curr)
+				if (curr->GetRight() == nullptr)
 				{
 					RemoveNode(curr);
 				}
@@ -231,31 +234,15 @@ BinaryTreeNode* BinaryTree::RemoveNode(BinaryTreeNode* curr)
 	{
 		if (curr->GetLeft() != nullptr && curr->GetRight() == nullptr)
 		{
-			if (curr == curr->GetLeft())
-			{
-				curr->SetLeft(curr->GetLeft());
-			}
-			else if (curr == curr->GetRight())
-			{
-				curr->SetRight(curr->GetLeft());
-			}
-			curr->SetLeft(nullptr);
-			RemoveNode(curr);
-			return curr;
+			BinaryTreeNode* temp = curr->GetLeft();
+			delete curr;
+			return temp;
 		}
 		else if (curr->GetLeft() == nullptr && curr->GetRight() != nullptr)
 		{
-			if (curr == curr->GetLeft())
-			{
-				curr->SetLeft(curr->GetRight());
-			}
-			else if (curr == curr->GetRight())
-			{
-				curr->SetRight(curr->GetRight());
-			}
-			curr->SetRight(nullptr);
-			RemoveNode(curr);
-			return curr;
+			BinaryTreeNode* temp = curr->GetRight();
+			delete curr;
+			return temp;
 		}
 		else
 		{
