@@ -42,7 +42,7 @@ void BinaryTree::MakeEmpty(BinaryTreeNode* curr)
 		{
 			MakeEmpty(curr->GetLeft());
 		}
-		else if (curr->GetRight() != nullptr)
+		if (curr->GetRight() != nullptr)
 		{
 			MakeEmpty(curr->GetRight());
 		}
