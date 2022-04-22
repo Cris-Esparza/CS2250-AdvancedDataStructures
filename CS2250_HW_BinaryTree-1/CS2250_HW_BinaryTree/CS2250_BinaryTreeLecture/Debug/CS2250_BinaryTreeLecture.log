@@ -1,8 +1,8 @@
 ﻿  BinaryTree.cpp
   BinaryTreeNode.cpp
   Generating Code...
-B:\A drive\Git\CS2250\CS2250_HW_BinaryTree-1\CS2250_HW_BinaryTree\CS2250_BinaryTreeLecture\BinaryTree.cpp(224): warning C4715: 'BinaryTree::Remove': not all control paths return a value
-B:\A drive\Git\CS2250\CS2250_HW_BinaryTree-1\CS2250_HW_BinaryTree\CS2250_BinaryTreeLecture\BinaryTree.cpp(151): warning C4715: 'BinaryTree::Search': not all control paths return a value
-B:\A drive\Git\CS2250\CS2250_HW_BinaryTree-1\CS2250_HW_BinaryTree\CS2250_BinaryTreeLecture\BinaryTree.cpp(120): warning C4715: 'BinaryTree::Search': not all control paths return a value
-B:\A drive\Git\CS2250\CS2250_HW_BinaryTree-1\CS2250_HW_BinaryTree\CS2250_BinaryTreeLecture\BinaryTree.cpp(172): warning C4715: 'BinaryTree::Remove': not all control paths return a value
+B:\A drive\Git\CS2250\CS2250_HW_BinaryTree-1\CS2250_HW_BinaryTree\CS2250_BinaryTreeLecture\BinaryTree.cpp(127): warning C4715: 'BinaryTree::Search': not all control paths return a value
+B:\A drive\Git\CS2250\CS2250_HW_BinaryTree-1\CS2250_HW_BinaryTree\CS2250_BinaryTreeLecture\BinaryTree.cpp(179): warning C4715: 'BinaryTree::Remove': not all control paths return a value
+B:\A drive\Git\CS2250\CS2250_HW_BinaryTree-1\CS2250_HW_BinaryTree\CS2250_BinaryTreeLecture\BinaryTree.cpp(158): warning C4715: 'BinaryTree::Search': not all control paths return a value
+B:\A drive\Git\CS2250\CS2250_HW_BinaryTree-1\CS2250_HW_BinaryTree\CS2250_BinaryTreeLecture\BinaryTree.cpp(236): warning C4715: 'BinaryTree::Remove': not all control paths return a value
   CS2250_BinaryTreeLecture.vcxproj -> B:\A drive\Git\CS2250\CS2250_HW_BinaryTree-1\CS2250_HW_BinaryTree\Debug\BinaryTreeLibrary.lib

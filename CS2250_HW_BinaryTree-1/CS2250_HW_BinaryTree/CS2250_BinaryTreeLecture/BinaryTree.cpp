@@ -17,7 +17,11 @@ BinaryTree::BinaryTree(bool isAVL)
 BinaryTree::~BinaryTree(void)
 {
 	// TODO: Add your code here
-	if (root->GetLeft() == nullptr && root->GetRight() == nullptr)
+	if (root == nullptr)
+	{
+		return;
+	}
+	else if (root->GetLeft() == nullptr && root->GetRight() == nullptr)
 	{
 		delete root;
 	}
@@ -32,15 +36,18 @@ BinaryTree::~BinaryTree(void)
 void BinaryTree::MakeEmpty(BinaryTreeNode* curr)
 {
 	// TODO: Add your code here
-	if (curr->GetLeft() != nullptr)
+	if (curr != nullptr)
 	{
-		MakeEmpty(curr->GetLeft());
+		if (curr->GetLeft() != nullptr)
+		{
+			MakeEmpty(curr->GetLeft());
+		}
+		else if (curr->GetRight() != nullptr)
+		{
+			MakeEmpty(curr->GetRight());
+		}
+		delete curr;
 	}
-	else if(curr->GetRight() != nullptr)
-	{
-		MakeEmpty(curr->GetRight());
-	}
-	delete curr;
 }
 
 /////////////////////////////////////////////////////////////////
@@ -216,6 +223,11 @@ bool BinaryTree::Remove(const string& item, BinaryTreeNode* curr)
 		{
 			return false;
 		}
+	}
+	else if (item == curr->GetData())
+	{
+		RemoveNode(curr);
+		return true;
 	}
 	else
 	{
