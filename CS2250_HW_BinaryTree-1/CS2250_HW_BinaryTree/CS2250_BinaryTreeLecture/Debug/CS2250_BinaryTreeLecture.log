@@ -1,1 +1,6 @@
-﻿
+﻿  BinaryTree.cpp
+C:\CS2250 Repository\CS2250\CS2250_HW_BinaryTree-1\CS2250_HW_BinaryTree\CS2250_BinaryTreeLecture\BinaryTree.cpp(131): warning C4715: 'BinaryTree::Search': not all control paths return a value
+C:\CS2250 Repository\CS2250\CS2250_HW_BinaryTree-1\CS2250_HW_BinaryTree\CS2250_BinaryTreeLecture\BinaryTree.cpp(183): warning C4715: 'BinaryTree::Remove': not all control paths return a value
+C:\CS2250 Repository\CS2250\CS2250_HW_BinaryTree-1\CS2250_HW_BinaryTree\CS2250_BinaryTreeLecture\BinaryTree.cpp(162): warning C4715: 'BinaryTree::Search': not all control paths return a value
+C:\CS2250 Repository\CS2250\CS2250_HW_BinaryTree-1\CS2250_HW_BinaryTree\CS2250_BinaryTreeLecture\BinaryTree.cpp(240): warning C4715: 'BinaryTree::Remove': not all control paths return a value
+  CS2250_BinaryTreeLecture.vcxproj -> C:\CS2250 Repository\CS2250\CS2250_HW_BinaryTree-1\CS2250_HW_BinaryTree\Debug\BinaryTreeLibrary.lib

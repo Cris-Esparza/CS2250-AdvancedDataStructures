@@ -48,7 +48,7 @@ void BinaryTree::MakeEmpty(BinaryTreeNode* curr)
 		}
 		else if (curr->GetRight() != nullptr && curr->GetLeft() != nullptr)
 		{
-			MakeEmpty(curr->GetLeft());
+			RemoveNode(curr);
 		}
 		delete curr;
 	}
@@ -268,14 +268,9 @@ BinaryTreeNode* BinaryTree::RemoveNode(BinaryTreeNode* curr)
 		}
 		else
 		{
-			if (curr->GetLeft() != nullptr)
-			{
-				return RemoveNode(curr);
-			}
-			else
-			{
-				return curr;
-			}
+			BinaryTreeNode* temp = curr->GetLeft();
+			return temp;
+			delete curr;
 		}
 	}
 }
