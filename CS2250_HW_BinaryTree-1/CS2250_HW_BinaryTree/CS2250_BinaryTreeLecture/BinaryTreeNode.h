@@ -7,25 +7,26 @@
 using namespace std;
 
 // TODO: Make this class a template
+template <class T>
 class BinaryTreeNode
 {
 public:
-	BinaryTreeNode(const string& item);
-	BinaryTreeNode(const BinaryTreeNode& node);
+	BinaryTreeNode(const T& item);
+	BinaryTreeNode(const BinaryTreeNode<T>& node);
 	~BinaryTreeNode();
 
-	BinaryTreeNode* GetLeft() const;
-	BinaryTreeNode* GetRight() const;
-	string GetData() const;
+	BinaryTreeNode<T>* GetLeft() const;
+	BinaryTreeNode<T>* GetRight() const;
+	T GetData() const;
 	int GetHeight() const;
 
 	// Mutators
-	void SetLeft(BinaryTreeNode* left);
-	void SetRight(BinaryTreeNode* right);
-	void SetData(const string& data);
+	void SetLeft(BinaryTreeNode<T>* left);
+	void SetRight(BinaryTreeNode<T>* right);
+	void SetData(const T& data);
 	void SetHeight(int height);
 
-	friend ostream& operator<<(ostream& sout, const BinaryTreeNode& node);
+	friend ostream& operator<< <> (ostream& sout, const BinaryTreeNode<T>& node);
 
 	///////////////////////////////////////////////////////////////////////////
 	// DO NOT USE THE BELOW IN YOUR CODE - THESE ARE FOR THE TESTING SUITE ONLY
@@ -37,9 +38,9 @@ public:
 	///////////////////////////////////////////////////////////////////////////
 private:
 
-	BinaryTreeNode* left;
-	BinaryTreeNode* right;
-	string data;
+	BinaryTreeNode<T>* left;
+	BinaryTreeNode<T>* right;
+	T data;
 	int height;
 
 	///////////////////////////////////////////////////////////////////////////
@@ -50,5 +51,7 @@ private:
 	// DO NOT USE THE ABOVE IN YOUR CODE - THESE ARE FOR THE TESTING SUITE ONLY
 	///////////////////////////////////////////////////////////////////////////
 };
+
+#include "BinaryTreeNode.cpp"
 
 #endif

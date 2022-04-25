@@ -38,17 +38,13 @@ void BinaryTree::MakeEmpty(BinaryTreeNode* curr)
 	// TODO: Add your code here
 	if (curr != nullptr)
 	{
-		if (curr->GetLeft() != nullptr && curr->GetRight() == nullptr)
+		if (curr->GetLeft() != nullptr)
 		{
 			MakeEmpty(curr->GetLeft());
 		}
-		else if (curr->GetRight() != nullptr && curr->GetLeft() == nullptr)
+		if (curr->GetRight() != nullptr)
 		{
 			MakeEmpty(curr->GetRight());
-		}
-		else if (curr->GetRight() != nullptr && curr->GetLeft() != nullptr)
-		{
-			RemoveNode(curr);
 		}
 		delete curr;
 	}
