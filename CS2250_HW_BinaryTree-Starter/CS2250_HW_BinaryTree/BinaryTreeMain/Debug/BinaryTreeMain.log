@@ -1,6 +1,5 @@
 ﻿  main.cpp
 B:\A drive\Git\CS2250\CS2250_HW_BinaryTree-Starter\CS2250_HW_BinaryTree\CS2250_BinaryTreeLecture\BinaryTree.cpp(133): warning C4715: 'BinaryTree<std::basic_string<char,std::char_traits<char>,std::allocator<char> > >::Search': not all control paths return a value
-B:\A drive\Git\CS2250\CS2250_HW_BinaryTree-Starter\CS2250_HW_BinaryTree\CS2250_BinaryTreeLecture\BinaryTree.cpp(187): warning C4715: 'BinaryTree<std::basic_string<char,std::char_traits<char>,std::allocator<char> > >::Remove': not all control paths return a value
 B:\A drive\Git\CS2250\CS2250_HW_BinaryTree-Starter\CS2250_HW_BinaryTree\CS2250_BinaryTreeLecture\BinaryTree.cpp(165): warning C4715: 'BinaryTree<std::basic_string<char,std::char_traits<char>,std::allocator<char> > >::Search': not all control paths return a value
 B:\A drive\Git\CS2250\CS2250_HW_BinaryTree-Starter\CS2250_HW_BinaryTree\CS2250_BinaryTreeLecture\BinaryTree.cpp(245): warning C4715: 'BinaryTree<std::basic_string<char,std::char_traits<char>,std::allocator<char> > >::Remove': not all control paths return a value
   BinaryTreeMain.vcxproj -> B:\A drive\Git\CS2250\CS2250_HW_BinaryTree-Starter\CS2250_HW_BinaryTree\Debug\BinaryTreeMain.exe

@@ -180,9 +180,14 @@ bool BinaryTree<T>::Remove(const T& item)
 	{
 		return false;
 	}
+	else if (root->GetData() == item)
+	{
+		root = RemoveNode(root);
+		return true;
+	}
 	else
 	{
-		Remove(item, root);
+		return Remove(item, root);
 	}
 }
 
@@ -206,7 +211,7 @@ bool BinaryTree<T>::Remove(const T& item, BinaryTreeNode<T>* curr)
 			}
 			else
 			{
-				Remove(item, curr);
+				Remove(item, curr->GetLeft());
 			}
 		}
 		else
@@ -225,18 +230,13 @@ bool BinaryTree<T>::Remove(const T& item, BinaryTreeNode<T>* curr)
 			}
 			else
 			{
-				Remove(item, curr);
+				Remove(item, curr->GetRight());
 			}
 		}
 		else
 		{
 			return false;
 		}
-	}
-	else if (item == curr->GetData())
-	{
-		RemoveNode(curr);
-		return true;
 	}
 	else
 	{
