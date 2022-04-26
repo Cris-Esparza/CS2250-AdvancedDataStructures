@@ -274,9 +274,23 @@ BinaryTreeNode<T>* BinaryTree<T>::RemoveNode(BinaryTreeNode<T>* curr)
 		}
 		else
 		{
-			BinaryTreeNode<T>* temp = curr->GetLeft();
-			return temp;
-			delete curr;
+			BinaryTreeNode<T>* parent = curr;
+			BinaryTreeNode<T>* min = curr->GetRight();
+			while (min->GetLeft() != nullptr)
+			{
+				parent = min;
+				min = min->GetLeft();
+			}
+			curr->SetData(min->GetData());
+			if (parent == curr)
+			{
+				parent->SetRight(min->GetRight());
+			}
+			else
+			{
+				parent->SetLeft(min->GetRight());
+			}
+			delete min;
 		}
 	}
 }
