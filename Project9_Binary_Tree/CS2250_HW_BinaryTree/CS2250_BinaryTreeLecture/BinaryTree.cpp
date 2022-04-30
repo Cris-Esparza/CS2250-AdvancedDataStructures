@@ -44,12 +44,15 @@ void BinaryTree<T>::MakeEmpty(BinaryTreeNode<T>* curr)
 		if (curr->GetLeft() != nullptr)
 		{
 			MakeEmpty(curr->GetLeft());
+			delete curr->GetLeft();
 		}
 		if (curr->GetRight() != nullptr)
 		{
 			MakeEmpty(curr->GetRight());
+			delete curr->GetRight();
 		}
-		delete curr;
+		curr->SetLeft(nullptr);
+		curr->SetRight(nullptr);
 	}
 }
 
@@ -291,6 +294,7 @@ BinaryTreeNode<T>* BinaryTree<T>::RemoveNode(BinaryTreeNode<T>* curr)
 				parent->SetLeft(min->GetRight());
 			}
 			delete min;
+			return curr;
 		}
 	}
 }
