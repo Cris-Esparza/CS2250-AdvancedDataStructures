@@ -10,6 +10,8 @@ Graph::Graph(void)
 	// *******************************************************************
 	// TODO: initialize the graph to a "safe" state
 	// *******************************************************************
+	this->numberOfNodes = numberOfNodes;
+	this->numberOfEdges = numberOfEdges;
 }
 
 // Destroys any dynamic memory allocated within the graph class
@@ -18,6 +20,10 @@ Graph::~Graph(void)
 	// *******************************************************************
 	// TODO: delete any dynamic memory you created
 	// *******************************************************************
+	for (int i = 0; i < numberOfNodes; i++)
+	{
+		
+	}
 }
 
 // Returns the number of nodes in the graph
