@@ -7,9 +7,6 @@ Graph::Graph(void)
 	numberOfNodes = 0;
 	numberOfEdges = 0;
 
-	// *******************************************************************
-	// TODO: initialize the graph to a "safe" state
-	// *******************************************************************
 	this->numberOfNodes = numberOfNodes;
 	this->numberOfEdges = numberOfEdges;
 }
@@ -17,9 +14,7 @@ Graph::Graph(void)
 // Destroys any dynamic memory allocated within the graph class
 Graph::~Graph(void)
 {
-	// *******************************************************************
-	// TODO: delete any dynamic memory you created
-	// *******************************************************************
+	
 }
 
 // Returns the number of nodes in the graph
@@ -38,9 +33,6 @@ int Graph::GetNumberOfEdges() const
 // numerical up to the number of nodes (0 to N-1, inclusive)
 void Graph::SetNumberOfNodes(int numberOfNodes)
 {
-	// *******************************************************************
-	// TODO: allocate any dynamic memory required to store the nodes
-	// *******************************************************************
 	this->numberOfNodes = numberOfNodes;
 	for (int i = 0; i < numberOfNodes; i++)
 	{
@@ -56,18 +48,11 @@ void Graph::SetNumberOfNodes(int numberOfNodes)
 void Graph::SetNumberOfEdges(int numberOfEdges)
 {
 	this->numberOfEdges = numberOfEdges;
-
-	// *******************************************************************
-	// TODO: allocate any dynamic memory required to store the edges
-	// *******************************************************************
 }
 
 // Adds a single edge to the graph.
 void Graph::AddEdge(int startNode, int endNode)
 {
-	// *******************************************************************
-	// TODO: Add the edge to the graph
-	// *******************************************************************
 	adjMatrix[startNode][endNode] = 1;
 }
 
@@ -77,21 +62,48 @@ void Graph::AddEdge(int startNode, int endNode)
 vector<int> Graph::GetShortestPath(int startNode, int endNode, bool isDirected, bool isWeighted) const
 {
 	vector<int> path;
+	vector<bool> isVisited;
+	vector<int> backPointers;
+	vector<int> queue;
 
-	// *******************************************************************
-	// TODO: find the shortest path between start and end nodes and
-	// return the path as a vector of integers.  The first node in the
-	// vector should be the start node and the last should be the end node
-	// If there is no path from start to end nodes, return an empty vector
-	// *******************************************************************
-
-
-	// *******************************************************************
-	// TODO: Push each node in the path onto the path vector
-	// HINT: use a loop....
-	// *******************************************************************
-	//path.push_back(nodeNumber);
-
+	isVisited.resize(numberOfNodes, false);
+	isVisited[startNode] = true;
+	queue.push_back(startNode);
+	backPointers.resize(numberOfNodes);
+	isVisited.resize(numberOfEdges);
+	
+	while (!queue.empty())
+	{
+		int curr = queue[0];
+		queue.erase(queue.begin());
+		if (curr == endNode)
+		{
+			int node = curr;
+			while (node != startNode)
+			{
+				path.push_back(node);
+				node = backPointers[node];
+			}
+			path.push_back(startNode);
+			reverse(path.begin(), path.end());
+			break;
+		}
+		for (int i = 0; i < numberOfNodes; ++i)
+		{
+			if (isDirected && adjMatrix[curr][i] == 1 && !isVisited[i])
+			{
+				queue.push_back(i);
+				backPointers[i] = curr;
+				isVisited[i] = true;
+			}
+			if (!isDirected && !isVisited[i] && (adjMatrix[curr][i] != 0 || adjMatrix[i][curr] != 0))
+			{
+				queue.push_back(i);
+				backPointers[i] = curr;
+				isVisited[i] = true;
+			}
+		}
+	}
 	return path;
 }
 
@@ -103,11 +115,6 @@ ostream& operator<<(ostream& sout, const Graph& graph)
 		 << "  Number of Edges: " << graph.GetNumberOfEdges() << endl
 		 << "  Edges: " << endl;
 
-	// *******************************************************************
-	// TODO: Display the nodes and edges of this graph.
-	// Replace the "startNode" and "endNode" with the actual node, retain
-	// all other formatting and spacing.
-	// *******************************************************************
 	int count = graph.GetNumberOfEdges();
 	for (int i = 0; i < graph.GetNumberOfEdges(); ++i)
 	{
