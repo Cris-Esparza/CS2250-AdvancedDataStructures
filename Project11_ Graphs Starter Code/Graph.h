@@ -26,7 +26,7 @@ public:
 private:
 	int numberOfNodes;		// Number of nodes in the graph
 	int numberOfEdges;		// Number of edges in the graph
-	vector<vector<int>> node;	// vector of nodes
+	vector<vector<int>> adjMatrix;	// vector of nodes
 	vector<int> backPointer;
 	vector<bool> isVisited;
 };

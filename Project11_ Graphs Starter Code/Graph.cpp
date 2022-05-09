@@ -38,18 +38,16 @@ int Graph::GetNumberOfEdges() const
 // numerical up to the number of nodes (0 to N-1, inclusive)
 void Graph::SetNumberOfNodes(int numberOfNodes)
 {
-	this->numberOfNodes = numberOfNodes;
-
 	// *******************************************************************
 	// TODO: allocate any dynamic memory required to store the nodes
 	// *******************************************************************
 	this->numberOfNodes = numberOfNodes;
 	for (int i = 0; i < numberOfNodes; i++)
 	{
-		node.push_back(vector<int>(numberOfNodes));
+		adjMatrix.push_back(vector<int>(numberOfNodes));
 		for (int j = 0; j < numberOfNodes; j++)
 		{
-			node[i][j] = 0;
+			adjMatrix[i][j] = 0;
 		}
 	}
 }
@@ -70,7 +68,7 @@ void Graph::AddEdge(int startNode, int endNode)
 	// *******************************************************************
 	// TODO: Add the edge to the graph
 	// *******************************************************************
-	node[startNode][endNode] = 1;
+	adjMatrix[startNode][endNode] = 1;
 }
 
 // Uses Breadth-first search to find the shortest path between two nodes
@@ -105,15 +103,20 @@ ostream& operator<<(ostream& sout, const Graph& graph)
 		 << "  Number of Edges: " << graph.GetNumberOfEdges() << endl
 		 << "  Edges: " << endl;
 
+	// *******************************************************************
+	// TODO: Display the nodes and edges of this graph.
+	// Replace the "startNode" and "endNode" with the actual node, retain
+	// all other formatting and spacing.
+	// *******************************************************************
 	for (int i = 0; i < graph.GetNumberOfEdges(); ++i)
 	{
-		// *******************************************************************
-		// TODO: Display the nodes and edges of this graph.
-		// Replace the "startNode" and "endNode" with the actual node, retain
-		// all other formatting and spacing.
-		// *******************************************************************
-
-		sout << "    Edge: " << "startNode" << " -> " << "endNode" << endl;
+		for (int j = 0; j < graph.GetNumberOfEdges(); j++)
+		{
+			if (graph.adjMatrix[i][j] == 1)
+			{
+				sout << "    Edge: " << i << " -> " << j << endl;
+			}
+		}
 	}
 	return sout;
 }
