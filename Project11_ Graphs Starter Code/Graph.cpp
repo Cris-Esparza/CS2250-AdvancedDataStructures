@@ -20,10 +20,6 @@ Graph::~Graph(void)
 	// *******************************************************************
 	// TODO: delete any dynamic memory you created
 	// *******************************************************************
-	for (int i = 0; i < numberOfNodes; i++)
-	{
-		
-	}
 }
 
 // Returns the number of nodes in the graph
