@@ -47,6 +47,15 @@ void Graph::SetNumberOfNodes(int numberOfNodes)
 	// *******************************************************************
 	// TODO: allocate any dynamic memory required to store the nodes
 	// *******************************************************************
+	this->numberOfNodes = numberOfNodes;
+	for (int i = 0; i < numberOfNodes; i++)
+	{
+		node.push_back(vector<int>(numberOfNodes));
+		for (int j = 0; j < numberOfNodes; j++)
+		{
+			node[i][j] = 0;
+		}
+	}
 }
 
 // Sets the number of edges in the graph.
@@ -65,6 +74,7 @@ void Graph::AddEdge(int startNode, int endNode)
 	// *******************************************************************
 	// TODO: Add the edge to the graph
 	// *******************************************************************
+	node[startNode][endNode] = 1;
 }
 
 // Uses Breadth-first search to find the shortest path between two nodes
