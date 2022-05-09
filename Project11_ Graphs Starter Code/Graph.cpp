@@ -108,13 +108,15 @@ ostream& operator<<(ostream& sout, const Graph& graph)
 	// Replace the "startNode" and "endNode" with the actual node, retain
 	// all other formatting and spacing.
 	// *******************************************************************
+	int count = graph.GetNumberOfEdges();
 	for (int i = 0; i < graph.GetNumberOfEdges(); ++i)
 	{
-		for (int j = 0; j < graph.GetNumberOfEdges(); j++)
+		for (int j = 0; j < graph.GetNumberOfNodes(); ++j)
 		{
-			if (graph.adjMatrix[i][j] == 1)
+			if (count != 0 && graph.adjMatrix[i][j] != 0)
 			{
 				sout << "    Edge: " << i << " -> " << j << endl;
+				--count;
 			}
 		}
 	}
