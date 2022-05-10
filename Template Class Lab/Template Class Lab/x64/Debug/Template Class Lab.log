@@ -1,4 +1,6 @@
 ﻿  Main.cpp
-C:\CS2250 Repository\CS2250\Template Class Lab\Template Class Lab\ObjectPool.cpp(33): warning C4715: 'ObjectPool<int>::Retrieve': not all control paths return a value
-C:\CS2250 Repository\CS2250\Template Class Lab\Template Class Lab\ObjectPool.cpp(33): warning C4715: 'ObjectPool<std::basic_string<char,std::char_traits<char>,std::allocator<char> > >::Retrieve': not all control paths return a value
-  Template Class Lab.vcxproj -> C:\CS2250 Repository\CS2250\Template Class Lab\x64\Debug\Template Class Lab.exe
+  ObjectPool.cpp
+  Generating Code...
+B:\A drive\Git\CS2250\Template Class Lab\Template Class Lab\ObjectPool.cpp(33): warning C4715: 'ObjectPool<std::basic_string<char,std::char_traits<char>,std::allocator<char> > >::Retrieve': not all control paths return a value
+B:\A drive\Git\CS2250\Template Class Lab\Template Class Lab\ObjectPool.cpp(33): warning C4715: 'ObjectPool<int>::Retrieve': not all control paths return a value
+  Template Class Lab.vcxproj -> B:\A drive\Git\CS2250\Template Class Lab\x64\Debug\Template Class Lab.exe
