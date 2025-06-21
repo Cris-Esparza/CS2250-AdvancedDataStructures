@@ -29,12 +29,12 @@ public:
 	void setColor(Color newColor);
 
 	// print 
-	void print();
+	void print() const;
 
 private:
 	string name;
-	int* level;
-	Color* trophyColor;
+	int level;
+	Color color;
 };	
 
 #endif

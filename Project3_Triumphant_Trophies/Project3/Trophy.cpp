@@ -1,22 +1,21 @@
-// TODO: implement the Trophy class
 #include "Trophy.h"
 
 Trophy :: Trophy()
 {
-	
+	name = "";
+	level = 1;
+	color = BRONZE;
 }
 
 Trophy::Trophy(string name, int newLevel, Color newColor)
 {
 	this->name = name;
-	level = new int(newLevel);
-	trophyColor = new Color(Color :: BRONZE);
+	this->level = newLevel;
+	this->color = newColor;
 }
 
 Trophy :: ~Trophy()
 {
-	delete level;
-	delete trophyColor;
 }
 
 string Trophy::getName() const
@@ -26,12 +25,12 @@ string Trophy::getName() const
 
 int Trophy :: getLevel() const
 {
-	return *level;
+	return level;
 }
 
 Color Trophy :: getColor() const
 {
-	return *trophyColor;
+	return color;
 }
 
 void Trophy :: setName(string newName)
@@ -41,15 +40,29 @@ void Trophy :: setName(string newName)
 
 void Trophy :: setLevel(int newLevel)
 {
-	*level = newLevel;
+	level = newLevel;
 }
 
 void Trophy :: setColor(Color newColor)
 {
-	*trophyColor = newColor;
+	color = newColor;
 }
 
-void Trophy::print() 
+void Trophy::print() const
 {
-	cout << "[ " << getName() << " : " << getLevel() << " : " << getColor() << " ]" << endl;
+	string colorString = "";
+	switch (color)
+	{
+	case GOLD:
+		colorString = "GOLD";
+		break;
+	case SILVER:
+		colorString = "SILVER";
+		break;
+	case BRONZE:
+		colorString = "BRONZE";
+		break;
+	}
+
+	cout << "[ " << name << " : " << level << " : " << colorString << " ]" << endl;
 }
