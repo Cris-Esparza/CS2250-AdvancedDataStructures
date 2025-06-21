@@ -22,7 +22,7 @@ int main()
 	string message;
 	string encryption;
 	
-	// Repeart the menu until user selects quit
+	// Repeat the menu until user selects quit
 	do
 	{
 		PrintMenu();
