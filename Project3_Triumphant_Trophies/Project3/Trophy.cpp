@@ -19,37 +19,37 @@ Trophy :: ~Trophy()
 	delete trophyColor;
 }
 
-string Trophy::GetName() const
+string Trophy::getName() const
 {
 	return name;
 }
 
-int Trophy :: GetLevel() const
+int Trophy :: getLevel() const
 {
 	return *level;
 }
 
-Color Trophy :: GetColor() const
+Color Trophy :: getColor() const
 {
 	return *trophyColor;
 }
 
-void Trophy :: SetName(string newName)
+void Trophy :: setName(string newName)
 {
 	name = newName;
 }
 
-void Trophy :: SetLevel(int newLevel)
+void Trophy :: setLevel(int newLevel)
 {
 	*level = newLevel;
 }
 
-void Trophy :: SetColor(Color newColor)
+void Trophy :: setColor(Color newColor)
 {
 	*trophyColor = newColor;
 }
 
-void Trophy::Print() 
+void Trophy::print() 
 {
-	cout << "[ " << GetName() << " : " << GetLevel() << " : " <</* GetColor() <<*/ " ]" << endl;
+	cout << "[ " << getName() << " : " << getLevel() << " : " << getColor() << " ]" << endl;
 }

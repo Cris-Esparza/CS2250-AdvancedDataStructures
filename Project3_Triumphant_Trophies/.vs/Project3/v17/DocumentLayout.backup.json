@@ -1,0 +1,108 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "B:\\Git\\CS2250-AdvancedDataStructures\\Project3_Triumphant_Trophies\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{BDCA3743-3057-43F9-8246-D7F56E06FB66}|Project3\\Project3.vcxproj|B:\\Git\\CS2250-AdvancedDataStructures\\Project3_Triumphant_Trophies\\Project3\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{BDCA3743-3057-43F9-8246-D7F56E06FB66}|Project3\\Project3.vcxproj|solutionrelative:Project3\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BDCA3743-3057-43F9-8246-D7F56E06FB66}|Project3\\Project3.vcxproj|B:\\Git\\CS2250-AdvancedDataStructures\\Project3_Triumphant_Trophies\\Project3\\Trophy.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{BDCA3743-3057-43F9-8246-D7F56E06FB66}|Project3\\Project3.vcxproj|solutionrelative:Project3\\Trophy.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BDCA3743-3057-43F9-8246-D7F56E06FB66}|Project3\\Project3.vcxproj|B:\\Git\\CS2250-AdvancedDataStructures\\Project3_Triumphant_Trophies\\Project3\\Trophy.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{BDCA3743-3057-43F9-8246-D7F56E06FB66}|Project3\\Project3.vcxproj|solutionrelative:Project3\\Trophy.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|B:\\Git\\CS2250-AdvancedDataStructures\\Project4_Dynamic_Trophies\\Project 3_ Triumphant Trophies Solution Code\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "main.cpp",
+              "DocumentMoniker": "B:\\Git\\CS2250-AdvancedDataStructures\\Project3_Triumphant_Trophies\\Project3\\main.cpp",
+              "RelativeDocumentMoniker": "Project3\\main.cpp",
+              "ToolTip": "B:\\Git\\CS2250-AdvancedDataStructures\\Project3_Triumphant_Trophies\\Project3\\main.cpp",
+              "RelativeToolTip": "Project3\\main.cpp",
+              "ViewState": "AgIAAPIAAAAAAAAAAAAAAJ0AAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-06-21T18:17:26.19Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Trophy.cpp",
+              "DocumentMoniker": "B:\\Git\\CS2250-AdvancedDataStructures\\Project3_Triumphant_Trophies\\Project3\\Trophy.cpp",
+              "RelativeDocumentMoniker": "Project3\\Trophy.cpp",
+              "ToolTip": "B:\\Git\\CS2250-AdvancedDataStructures\\Project3_Triumphant_Trophies\\Project3\\Trophy.cpp",
+              "RelativeToolTip": "Project3\\Trophy.cpp",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAADMAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-06-21T18:17:16.376Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Trophy.h",
+              "DocumentMoniker": "B:\\Git\\CS2250-AdvancedDataStructures\\Project3_Triumphant_Trophies\\Project3\\Trophy.h",
+              "RelativeDocumentMoniker": "Project3\\Trophy.h",
+              "ToolTip": "B:\\Git\\CS2250-AdvancedDataStructures\\Project3_Triumphant_Trophies\\Project3\\Trophy.h",
+              "RelativeToolTip": "Project3\\Trophy.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-06-21T18:15:13.766Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "FloatingWindowState": {
+        "Id": "adc55fec-ed5b-46ab-9e07-cdb98a79b185",
+        "Display": 1,
+        "X": 34,
+        "Y": 874,
+        "Width": 1382,
+        "Height": 1084,
+        "WindowState": 0
+      },
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "main.cpp",
+              "DocumentMoniker": "B:\\Git\\CS2250-AdvancedDataStructures\\Project4_Dynamic_Trophies\\Project 3_ Triumphant Trophies Solution Code\\main.cpp",
+              "RelativeDocumentMoniker": "..\\Project4_Dynamic_Trophies\\Project 3_ Triumphant Trophies Solution Code\\main.cpp",
+              "ToolTip": "B:\\Git\\CS2250-AdvancedDataStructures\\Project4_Dynamic_Trophies\\Project 3_ Triumphant Trophies Solution Code\\main.cpp",
+              "RelativeToolTip": "..\\Project4_Dynamic_Trophies\\Project 3_ Triumphant Trophies Solution Code\\main.cpp",
+              "ViewState": "AgIAAO8AAAAAAAAAAAAAACEBAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-06-21T18:19:20.029Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

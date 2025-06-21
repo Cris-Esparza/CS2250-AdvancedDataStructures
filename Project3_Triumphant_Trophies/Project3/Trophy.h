@@ -1,15 +1,13 @@
-// TODO: Guard the header
 #ifndef TROPHY_H
 #define TROPHY_H
-// TODO: include the libraries this class will need
+
 #include <iostream>
 #include <string>
 #include <vector>
 using namespace std;
 
-enum class Color {GOLD, SILVER, BRONZE, COPPER};		// TODO: create the color values
+enum Color {GOLD, SILVER, BRONZE, COPPER};		
 
-// TODO: complete the Trophy class
 class Trophy 
 {	
 public:
@@ -21,17 +19,17 @@ public:
 	~Trophy();
 
 	// accessors
-	string GetName() const;
-	int GetLevel() const;
-	Color GetColor() const;
+	string getName() const;
+	int getLevel() const;
+	Color getColor() const;
 
 	// mutators
-	void SetName(string newName);
-	void SetLevel(int newLevel);
-	void SetColor(Color newColor);
+	void setName(string newName);
+	void setLevel(int newLevel);
+	void setColor(Color newColor);
 
 	// print 
-	void Print();
+	void print();
 
 private:
 	string name;
@@ -39,5 +37,4 @@ private:
 	Color* trophyColor;
 };	
 
-// TODO: end the guard
 #endif
